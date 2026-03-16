@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Recoleta Alt";
+  src: url("/fonts/RecoletaAlt-Bold.woff2") format("woff2"),
+       url("/fonts/RecoletaAlt-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Be Home Color Palette */
+  /* CIN 07N2 – warm neutral tones */
+  --color-cream: #FAF7F2;
+  --color-stone-warm: #E8E0D5;
+  --color-stone: #C9BFB2;
+  --color-stone-deep: #A89880;
+  /* PANTONE® 13-0663 TSX Sun Glare */
+  --color-trumpet:       #EDFF00;
+  --color-trumpet-light: #F5FF66;
+  --color-trumpet-deep:  #CCDB00;
+  /* Text & accents */
+  --color-charcoal: #2C2825;
+  --color-sage: #8B9E7B;
+
+  /* Typography */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FAF7F2;
+  --foreground: #2C2825;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Recoleta Alt", var(--font-serif);
+  font-weight: 700;
 }

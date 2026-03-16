@@ -1,0 +1,540 @@
+/**
+ * Be Home – Site Content
+ *
+ * This file contains all editable website copy.
+ * To update any text on the site, find the relevant section below and change the value.
+ * The site will reflect changes automatically on next page load (or hot reload in dev).
+ *
+ * Sections:
+ *   homepage       → / (root page)
+ *   about          → /about
+ *   studio         → /studio
+ *   treatmentRoom  → /treatment-room
+ *   catering       → /catering
+ *   classes        → /classes
+ *   events         → /events
+ *   treatments     → /treatments
+ *   practitioners  → /practitioners
+ *   contact        → /contact
+ */
+
+export const content = {
+
+  // ─────────────────────────────────────────────
+  // HOMEPAGE  /
+  // ─────────────────────────────────────────────
+  homepage: {
+    hero: {
+      tagline: "Community · Wellness · Cascais",
+      headlineLine1: "A place to",
+      headlineLine2: "feel at home",
+      subheadline:
+        "Be Home is a community wellness space in Cascais — a warm, welcoming environment for practitioners to flourish and people to find their balance.",
+      ctaPrimary: "Hire a Space",
+      ctaSecondary: "View Events",
+    },
+    spaces: {
+      sectionTagline: "Our Spaces",
+      sectionHeadline: "Built for your practice",
+      cards: [
+        {
+          icon: "◎",
+          title: "The Studio",
+          description:
+            "A spacious, beautifully lit and designed studio perfect for yoga, movement, workshops, and group sessions. Available to hire for 90 minutes, half day or full day.",
+          href: "/studio",
+          cta: "Explore the Studio",
+        },
+        {
+          icon: "◇",
+          title: "Treatment Room",
+          description:
+            "A private, serene room designed for one-to-one treatments, massage, coaching, and wellness consultations. Thoughtfully equipped for your practice.",
+          href: "/treatment-room",
+          cta: "Explore the Room",
+        },
+        {
+          icon: "◈",
+          title: "Catering & Drinks",
+          description:
+            "From organic teas and juices to full catering packages. Elevate your workshop or retreat with nourishing food and drinks.",
+          href: "/catering",
+          cta: "View Packages",
+        },
+      ],
+    },
+    schedule: {
+      sectionTagline: "This Week",
+      sectionHeadline: "Upcoming classes",
+      fullScheduleLabel: "Full schedule →",
+    },
+    philosophy: {
+      sectionTagline: "Our Philosophy",
+      quote:
+        '"We believe wellness is not a destination — it\'s the feeling of being exactly where you\'re meant to be."',
+      ctaLabel: "Our story",
+    },
+    practitionerStrip: {
+      headline: "Are you a practitioner?",
+      body:
+        "Hire our beautiful studio or treatment room. Bring your clients, run your classes, and make Be Home your home base in Cascais.",
+      ctaPrimary: "Hire the Studio",
+      ctaSecondary: "Meet Our Practitioners",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // ABOUT  /about
+  // ─────────────────────────────────────────────
+  about: {
+    hero: {
+      tagline: "Our Story",
+      headline: "About Be Home",
+      subheadline:
+        "A place where practitioners can build their practice, and where the people of Cascais can find the classes, treatments, and community they need to feel good.",
+    },
+    story: {
+      headline: "Built on the idea of belonging",
+      body1:
+        "Be Home was created for one simple reason: to give Cascais a wellness space that genuinely feels like a community. Not a gym. Not a sterile studio. A warm, thoughtfully designed place where people can come as they are.",
+      body2:
+        "We work with independent practitioners who share our values — offering their expertise in an environment designed to support their practice and their clients.",
+    },
+    values: [
+      {
+        title: "Community first",
+        body: "We believe wellness is better together. Everything we do is in service of bringing people closer — to themselves and to each other.",
+      },
+      {
+        title: "Quality & warmth",
+        body: "Our spaces are carefully curated. Every detail — from the materials to the light — is chosen to create a feeling of ease and quality.",
+      },
+      {
+        title: "Practitioner-led",
+        body: "We trust our practitioners. They bring their expertise, their voice, and their community. We simply give them the best possible home.",
+      },
+    ],
+    cta: {
+      headline: "Come and see for yourself",
+      body: "Whether you're a practitioner looking for a beautiful space, or someone seeking a class or treatment — we'd love to meet you.",
+      ctaPrimary: "Get in touch",
+      ctaSecondary: "Browse classes",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // STUDIO  /studio
+  // ─────────────────────────────────────────────
+  studio: {
+    hero: {
+      tagline: "Hire a Space",
+      headline: "The Studio",
+      body:
+        "A beautifully designed space with considered lighting, created for movement, community, and connection. Perfect for yoga, pilates, dance, workshops, and group sessions.",
+      ctaLabel: "Request a Booking",
+    },
+    amenities: [
+      "Beautiful lighting",
+      "Natural light",
+      "Sound system",
+      "Yoga mats & blocks",
+      "Changing area",
+      "Waiting area for clients",
+      "Air circulation and filtration",
+    ],
+    rates: [
+      { label: "90 Minutes", price: "€50", note: "" },
+      { label: "Half Day", price: "€150", note: "8:00–14:00 or 14:00–20:00" },
+      { label: "Full Day", price: "€300", note: "8:00–20:00" },
+    ],
+    ratesNote: "Rates exclude IVA. Extended hours up to 22:00 available on request.",
+    cateringNote:
+      "Food and drink packages available on request — organic teas, juices, snack platters and more.",
+    cta: {
+      headline: "Ready to book the Studio?",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // TREATMENT ROOM  /treatment-room
+  // ─────────────────────────────────────────────
+  treatmentRoom: {
+    hero: {
+      tagline: "Hire a Space",
+      headline: "Treatment Room",
+      body:
+        "A serene, private space for one-to-one treatments, coaching, bodywork, and wellness consultations. Thoughtfully designed for deep work.",
+      ctaLabel: "Request a Booking",
+    },
+    amenities: [
+      "Professional treatment table",
+      "Dimmable warm lighting",
+      "Sound system for ambient music",
+    ],
+    suitableFor:
+      "Massage therapy · Osteopathy · Physiotherapy · Acupuncture · Reiki · Sound healing · Life coaching · Nutritional therapy · Psychotherapy",
+    rates: [
+      { label: "Half Day", price: "€80", note: "8:00–14:00 or 14:00–20:00" },
+      { label: "Full Day", price: "€150", note: "8:00–20:00 · €12.50/hr" },
+    ],
+    ratesNote: "Optional towel service available as an add-on: €10 per session.",
+    cta: {
+      headline: "Ready to book the Treatment Room?",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // CATERING  /catering
+  // ─────────────────────────────────────────────
+  catering: {
+    hero: {
+      tagline: "Nourishment",
+      headline: "Catering & Drinks",
+      body:
+        "Elevate your workshop, retreat, or event with our organic catering packages. All food and drinks can be added to any studio or treatment room booking.",
+    },
+    packages: [
+      {
+        id: "1",
+        name: "Tea & Coffee Station",
+        type: "DRINKS",
+        description:
+          "A self-serve station with organic herbal teas, Portuguese coffee, and filtered water. Perfect for morning workshops and all-day retreats.",
+        pricePerHead: 5,
+        minimumPeople: 4,
+        includes: [
+          "Selection of 6 herbal teas",
+          "Fresh ground coffee",
+          "Oat, almond & regular milk",
+          "Filtered still and sparkling water",
+          "Cups, napkins, all equipment",
+        ],
+      },
+      {
+        id: "2",
+        name: "Wellness Drinks Package",
+        type: "DRINKS",
+        description:
+          "Cold-pressed juices, kombucha, and coconut water. A nourishing alternative to hot drinks — ideal for movement-based sessions.",
+        pricePerHead: 8,
+        minimumPeople: 4,
+        includes: [
+          "3 cold-pressed juice varieties",
+          "Kombucha selection",
+          "Coconut water",
+          "Still & sparkling water",
+          "Glassware included",
+        ],
+      },
+      {
+        id: "3",
+        name: "Light Bites Platter",
+        type: "FOOD",
+        description:
+          "A seasonal selection of wholesome snacks. Beautifully presented and designed to energise without weighing down.",
+        pricePerHead: 12,
+        minimumPeople: 6,
+        includes: [
+          "Seasonal fruit platter",
+          "Mixed nuts & seeds",
+          "Homemade energy balls",
+          "Gluten-free crackers with hummus",
+          "Can cater for dietary requirements",
+        ],
+      },
+      {
+        id: "4",
+        name: "Full Wellness Package",
+        type: "FULL_PACKAGE",
+        description:
+          "Our most popular option for full-day workshops and retreats. Hot drinks, juices, and a substantial mid-day lunch — all organic and locally sourced where possible.",
+        pricePerHead: 35,
+        minimumPeople: 8,
+        includes: [
+          "Full tea & coffee station",
+          "Morning welcome juice",
+          "Mid-session light bites",
+          "Organic lunch (seasonal menu)",
+          "Afternoon tea break",
+          "All glassware, crockery & staff",
+        ],
+      },
+    ],
+    bespoke: {
+      headline: "Need something bespoke?",
+      body: "We can create a custom menu for your event. Get in touch and we'll put together something perfect for your group and dietary needs.",
+      ctaLabel: "Enquire about catering",
+    },
+    footer:
+      "To add catering to your space rental, mention it when you get in touch. All packages are confirmed 48 hours before your booking.",
+  },
+
+  // ─────────────────────────────────────────────
+  // CLASSES  /classes
+  // ─────────────────────────────────────────────
+  classes: {
+    hero: {
+      tagline: "Weekly Schedule",
+      headline: "Classes & Schedule",
+      body: "Browse our weekly schedule. Booking links go directly to each practitioner.",
+    },
+    schedule: [
+      {
+        id: "1",
+        day: "Monday",
+        time: "07:30",
+        title: "Early Bird Yoga",
+        practitioner: "Sofia Mendes",
+        type: "Yoga",
+        duration: "60 min",
+        price: "€15",
+        spots: 3,
+        bookingUrl: "https://example.com",
+      },
+      {
+        id: "2",
+        day: "Tuesday",
+        time: "09:00",
+        title: "Morning Vinyasa Flow",
+        practitioner: "Sofia Mendes",
+        type: "Yoga",
+        duration: "75 min",
+        price: "€17",
+        spots: 4,
+        bookingUrl: "https://example.com",
+      },
+      {
+        id: "3",
+        day: "Wednesday",
+        time: "10:30",
+        title: "Pilates Fundamentals",
+        practitioner: "Ana Rodrigues",
+        type: "Pilates",
+        duration: "60 min",
+        price: "€18",
+        spots: 6,
+        bookingUrl: "https://example.com",
+      },
+      {
+        id: "4",
+        day: "Wednesday",
+        time: "18:30",
+        title: "Breathwork & Meditation",
+        practitioner: "James Carroll",
+        type: "Meditation",
+        duration: "90 min",
+        price: "€20",
+        spots: 8,
+        bookingUrl: "https://example.com",
+      },
+      {
+        id: "5",
+        day: "Thursday",
+        time: "19:00",
+        title: "Yin Yoga",
+        practitioner: "Sofia Mendes",
+        type: "Yoga",
+        duration: "75 min",
+        price: "€15",
+        spots: 5,
+        bookingUrl: "https://example.com",
+      },
+      {
+        id: "6",
+        day: "Friday",
+        time: "10:00",
+        title: "Pilates Reformer",
+        practitioner: "Ana Rodrigues",
+        type: "Pilates",
+        duration: "55 min",
+        price: "€22",
+        spots: 2,
+        bookingUrl: "https://example.com",
+      },
+      {
+        id: "7",
+        day: "Saturday",
+        time: "09:30",
+        title: "Weekend Flow",
+        practitioner: "Sofia Mendes",
+        type: "Yoga",
+        duration: "90 min",
+        price: "€18",
+        spots: 10,
+        bookingUrl: "https://example.com",
+      },
+    ],
+    footer:
+      "Are you a practitioner wanting to run classes here?",
+    footerCta: "Get in touch →",
+  },
+
+  // ─────────────────────────────────────────────
+  // EVENTS  /events
+  // ─────────────────────────────────────────────
+  events: {
+    hero: {
+      tagline: "Classes, Workshops & Retreats",
+      headline: "Events",
+      body: "Upcoming practitioner sessions and special events at Be Home. Browse, find your spot, and book directly via WhatsApp.",
+    },
+    list: [
+      {
+        id: "1",
+        date: "Saturday, 8 March 2025",
+        time: "10:00 – 17:00",
+        title: "Spring Renewal Retreat",
+        description:
+          "A full day of yoga, breathwork, sound bath, and nourishing food. Celebrate the changing of the seasons and set intentions for the months ahead.",
+        practitioner: "Sofia Mendes & James Carroll",
+        price: "€120",
+        type: "Retreat",
+        spots: 12,
+      },
+      {
+        id: "2",
+        date: "Sunday, 16 March 2025",
+        time: "14:00 – 16:00",
+        title: "Cacao Ceremony & Meditation",
+        description:
+          "A heart-opening ceremony using ceremonial grade cacao, paired with guided meditation and sound healing. A profound afternoon of connection and stillness.",
+        practitioner: "James Carroll",
+        price: "€45",
+        type: "Workshop",
+        spots: 15,
+      },
+      {
+        id: "3",
+        date: "Saturday, 29 March 2025",
+        time: "09:30 – 12:30",
+        title: "Pilates Fundamentals Workshop",
+        description:
+          "A deep dive into the foundations of Pilates for beginners and those who want to refine their technique. Small group, detailed instruction.",
+        practitioner: "Ana Rodrigues",
+        price: "€55",
+        type: "Workshop",
+        spots: 8,
+      },
+    ],
+    hostCta: {
+      headline: "Want to run an event at Be Home?",
+      body: "Our studio is available for workshops, retreats, and special events. Get in touch to discuss.",
+      ctaLabel: "Enquire about hosting an event",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // TREATMENTS  /treatments
+  // ─────────────────────────────────────────────
+  treatments: {
+    hero: {
+      tagline: "One-to-One",
+      headline: "Treatments",
+      body: "Private, one-to-one treatments with our practitioners in the Be Home treatment room. Book directly with each practitioner.",
+    },
+    list: [
+      {
+        practitioner: "Lúcia Ferreira",
+        slug: "lucia-ferreira",
+        specialty: "Massage Therapy",
+        bio: "Lúcia has been practising massage therapy for 8 years, with additional training in myofascial release and sports recovery.",
+        treatments: [
+          { name: "Swedish Relaxation Massage", duration: "60 min", price: "€70" },
+          { name: "Deep Tissue Massage", duration: "60 min", price: "€80" },
+          { name: "Sports Massage", duration: "45 min", price: "€65" },
+        ],
+      },
+      {
+        practitioner: "James Carroll",
+        slug: "james-carroll",
+        specialty: "Breathwork & Sound Healing",
+        bio: "James offers deeply personal one-to-one sessions in breathwork, sound, and meditation for stress, anxiety, and personal growth.",
+        treatments: [
+          { name: "1:1 Breathwork Session", duration: "90 min", price: "€90" },
+          { name: "Sound Healing Treatment", duration: "60 min", price: "€75" },
+          { name: "Meditation Coaching", duration: "60 min", price: "€65" },
+        ],
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────
+  // PRACTITIONERS  /practitioners
+  // ─────────────────────────────────────────────
+  practitioners: {
+    hero: {
+      tagline: "Our Community",
+      headline: "Practitioners",
+      body: "Meet the talented practitioners who call Be Home their base. Each brings their own unique skills and approach to wellness.",
+    },
+    directory: [
+      {
+        slug: "jane",
+        name: "Jane",
+        specialty: "Yoga",
+        bio: "I'm a dedicated yoga teacher whose classes blend movement, breath and stillness. I bring warmth and care to everyone I work with.",
+        tags: ["Reiki", "Yoga", "Silent Disco"],
+        image: "/practitioners/jane.jpg",
+      },
+      {
+        slug: "lianne",
+        name: "Lianne",
+        specialty: "Creativity & Crafting",
+        bio: "I run creative sessions and offline crafting workshops that invite you to slow down, make something with your hands, and reconnect with your imagination.",
+        tags: ["Creativity", "Crafting", "Workshops"],
+      },
+      {
+        slug: "natalie",
+        name: "Natalie",
+        specialty: "Pilates",
+        bio: "I'm a Pilates instructor offering both mat and reformer work. I teach group classes and one-to-ones, welcoming all levels with a warm and encouraging approach.",
+        tags: ["Pilates", "Mat", "Reformer", "1:1"],
+      },
+      {
+        slug: "justyna",
+        name: "Justyna",
+        specialty: "Sound Baths",
+        bio: "I guide immersive sound bath experiences using a range of instruments and my own voice. I hold sessions for all ages, creating space for deep rest and renewal.",
+        tags: ["Sound Bath", "Singing", "All Ages"],
+      },
+    ],
+    joinCta: {
+      headline: "Want to join our practitioner community?",
+      body: "We welcome applications from experienced practitioners. Get in touch to discuss hiring a space.",
+      ctaLabel: "Apply to join",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // CONTACT  /contact
+  // ─────────────────────────────────────────────
+  contact: {
+    hero: {
+      tagline: "Say Hello",
+      headline: "Get in touch",
+      body: "Whether you'd like to hire a space, join our practitioner community, or just have a question — we'd love to hear from you.",
+    },
+    email: "hello@behomecascais.com",
+    location: "Cascais, Portugal",
+    instagram: "@behome.cascais",
+    instagramUrl: "https://instagram.com",
+    subjects: [
+      "Studio Booking",
+      "Treatment Room Booking",
+      "Catering Enquiry",
+      "Practitioner Application",
+      "Event Enquiry",
+      "General Question",
+    ],
+  },
+} as const;
+
+// Type exports for convenience
+export type ContentHomepage = typeof content.homepage;
+export type ContentAbout = typeof content.about;
+export type ContentStudio = typeof content.studio;
+export type ContentCatering = typeof content.catering;
+export type CateringPackage = typeof content.catering.packages[number];
+export type ClassEntry = typeof content.classes.schedule[number];
+export type EventEntry = typeof content.events.list[number];
+export type PractitionerEntry = typeof content.practitioners.directory[number];

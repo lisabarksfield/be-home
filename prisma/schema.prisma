@@ -1,0 +1,320 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─────────────────────────────────────────────
+// AUTH & USERS
+// ─────────────────────────────────────────────
+
+enum UserRole {
+  CUSTOMER
+  PRACTITIONER
+  ADMIN
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  name          String?
+  image         String?
+  phone         String?
+  role          UserRole  @default(CUSTOMER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts Account[]
+  sessions Session[]
+
+  practitionerProfile PractitionerProfile?
+  customerProfile     CustomerProfile?
+
+  bookingsAsCustomer Booking[] @relation("CustomerBookings")
+
+  stripeCustomerId String? @unique
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ─────────────────────────────────────────────
+// PRACTITIONER PROFILE
+// ─────────────────────────────────────────────
+
+model PractitionerProfile {
+  id           String  @id @default(cuid())
+  userId       String  @unique
+  bio          String? @db.Text
+  specialty    String?
+  websiteUrl   String?
+  instagramUrl String?
+  avatarUrl    String?
+  isPublic     Boolean @default(false)
+  isVerified   Boolean @default(false)
+
+  whatsappNumber String @default("")
+
+  // Google Calendar (tokens stored encrypted)
+  googleCalendarId           String?
+  googleCalendarAccessToken  String? @db.Text
+  googleCalendarRefreshToken String? @db.Text
+  googleCalendarTokenExpiry  DateTime?
+
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  classes      Class[]
+  spaceRentals SpaceRental[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CustomerProfile {
+  id     String  @id @default(cuid())
+  userId String  @unique
+  notes  String? @db.Text
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────
+// SPACES
+// ─────────────────────────────────────────────
+
+model Space {
+  id          String   @id @default(cuid())
+  name        String
+  description String?  @db.Text
+  capacity    Int
+  hourlyRate  Float
+  halfDayRate Float?
+  fullDayRate Float?
+  amenities   String[]
+  images      String[]
+  isActive    Boolean  @default(true)
+
+  spaceRentals SpaceRental[]
+  classes      Class[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────
+// SPACE RENTALS
+// ─────────────────────────────────────────────
+
+enum RentalStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+model SpaceRental {
+  id             String       @id @default(cuid())
+  spaceId        String
+  practitionerId String
+  startTime      DateTime
+  endTime        DateTime
+  status         RentalStatus @default(PENDING)
+  totalAmount    Float
+  addOns         Json?
+  notes          String?      @db.Text
+  eventTitle       String       @default("")
+  spotsAvailable   Int          @default(0)
+  cateringRequired Boolean      @default(false)
+
+  stripePaymentIntentId String?  @unique
+  stripeCheckoutSession String?  @unique
+  paidAt                DateTime?
+
+  googleCalendarEventId String?
+
+  space        Space               @relation(fields: [spaceId], references: [id])
+  practitioner PractitionerProfile @relation(fields: [practitionerId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────
+// CLASSES & TREATMENTS
+// ─────────────────────────────────────────────
+
+enum ClassType {
+  CLASS
+  WORKSHOP
+  EVENT
+  TREATMENT
+  RETREAT
+}
+
+model Class {
+  id             String    @id @default(cuid())
+  practitionerId String
+  spaceId        String?
+  title          String
+  description    String?   @db.Text
+  type           ClassType @default(CLASS)
+  maxParticipants Int
+  price          Float
+  currency       String    @default("EUR")
+  imageUrl       String?
+
+  startTime     DateTime
+  endTime       DateTime
+  isRecurring   Boolean  @default(false)
+  recurrenceRule String?
+
+  bookingUrl             String?
+  externalBookingEnabled Boolean @default(true)
+
+  googleCalendarEventId String?
+  isPublished           Boolean @default(false)
+  isCancelled           Boolean @default(false)
+
+  practitioner PractitionerProfile @relation(fields: [practitionerId], references: [id])
+  space        Space?              @relation(fields: [spaceId], references: [id])
+  bookings     Booking[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────
+// BOOKINGS (customer books via website - optional)
+// ─────────────────────────────────────────────
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  ATTENDED
+  NO_SHOW
+}
+
+model Booking {
+  id         String        @id @default(cuid())
+  classId    String
+  customerId String
+  status     BookingStatus @default(PENDING)
+  guestName  String?
+  guestEmail String?
+  notes      String?       @db.Text
+
+  stripePaymentIntentId   String? @unique
+  stripeCheckoutSessionId String? @unique
+  paidAt                  DateTime?
+
+  calendarInviteSent Boolean @default(false)
+
+  class    Class @relation(fields: [classId], references: [id])
+  customer User  @relation("CustomerBookings", fields: [customerId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────
+// CATERING PACKAGES
+// ─────────────────────────────────────────────
+
+enum CateringType {
+  DRINKS
+  FOOD
+  FULL_PACKAGE
+}
+
+model CateringPackage {
+  id            String       @id @default(cuid())
+  name          String
+  description   String?      @db.Text
+  type          CateringType
+  pricePerHead  Float
+  minimumPeople Int          @default(4)
+  includes      String[]
+  imageUrl      String?
+  isActive      Boolean      @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────
+// CONTACT SUBMISSIONS
+// ─────────────────────────────────────────────
+
+model ContactSubmission {
+  id        String    @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String    @db.Text
+  isRead    Boolean   @default(false)
+  repliedAt DateTime?
+  createdAt DateTime  @default(now())
+}
+
+// ─────────────────────────────────────────────
+// AI CHAT SESSIONS
+// ─────────────────────────────────────────────
+
+model ChatSession {
+  id        String        @id @default(cuid())
+  sessionId String        @unique
+  messages  ChatMessage[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model ChatMessage {
+  id            String      @id @default(cuid())
+  chatSessionId String
+  role          String
+  content       String      @db.Text
+  createdAt     DateTime    @default(now())
+
+  chatSession ChatSession @relation(fields: [chatSessionId], references: [id], onDelete: Cascade)
+}
