@@ -30,8 +30,11 @@ export default function AboutPage() {
             <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-stone-deep)" }}>
               {about.story.body1}
             </p>
-            <p className="text-base leading-relaxed" style={{ color: "var(--color-stone-deep)" }}>
+            <p className="text-base leading-relaxed mb-4" style={{ color: "var(--color-stone-deep)" }}>
               {about.story.body2}
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: "var(--color-stone-deep)" }}>
+              {about.story.body3}
             </p>
           </div>
         </div>
@@ -73,7 +76,7 @@ export default function AboutPage() {
             {about.cta.ctaPrimary}
           </Link>
           <Link
-            href="/classes"
+            href="/events"
             style={{ border: "1.5px solid var(--color-charcoal)", color: "var(--color-charcoal)" }}
             className="px-8 py-3.5 rounded-full font-medium hover:opacity-60 transition-opacity"
           >

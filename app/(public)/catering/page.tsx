@@ -19,7 +19,7 @@ export default function CateringPage() {
   return (
     <div>
       <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--color-stone-warm)" }}>
-        <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: "var(--color-trumpet)" }}>
+        <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: "var(--color-trumpet)", textShadow: "0 1px 3px rgba(0,0,0,0.2)" }}>
           {catering.hero.tagline}
         </p>
         <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ fontFamily: "'Recoleta Alt', var(--font-serif)", color: "var(--color-charcoal)" }}>

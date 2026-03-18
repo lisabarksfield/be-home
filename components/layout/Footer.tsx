@@ -34,7 +34,7 @@ export default function Footer() {
             {[
               { href: "/studio", label: "The Studio" },
               { href: "/treatment-room", label: "Treatment Room" },
-              { href: "/classes", label: "Classes" },
+              { href: "/events", label: "Classes & Events" },
               { href: "/treatments", label: "Treatments" },
               { href: "/events", label: "Events" },
             ].map((l) => (
@@ -98,7 +98,7 @@ export default function Footer() {
             </a>
             <div className="flex gap-4 pt-2">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/behome.cascais"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs tracking-wide uppercase hover:opacity-60 transition-opacity"

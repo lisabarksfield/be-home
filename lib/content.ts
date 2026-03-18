@@ -65,7 +65,7 @@ export const content = {
     },
     schedule: {
       sectionTagline: "This Week",
-      sectionHeadline: "Upcoming classes",
+      sectionHeadline: "Upcoming events",
       fullScheduleLabel: "Full schedule →",
     },
     philosophy: {
@@ -96,8 +96,10 @@ export const content = {
     story: {
       headline: "Built on the idea of belonging",
       body1:
-        "Be Home was created for one simple reason: to give Cascais a wellness space that genuinely feels like a community. Not a gym. Not a sterile studio. A warm, thoughtfully designed place where people can come as they are.",
+        "Be Home was created for one simple reason: to give Cascais a wellness space that genuinely feels like a community. Not a sterile studio. A warm, thoughtfully designed place where people can come as they are.",
       body2:
+        "The name reflects our philosophy: your body is your home, and we're here to support you in nurturing and nourishing it. We want you to feel at home in our home.",
+      body3:
         "We work with independent practitioners who share our values — offering their expertise in an environment designed to support their practice and their clients.",
     },
     values: [
@@ -199,13 +201,13 @@ export const content = {
         name: "Tea & Coffee Station",
         type: "DRINKS",
         description:
-          "A self-serve station with organic herbal teas, Portuguese coffee, and filtered water. Perfect for morning workshops and all-day retreats.",
+          "A self-serve station with organic herbal teas, coffee, and filtered water. Perfect for morning workshops and all-day retreats.",
         pricePerHead: 5,
         minimumPeople: 4,
         includes: [
-          "Selection of 6 herbal teas",
-          "Fresh ground coffee",
-          "Oat, almond & regular milk",
+          "Selection of herbal teas",
+          "Coffee",
+          "Variety of milks",
           "Filtered still and sparkling water",
           "Cups, napkins, all equipment",
         ],
@@ -215,11 +217,11 @@ export const content = {
         name: "Wellness Drinks Package",
         type: "DRINKS",
         description:
-          "Cold-pressed juices, kombucha, and coconut water. A nourishing alternative to hot drinks — ideal for movement-based sessions.",
+          "Juices, kombucha, and coconut water. A nourishing alternative to hot drinks — ideal for movement-based sessions.",
         pricePerHead: 8,
         minimumPeople: 4,
         includes: [
-          "3 cold-pressed juice varieties",
+          "3 juice varieties",
           "Kombucha selection",
           "Coconut water",
           "Still & sparkling water",
@@ -238,7 +240,7 @@ export const content = {
           "Seasonal fruit platter",
           "Mixed nuts & seeds",
           "Homemade energy balls",
-          "Gluten-free crackers with hummus",
+          "Seasonal dips with bread and crackers",
           "Can cater for dietary requirements",
         ],
       },
@@ -247,14 +249,14 @@ export const content = {
         name: "Full Wellness Package",
         type: "FULL_PACKAGE",
         description:
-          "Our most popular option for full-day workshops and retreats. Hot drinks, juices, and a substantial mid-day lunch — all organic and locally sourced where possible.",
+          "Our most popular option for full-day workshops and retreats. Hot drinks, juices, and a substantial mid-day lunch — locally sourced where possible.",
         pricePerHead: 35,
         minimumPeople: 8,
         includes: [
           "Full tea & coffee station",
           "Morning welcome juice",
           "Mid-session light bites",
-          "Organic lunch (seasonal menu)",
+          "Lunch (seasonal menu)",
           "Afternoon tea break",
           "All glassware, crockery & staff",
         ],
@@ -278,92 +280,18 @@ export const content = {
       headline: "Classes & Schedule",
       body: "Browse our weekly schedule. Booking links go directly to each practitioner.",
     },
-    schedule: [
-      {
-        id: "1",
-        day: "Monday",
-        time: "07:30",
-        title: "Early Bird Yoga",
-        practitioner: "Sofia Mendes",
-        type: "Yoga",
-        duration: "60 min",
-        price: "€15",
-        spots: 3,
-        bookingUrl: "https://example.com",
-      },
-      {
-        id: "2",
-        day: "Tuesday",
-        time: "09:00",
-        title: "Morning Vinyasa Flow",
-        practitioner: "Sofia Mendes",
-        type: "Yoga",
-        duration: "75 min",
-        price: "€17",
-        spots: 4,
-        bookingUrl: "https://example.com",
-      },
-      {
-        id: "3",
-        day: "Wednesday",
-        time: "10:30",
-        title: "Pilates Fundamentals",
-        practitioner: "Ana Rodrigues",
-        type: "Pilates",
-        duration: "60 min",
-        price: "€18",
-        spots: 6,
-        bookingUrl: "https://example.com",
-      },
-      {
-        id: "4",
-        day: "Wednesday",
-        time: "18:30",
-        title: "Breathwork & Meditation",
-        practitioner: "James Carroll",
-        type: "Meditation",
-        duration: "90 min",
-        price: "€20",
-        spots: 8,
-        bookingUrl: "https://example.com",
-      },
-      {
-        id: "5",
-        day: "Thursday",
-        time: "19:00",
-        title: "Yin Yoga",
-        practitioner: "Sofia Mendes",
-        type: "Yoga",
-        duration: "75 min",
-        price: "€15",
-        spots: 5,
-        bookingUrl: "https://example.com",
-      },
-      {
-        id: "6",
-        day: "Friday",
-        time: "10:00",
-        title: "Pilates Reformer",
-        practitioner: "Ana Rodrigues",
-        type: "Pilates",
-        duration: "55 min",
-        price: "€22",
-        spots: 2,
-        bookingUrl: "https://example.com",
-      },
-      {
-        id: "7",
-        day: "Saturday",
-        time: "09:30",
-        title: "Weekend Flow",
-        practitioner: "Sofia Mendes",
-        type: "Yoga",
-        duration: "90 min",
-        price: "€18",
-        spots: 10,
-        bookingUrl: "https://example.com",
-      },
-    ],
+    schedule: [] as {
+      id: string;
+      day: string;
+      time: string;
+      title: string;
+      practitioner: string;
+      type: string;
+      duration: string;
+      price: string;
+      spots: number;
+      bookingUrl: string;
+    }[],
     footer:
       "Are you a practitioner wanting to run classes here?",
     footerCta: "Get in touch →",
@@ -381,39 +309,17 @@ export const content = {
     list: [
       {
         id: "1",
-        date: "Saturday, 8 March 2025",
-        time: "10:00 – 17:00",
-        title: "Spring Renewal Retreat",
+        date: "Thursday, 26 March 2026",
+        time: "19:00",
+        title: "An Evening of Sound",
         description:
-          "A full day of yoga, breathwork, sound bath, and nourishing food. Celebrate the changing of the seasons and set intentions for the months ahead.",
-        practitioner: "Sofia Mendes & James Carroll",
-        price: "€120",
-        type: "Retreat",
-        spots: 12,
-      },
-      {
-        id: "2",
-        date: "Sunday, 16 March 2025",
-        time: "14:00 – 16:00",
-        title: "Cacao Ceremony & Meditation",
-        description:
-          "A heart-opening ceremony using ceremonial grade cacao, paired with guided meditation and sound healing. A profound afternoon of connection and stillness.",
-        practitioner: "James Carroll",
-        price: "€45",
-        type: "Workshop",
-        spots: 15,
-      },
-      {
-        id: "3",
-        date: "Saturday, 29 March 2025",
-        time: "09:30 – 12:30",
-        title: "Pilates Fundamentals Workshop",
-        description:
-          "A deep dive into the foundations of Pilates for beginners and those who want to refine their technique. Small group, detailed instruction.",
-        practitioner: "Ana Rodrigues",
-        price: "€55",
-        type: "Workshop",
-        spots: 8,
+          "A gentle evening of sound — crystal bowls, gong, chimes, and soft voice. A space to slow down, breathe a little deeper, and let the nervous system unwind in its own time. No pressure, no expectations. Just come as you are.",
+        practitioner: "Justyna",
+        price: "€20 · Free for teens",
+        type: "Sound Bath",
+        spots: 0,
+        whatsappUrl:
+          "https://wa.me/351960057880?text=I+would+like+a+space+at+your+sound+bath+event+on+Thursday+26+March+at+7pm",
       },
     ],
     hostCta: {
@@ -495,6 +401,7 @@ export const content = {
         name: "Justyna",
         specialty: "Sound Baths",
         bio: "I guide immersive sound bath experiences using a range of instruments and my own voice. I hold sessions for all ages, creating space for deep rest and renewal.",
+        image: "/practitioners/justyna.jpg",
         tags: ["Sound Bath", "Singing", "All Ages"],
       },
     ],
@@ -517,7 +424,7 @@ export const content = {
     email: "hello@behomecascais.com",
     location: "Cascais, Portugal",
     instagram: "@behome.cascais",
-    instagramUrl: "https://instagram.com",
+    instagramUrl: "https://www.instagram.com/behome.cascais",
     subjects: [
       "Studio Booking",
       "Treatment Room Booking",

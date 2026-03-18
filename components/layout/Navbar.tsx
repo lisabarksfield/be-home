@@ -22,10 +22,7 @@ const navGroups: NavGroup[] = [
   {
     id: "schedule",
     label: "Classes & Events",
-    items: [
-      { href: "/classes", label: "Weekly Classes",      sub: "Regular schedule with all practitioners" },
-      { href: "/events",  label: "Events & Workshops",  sub: "Retreats, upcoming sessions & book your spot" },
-    ],
+    href: "/events",
   },
   {
     id: "practitioners",
