@@ -30,7 +30,7 @@ export default function PractitionersPage() {
             >
               <div className="h-48 relative overflow-hidden" style={{ backgroundColor: "var(--color-stone)" }}>
                 {"image" in p && p.image ? (
-                  <Image src={p.image} alt={p.name} fill className="object-cover object-top" />
+                  <Image src={p.image} alt={p.name} fill className="object-cover object-[center_20%]" />
                 ) : (
                   <div className="h-full flex items-center justify-center">
                     <div
