@@ -390,13 +390,6 @@ export const content = {
         tags: ["Creativity", "Crafting", "Workshops"],
       },
       {
-        slug: "natalie",
-        name: "Natalie",
-        specialty: "Pilates",
-        bio: "I'm a Pilates instructor offering both mat and reformer work. I teach group classes and one-to-ones, welcoming all levels with a warm and encouraging approach.",
-        tags: ["Pilates", "Mat", "Reformer", "1:1"],
-      },
-      {
         slug: "justyna",
         name: "Justyna",
         specialty: "Sound Baths",
