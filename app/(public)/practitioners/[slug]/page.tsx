@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-export default function PractitionerProfilePage({ params }: { params: { slug: string } }) {
-  const name = params.slug
+export default async function PractitionerProfilePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const name = slug
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
