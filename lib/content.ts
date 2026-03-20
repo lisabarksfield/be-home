@@ -381,6 +381,7 @@ export const content = {
         bio: "I'm a dedicated yoga teacher whose classes blend movement, breath and stillness. I bring warmth and care to everyone I work with.",
         tags: ["Reiki", "Yoga", "Silent Disco"],
         image: "/practitioners/jane.jpg",
+        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
       {
         slug: "lianne",
@@ -388,6 +389,7 @@ export const content = {
         specialty: "Creativity & Crafting",
         bio: "I run creative sessions and offline crafting workshops that invite you to slow down, make something with your hands, and reconnect with your imagination.",
         tags: ["Creativity", "Crafting", "Workshops"],
+        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
       {
         slug: "justyna",
@@ -396,6 +398,7 @@ export const content = {
         bio: "I guide immersive sound bath experiences using a range of instruments and my own voice. I hold sessions for all ages, creating space for deep rest and renewal.",
         image: "/practitioners/justyna.jpg",
         tags: ["Sound Bath", "Singing", "All Ages"],
+        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
     ],
     joinCta: {
