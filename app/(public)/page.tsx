@@ -37,7 +37,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/studio"
+              href="/contact"
               style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
               className="px-8 py-3.5 rounded-full font-medium tracking-wide hover:opacity-90 transition-opacity"
             >

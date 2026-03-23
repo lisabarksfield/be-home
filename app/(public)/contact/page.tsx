@@ -94,6 +94,20 @@ export default function ContactPage() {
                   {contact.instagram}
                 </a>
               </div>
+              {"whatsappUrl" in contact && contact.whatsappUrl && (
+                <div>
+                  <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "var(--color-stone-deep)" }}>WhatsApp</p>
+                  <a
+                    href={contact.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base hover:opacity-60 transition-opacity"
+                    style={{ color: "var(--color-charcoal)" }}
+                  >
+                    +44 7736 709 009
+                  </a>
+                </div>
+              )}
             </div>
           </div>
 

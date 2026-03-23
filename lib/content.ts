@@ -421,6 +421,7 @@ export const content = {
     location: "Cascais, Portugal",
     instagram: "@behome.cascais",
     instagramUrl: "https://www.instagram.com/behome.cascais",
+    whatsappUrl: "https://wa.me/447736709009",
     subjects: [
       "Studio Booking",
       "Treatment Room Booking",

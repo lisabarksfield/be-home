@@ -176,7 +176,7 @@ export default function Navbar() {
             Sign In
           </Link>
           <Link
-            href="/studio"
+            href="/contact"
             className="px-5 py-2 text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
             style={{
               backgroundColor: "var(--color-trumpet)",
@@ -298,7 +298,7 @@ export default function Navbar() {
               Sign In
             </Link>
             <Link
-              href="/studio"
+              href="/contact"
               className="px-5 py-2.5 text-sm font-medium rounded-full text-center"
               style={{
                 backgroundColor: "var(--color-trumpet)",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { signIn } from "next-auth/react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -50,7 +51,7 @@ export default function LoginPage() {
           <>
             {/* Google sign-in */}
             <button
-              onClick={() => {/* signIn('google') */}}
+              onClick={() => signIn('google', { callbackUrl: '/' })}
               className="w-full py-3 rounded-xl text-sm font-medium flex items-center justify-center gap-2 mb-4"
               style={{ backgroundColor: "var(--color-cream)", color: "var(--color-charcoal)", border: "1px solid var(--color-stone)" }}
             >
