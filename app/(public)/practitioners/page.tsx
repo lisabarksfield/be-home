@@ -29,18 +29,7 @@ export default function PractitionersPage() {
               style={{ backgroundColor: "var(--color-stone-warm)" }}
             >
               <div className="h-48 relative overflow-hidden" style={{ backgroundColor: "var(--color-stone)" }}>
-                {"image" in p && p.image ? (
-                  <Image src={p.image} alt={p.name} fill className="object-cover object-[center_35%]" />
-                ) : (
-                  <div className="h-full flex items-center justify-center">
-                    <div
-                      className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-light"
-                      style={{ backgroundColor: "var(--color-stone-deep)", color: "var(--color-cream)" }}
-                    >
-                      {p.name.split(" ").map((n) => n[0]).join("")}
-                    </div>
-                  </div>
-                )}
+                <Image src={p.image} alt={p.name} fill className="object-cover object-[center_35%]" />
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
