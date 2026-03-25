@@ -471,7 +471,7 @@ export const content = {
       headline: "Tailored for everyone",
       adult: {
         label: "For you & your friends",
-        body: "A spa-like wellness day, a birthday celebration, a hen party with heart — or simply a day to gather and feel good together. We'll create something that reflects exactly what your group needs.",
+        body: "A curated wellness day, a birthday celebration, a hen party with heart — or simply a day to gather and feel good together. We'll create something that reflects exactly what your group needs.",
       },
       kids: {
         label: "For kids & teens",
