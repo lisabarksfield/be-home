@@ -387,7 +387,7 @@ export const content = {
         slug: "lianne",
         name: "Lianne",
         specialty: "Creativity & Crafting",
-        bio: "I run creative sessions and offline crafting workshops that invite you to slow down, make something with your hands, and reconnect with your imagination.",
+        bio: "I'm Lianne, founder of The Creative Break. I run crafting sessions and creative workshops that give you permission to slow down, make something with your hands, and remember what it feels like to create without pressure. Keep an eye out for special collaborations with other Be Home practitioners, some of my favorite workshops happen when we bring different creative worlds together.",
         tags: ["Creativity", "Crafting", "Workshops"],
         image: "/practitioners/lianne.jpg",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
