@@ -389,6 +389,7 @@ export const content = {
         specialty: "Creativity & Crafting",
         bio: "I run creative sessions and offline crafting workshops that invite you to slow down, make something with your hands, and reconnect with your imagination.",
         tags: ["Creativity", "Crafting", "Workshops"],
+        image: "/practitioners/lianne.jpg",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
       {
