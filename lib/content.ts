@@ -432,6 +432,64 @@ export const content = {
       "General Question",
     ],
   },
+  // ─────────────────────────────────────────────
+  // BESPOKE  /bespoke
+  // ─────────────────────────────────────────────
+  bespoke: {
+    hero: {
+      tagline: "Curated Experiences",
+      headline: "Be Home Bespoke",
+      body: "A fully curated wellness day, designed around you. We bring together our practitioners to create a bespoke experience for you and your friends — combining movement, healing, creativity, and nourishment into one unforgettable day.",
+    },
+    intro: {
+      headline: "Your perfect day, designed by us",
+      body: "Tell us what you're looking for — a morning of yoga and sound, an afternoon of treatments and crafting, or a full-day retreat — and we'll curate it. Every Bespoke experience is unique, and every detail is taken care of.",
+    },
+    experiences: [
+      {
+        icon: "◎",
+        title: "Movement & Breath",
+        description: "Yoga, pilates, breathwork, or dance — we'll match you with the perfect practitioner for your group.",
+      },
+      {
+        icon: "◇",
+        title: "Healing & Treatments",
+        description: "Sound baths, massage, reiki, and more. Space and time to truly unwind.",
+      },
+      {
+        icon: "◈",
+        title: "Creativity & Craft",
+        description: "Offline creative sessions to slow down, make something beautiful, and reconnect with your imagination.",
+      },
+      {
+        icon: "✦",
+        title: "Nourishment",
+        description: "Organic teas, juices, and catering packages to keep your group energised throughout the day.",
+      },
+    ],
+    tailored: {
+      headline: "Tailored for everyone",
+      adult: {
+        label: "For you & your friends",
+        body: "A spa-like wellness day, a birthday celebration, a hen party with heart — or simply a day to gather and feel good together. We'll create something that reflects exactly what your group needs.",
+      },
+      kids: {
+        label: "For kids & teens",
+        body: "From creative craft sessions to movement and mindfulness, we offer bespoke experiences for younger groups too — fun, grounding, and genuinely nourishing.",
+      },
+    },
+    howItWorks: [
+      { step: "1", label: "Tell us your vision", body: "Get in touch and share what you have in mind — dates, group size, and any must-haves." },
+      { step: "2", label: "We curate your day", body: "We match you with the right practitioners, put together a schedule, and handle every detail." },
+      { step: "3", label: "You arrive and enjoy", body: "All you need to do is show up. We take care of everything else." },
+    ],
+    cta: {
+      headline: "Ready to plan your Bespoke day?",
+      body: "Get in touch and tell us what you have in mind. We'll take it from there.",
+      ctaLabel: "Enquire about Bespoke",
+    },
+  },
+
 } as const;
 
 // Type exports for convenience
@@ -443,3 +501,4 @@ export type CateringPackage = typeof content.catering.packages[number];
 export type ClassEntry = typeof content.classes.schedule[number];
 export type EventEntry = typeof content.events.list[number];
 export type PractitionerEntry = typeof content.practitioners.directory[number];
+export type ContentBespoke = typeof content.bespoke;

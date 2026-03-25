@@ -30,6 +30,11 @@ const navGroups: NavGroup[] = [
     href: "/practitioners",
   },
   {
+    id: "bespoke",
+    label: "Bespoke",
+    href: "/bespoke",
+  },
+  {
     id: "about",
     label: "About",
     items: [
