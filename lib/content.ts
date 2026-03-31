@@ -61,6 +61,14 @@ export const content = {
           href: "/catering",
           cta: "View Packages",
         },
+        {
+          icon: "◻",
+          title: "The Workshop",
+          description:
+            "A large crafting table, making and meeting space with comfortable sofas and a fireplace. Perfect for creative workshops, team meetings, and intimate gatherings.",
+          href: "/workshop",
+          cta: "Explore the Workshop",
+        },
       ],
     },
     schedule: {
@@ -308,21 +316,6 @@ export const content = {
     },
     list: [
       {
-        id: "1",
-        date: "Thursday, 26 March 2026",
-        isoDate: "2026-03-26",
-        time: "19:00",
-        title: "An Evening of Sound",
-        description:
-          "A gentle evening of sound — crystal bowls, gong, chimes, and soft voice. A space to slow down, breathe a little deeper, and let the nervous system unwind in its own time. No pressure, no expectations. Just come as you are.",
-        practitioner: "Justyna",
-        price: "€20 · Free for teens",
-        type: "Sound Bath",
-        spots: 0,
-        whatsappUrl:
-          "https://wa.me/351960057880?text=I+would+like+a+space+at+your+sound+bath+event+on+Thursday+26+March+at+7pm",
-      },
-      {
         id: "2",
         date: "Saturday, 25 April 2026",
         isoDate: "2026-04-25",
@@ -512,6 +505,39 @@ export const content = {
       headline: "Ready to plan your Bespoke day?",
       body: "Get in touch and tell us what you have in mind. We'll take it from there.",
       ctaLabel: "Enquire about Bespoke",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // WORKSHOP  /workshop
+  // ─────────────────────────────────────────────
+  workshop: {
+    hero: {
+      tagline: "Hire a Space",
+      headline: "The Workshop",
+      body: "A warm, creative space with a large crafting table, comfortable sofas, and an open fireplace. Ideal for workshops, making sessions, team meetings, and intimate gatherings.",
+      ctaLabel: "Request a Booking",
+      ctaHref: "/contact?subject=Workshop+Hire",
+    },
+    amenities: [
+      "Large crafting and making table",
+      "Comfortable sofas and lounge seating",
+      "Open fireplace",
+      "Natural light",
+      "Kitchenette access",
+      "Whiteboard and display wall",
+      "Wi-Fi included",
+    ],
+    rates: [
+      { label: "90 Minutes", price: "€50", note: "" },
+      { label: "Half Day",   price: "€150", note: "8:00–14:00 or 14:00–20:00" },
+      { label: "Full Day",   price: "€300", note: "8:00–20:00" },
+    ],
+    ratesNote: "Rates exclude IVA. Extended hours up to 22:00 available on request.",
+    cateringNote:
+      "Food and drink packages available on request — organic teas, juices, snack platters and more.",
+    cta: {
+      headline: "Ready to book the Workshop?",
     },
   },
 

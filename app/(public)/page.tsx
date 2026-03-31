@@ -68,7 +68,7 @@ export default function HomePage() {
               {homepage.spaces.sectionHeadline}
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {homepage.spaces.cards.map((f) => (
               <div
                 key={f.title}
@@ -87,6 +87,24 @@ export default function HomePage() {
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* Matterport 3D Tour */}
+          <div className="mt-16">
+            <p
+              className="text-xs tracking-[0.3em] uppercase mb-4 text-center"
+              style={{ color: "var(--color-trumpet)" }}
+            >
+              Explore the space
+            </p>
+            <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://my.matterport.com/show/?m=FxuqjEQ6gqS&play=1"
+                className="absolute inset-0 w-full h-full"
+                allow="fullscreen; xr-spatial-tracking"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
