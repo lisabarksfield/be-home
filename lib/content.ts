@@ -417,6 +417,15 @@ export const content = {
         tags: ["Sound Bath", "Singing", "All Ages"],
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
+      {
+        slug: "eliza",
+        name: "Eliza",
+        specialty: "Restorative Yoga",
+        bio: "I teach restorative yoga — a slow, supported practice designed to help the body fully release and recover. My sessions create space for deep rest, nervous system regulation, and genuine renewal.",
+        image: "/practitioners/eliza.jpg",
+        tags: ["Restorative Yoga", "Rest", "Recovery"],
+        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
+      },
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",
