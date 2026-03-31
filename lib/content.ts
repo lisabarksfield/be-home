@@ -310,6 +310,7 @@ export const content = {
       {
         id: "1",
         date: "Thursday, 26 March 2026",
+        isoDate: "2026-03-26",
         time: "19:00",
         title: "An Evening of Sound",
         description:
@@ -320,6 +321,21 @@ export const content = {
         spots: 0,
         whatsappUrl:
           "https://wa.me/351960057880?text=I+would+like+a+space+at+your+sound+bath+event+on+Thursday+26+March+at+7pm",
+      },
+      {
+        id: "2",
+        date: "Saturday, 25 April 2026",
+        isoDate: "2026-04-25",
+        time: "10:00",
+        title: "Rhythm and Rest",
+        description:
+          "This class is about balance. Energy and ease. Movement and stillness. Rhythm and Rest starts with a silent disco, an invitation to reconnect with your body through music and free movement. From there, we transition into restorative yoga, giving the body time to slow down, release, and fully rest. 80 Minutes of Bliss. It's simple, intentional, and deeply nourishing.",
+        practitioner: "Jane & Eliza",
+        price: "€25",
+        type: "Workshop",
+        spots: 0,
+        whatsappUrl:
+          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+Rhythm+and+Rest+on+Saturday+25+April+at+10am",
       },
     ],
     hostCta: {
