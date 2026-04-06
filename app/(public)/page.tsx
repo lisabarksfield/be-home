@@ -99,10 +99,11 @@ export default function HomePage() {
             </p>
             <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                src="https://my.matterport.com/show/?m=FxuqjEQ6gqS&play=1"
+                src="https://my.matterport.com/show/?m=1m8BpcWptXP"
                 className="absolute inset-0 w-full h-full"
-                allow="fullscreen; xr-spatial-tracking"
+                allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
                 allowFullScreen
+                frameBorder="0"
               />
             </div>
           </div>
