@@ -29,7 +29,13 @@ export default function PractitionersPage() {
               style={{ backgroundColor: "var(--color-stone-warm)" }}
             >
               <div className="h-48 relative overflow-hidden" style={{ backgroundColor: "var(--color-stone)" }}>
-                <Image src={p.image} alt={p.name} fill className="object-cover object-[center_35%]" />
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  className="object-cover"
+                  style={{ objectPosition: p.imageObjectPosition ?? "center 35%" }}
+                />
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
@@ -40,7 +46,7 @@ export default function PractitionersPage() {
                     <p className="text-sm" style={{ color: "var(--color-stone-deep)" }}>{p.specialty}</p>
                   </div>
                 </div>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--color-stone-deep)" }}>
+                <p className="text-sm leading-relaxed mb-4 line-clamp-4" style={{ color: "var(--color-stone-deep)" }}>
                   {p.bio}
                 </p>
                 <div className="flex flex-wrap gap-2">

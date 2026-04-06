@@ -390,6 +390,7 @@ export const content = {
         bio: "I'm a dedicated yoga teacher whose classes blend movement, breath and stillness. I bring warmth and care to everyone I work with.",
         tags: ["Reiki", "Yoga", "Silent Disco"],
         image: "/practitioners/jane.jpg",
+        imageProfile: "",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
       {
@@ -399,6 +400,7 @@ export const content = {
         bio: "I'm Lianne, founder of The Creative Break. I run crafting sessions and creative workshops that give you permission to slow down, make something with your hands, and remember what it feels like to create without pressure. Keep an eye out for special collaborations with other Be Home practitioners, some of my favorite workshops happen when we bring different creative worlds together.",
         tags: ["Creativity", "Crafting", "Workshops"],
         image: "/practitioners/lianne.jpg",
+        imageProfile: "",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
       {
@@ -407,17 +409,30 @@ export const content = {
         specialty: "Sound Baths",
         bio: "I guide immersive sound bath experiences using a range of instruments and my own voice. I hold sessions for all ages, creating space for deep rest and renewal.",
         image: "/practitioners/justyna.jpg",
+        imageProfile: "",
         tags: ["Sound Bath", "Singing", "All Ages"],
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
       {
         slug: "eliza",
-        name: "Eliza",
+        name: "Eliza Roza Ché",
         specialty: "Restorative Yoga",
-        bio: "I teach restorative yoga — a slow, supported practice designed to help the body fully release and recover. My sessions create space for deep rest, nervous system regulation, and genuine renewal.",
+        bio: "My name is Eliza Roza Ché. I have been teaching yoga since 2015, with a practice rooted in the integration of movement, breath, and nervous system psychology. I hold 300 hours of Hot 26+ (Bikram) training, 200 hours of Vinyasa training, and a 50-hour mentorship under the late Melanie Castleman, alongside a BA in Applied Psychology from the University of South Africa.\n\nRestorative Yoga is at the heart of what I do. A chronically activated nervous system affects everything: how we feel, how we function, and how we sleep, and somatic approaches to down-regulation are among the most powerful tools we have for restoring that balance. My classes are deep, dynamic, and intentional, with language drawn from both yoga tradition and somatic psychology.\n\nPortuguese by descent, raised in South Africa, and based in Cascais since 2021, I spent over two decades working as a professional television director and producer across Africa, a background that shaped how I communicate: clearly, without fuss, with a strong sense of structure and pacing. My Restorative classes welcome complete beginners and experienced practitioners equally. What brings people back is not the difficulty of the practice. It is the quality of the stillness.",
         image: "/practitioners/eliza.jpg",
+        imageProfile: "/practitioners/eliza-profile.jpg",
+        imageObjectPosition: "center 15%",
         tags: ["Restorative Yoga", "Rest", "Recovery"],
-        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
+        whatsappUrl: "",
+      },
+      {
+        slug: "ramen",
+        name: "Ramen",
+        specialty: "Vinyasa Yoga & Active Breathwork",
+        bio: "I'm Ramen, and I specialise in vinyasa yoga and active breathwork because these practices are game changers.\n\nVinyasa is all about finding your flow, linking breath to movement, building strength and flexibility, and learning to ride life's transitions with grace instead of resistance.\n\nActive breathwork can calm the nervous system, release what we've been holding onto, and bring a sense of clarity and lightness that stays with you long after the class ends.\n\nI fell in love with these practices because of the way they made me feel — they don't just make you feel good for an hour, they rewire how you handle stress, process emotions, and show up in the world.\n\nI'm here to share that with you, and trust me, once you tap into the power of intentional movement and breath, there's no going back.",
+        image: "/practitioners/ramen.jpg",
+        imageProfile: "/practitioners/ramen.jpg",
+        tags: ["Vinyasa Yoga", "Breathwork", "Movement"],
+        whatsappUrl: "",
       },
     ],
     joinCta: {
