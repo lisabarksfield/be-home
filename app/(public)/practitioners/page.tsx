@@ -35,7 +35,7 @@ export default function PractitionersPage() {
                     alt={p.name}
                     fill
                     className="object-cover"
-                    style={{ objectPosition: p.imageObjectPosition ?? "center 35%" }}
+                    style={{ objectPosition: ('imageObjectPosition' in p ? p.imageObjectPosition as string : undefined) ?? "center 35%" }}
                   />
                 ) : (
                   <div
