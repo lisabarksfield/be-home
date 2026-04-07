@@ -28,14 +28,23 @@ export default async function PractitionerProfilePage({ params }: { params: Prom
           </Link>
           <div className="flex flex-col md:flex-row gap-10 items-start">
             {/* Avatar / photo */}
-            <div className="w-36 h-36 rounded-full overflow-hidden shrink-0 relative">
-              <Image
-                src={practitioner.image}
-                alt={practitioner.name}
-                fill
-                className="object-cover object-[center_35%]"
-              />
-            </div>
+            {practitioner.image ? (
+              <div className="w-36 h-36 rounded-full overflow-hidden shrink-0 relative">
+                <Image
+                  src={practitioner.image}
+                  alt={practitioner.name}
+                  fill
+                  className="object-cover object-[center_35%]"
+                />
+              </div>
+            ) : (
+              <div
+                className="w-36 h-36 rounded-full flex items-center justify-center text-3xl font-light shrink-0"
+                style={{ backgroundColor: "var(--color-stone)", color: "var(--color-cream)" }}
+              >
+                {practitioner.name.split(" ").map((n) => n[0]).join("")}
+              </div>
+            )}
 
             <div>
               <h1

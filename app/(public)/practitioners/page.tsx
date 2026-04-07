@@ -28,14 +28,23 @@ export default function PractitionersPage() {
               className="group block rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
               style={{ backgroundColor: "var(--color-stone-warm)" }}
             >
-              <div className="h-48 relative overflow-hidden" style={{ backgroundColor: "var(--color-stone)" }}>
-                <Image
-                  src={p.image}
-                  alt={p.name}
-                  fill
-                  className="object-cover"
-                  style={{ objectPosition: p.imageObjectPosition ?? "center 35%" }}
-                />
+              <div className="h-48 relative overflow-hidden flex items-center justify-center" style={{ backgroundColor: "var(--color-stone)" }}>
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: p.imageObjectPosition ?? "center 35%" }}
+                  />
+                ) : (
+                  <div
+                    className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-light"
+                    style={{ backgroundColor: "var(--color-stone-deep)", color: "var(--color-cream)" }}
+                  >
+                    {p.name.split(" ").map((n) => n[0]).join("")}
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
