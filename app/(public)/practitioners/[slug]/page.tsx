@@ -7,9 +7,7 @@ export default async function PractitionerProfilePage({ params }: { params: Prom
   const { slug } = await params;
   const practitioner = content.practitioners.directory.find((p) => p.slug === slug);
 
-  if (!practitioner) {
-    notFound();
-  }
+  if (!practitioner) return notFound();
 
   return (
     <div>
@@ -28,7 +26,7 @@ export default async function PractitionerProfilePage({ params }: { params: Prom
           </Link>
           <div className="flex flex-col md:flex-row gap-10 items-start">
             {/* Avatar / photo */}
-            {practitioner.image ? (
+            {(practitioner.image as string) ? (
               <div className="w-36 h-36 rounded-full overflow-hidden shrink-0 relative">
                 <Image
                   src={practitioner.image}

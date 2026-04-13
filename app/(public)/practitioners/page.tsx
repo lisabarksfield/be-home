@@ -29,7 +29,7 @@ export default function PractitionersPage() {
               style={{ backgroundColor: "var(--color-stone-warm)" }}
             >
               <div className="h-48 relative overflow-hidden flex items-center justify-center" style={{ backgroundColor: "var(--color-stone)" }}>
-                {p.image ? (
+                {(p.image as string) ? (
                   <Image
                     src={p.image}
                     alt={p.name}
