@@ -43,6 +43,9 @@ const rooms: { label: string; images: GalleryImage[] }[] = [
     label: "The Space",
     images: [
       { src: "/space/space-1.jpg", alt: "The Space — guest bathroom" },
+      { src: "/space/space-2.jpg", alt: "The Space — corridor with storage and bathroom beyond" },
+      { src: "/space/space-3.jpg", alt: "The Space — Be Home rolled cork mat" },
+      { src: "/space/space-4.jpg", alt: "The Space — changing room corridor" },
     ],
   },
 ];
