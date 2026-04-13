@@ -40,6 +40,7 @@ const navGroups: NavGroup[] = [
     label: "About",
     items: [
       { href: "/about",    label: "Our Story", sub: "About Be Home Cascais" },
+      { href: "/gallery",  label: "Gallery",   sub: "Photos of our spaces" },
       { href: "/contact",  label: "Contact",   sub: "Get in touch with us" },
     ],
   },
