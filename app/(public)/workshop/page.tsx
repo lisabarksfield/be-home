@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 
@@ -25,8 +26,16 @@ export default function WorkshopPage() {
         </Link>
       </section>
 
-      <div className="h-80 md:h-[500px] flex items-center justify-center text-sm" style={{ backgroundColor: "var(--color-stone)", color: "var(--color-stone-deep)" }}>
-        [ Workshop photography coming soon ]
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="relative h-72 md:h-[500px]">
+          <Image src="/workshop/workshop-1.jpg" alt="Be Home workshop space with dining table and sofas" fill className="object-cover" />
+        </div>
+        <div className="relative h-72 md:h-[500px]">
+          <Image src="/workshop/workshop-2.jpg" alt="Be Home workshop room with curved sofa and fireplace" fill className="object-cover" />
+        </div>
+        <div className="relative h-72 md:h-[500px]">
+          <Image src="/workshop/workshop-3.jpg" alt="Be Home workshop dining table setup with fireplace" fill className="object-cover" />
+        </div>
       </div>
 
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
