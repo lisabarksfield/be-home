@@ -20,7 +20,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
-        <div className="max-w-4xl mx-auto flex flex-col gap-10">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
             <Image src="/about-founder.jpg" alt="Lisa — founder of Be Home Cascais" fill className="object-cover" style={{ objectPosition: "center 30%" }} />
           </div>
