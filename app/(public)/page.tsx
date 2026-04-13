@@ -50,6 +50,13 @@ export default function HomePage() {
             >
               {homepage.hero.ctaSecondary}
             </Link>
+            <Link
+              href="/gallery"
+              style={{ border: "1.5px solid var(--color-charcoal)", color: "var(--color-charcoal)" }}
+              className="px-8 py-3.5 rounded-full font-medium tracking-wide hover:opacity-60 transition-opacity"
+            >
+              View Gallery
+            </Link>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
