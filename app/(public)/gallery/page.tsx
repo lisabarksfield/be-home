@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 type GalleryImage = { src: string; alt: string };
-type Room = { label: string; images: GalleryImage[]; layout?: "two-column" };
+type Room = { label: string; images: GalleryImage[]; layout?: "stacked-left" };
 
 const rooms: Room[] = [
   {
@@ -22,11 +22,11 @@ const rooms: Room[] = [
   },
   {
     label: "Treatment Room",
-    layout: "two-column",
+    layout: "stacked-left",
     images: [
       { src: "/treatment-room/treatment-1.jpg", alt: "Treatment Room — massage table" },
-      { src: "/treatment-room/treatment-2.jpg", alt: "Treatment Room — table with lamp and flowers" },
       { src: "/treatment-room/treatment-4.jpg", alt: "Treatment Room — wide view with massage table and armchair" },
+      { src: "/treatment-room/treatment-2.jpg", alt: "Treatment Room — table with lamp and flowers" },
       { src: "/treatment-room/treatment-3.jpg", alt: "Treatment Room — armchair and lamp detail" },
     ],
   },
@@ -108,27 +108,28 @@ export default function GalleryPage() {
           <h2 className="text-2xl font-light mb-6" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
             {room.label}
           </h2>
-          {room.layout === "two-column" ? (
+          {room.layout === "stacked-left" ? (
             <div className="flex gap-3">
-              {[room.images.filter((_, i) => i % 2 === 0), room.images.filter((_, i) => i % 2 === 1)].map((col, ci) => (
-                <div key={ci} className="flex flex-col gap-3 flex-1">
-                  {col.map((img) => (
-                    <div
-                      key={img.src}
-                      className="cursor-pointer overflow-hidden rounded-xl group"
-                      onClick={() => openLightbox(img.src)}
-                    >
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        width={1080}
-                        height={1080}
-                        className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]"
-                      />
-                    </div>
-                  ))}
+              {/* Col 1: first two images stacked */}
+              <div className="flex flex-col gap-3 flex-1">
+                {room.images.slice(0, 2).map((img) => (
+                  <div key={img.src} className="cursor-pointer overflow-hidden rounded-xl group" onClick={() => openLightbox(img.src)}>
+                    <Image src={img.src} alt={img.alt} width={1080} height={1080} className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]" />
+                  </div>
+                ))}
+              </div>
+              {/* Col 2: third image */}
+              <div className="flex-1">
+                <div className="cursor-pointer overflow-hidden rounded-xl group" onClick={() => openLightbox(room.images[2].src)}>
+                  <Image src={room.images[2].src} alt={room.images[2].alt} width={1080} height={1080} className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]" />
                 </div>
-              ))}
+              </div>
+              {/* Col 3: fourth image */}
+              <div className="flex-1">
+                <div className="cursor-pointer overflow-hidden rounded-xl group" onClick={() => openLightbox(room.images[3].src)}>
+                  <Image src={room.images[3].src} alt={room.images[3].alt} width={1080} height={1080} className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]" />
+                </div>
+              </div>
             </div>
           ) : (
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-3">
