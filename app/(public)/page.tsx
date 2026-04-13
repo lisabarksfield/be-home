@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { content } from "@/lib/content";
 
 const { homepage } = content;
@@ -61,6 +62,33 @@ export default function HomePage() {
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <div className="w-px h-12 animate-pulse" style={{ backgroundColor: "var(--color-stone-deep)" }} />
+        </div>
+      </section>
+
+      {/* Photo strip */}
+      <section className="py-16 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
+        <div className="max-w-7xl mx-auto">
+          {/* Top row: wide studio + treatment room */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+            <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+              <Image src="/home/home-studio-wide.jpg" alt="The Studio — yoga mats laid out" fill className="object-cover" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+              <Image src="/home/home-treatment.jpg" alt="Treatment Room" fill className="object-cover" />
+            </div>
+          </div>
+          {/* Bottom row: person in studio + workshop wide + workshop host */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              <Image src="/home/home-studio-person.jpg" alt="The Studio — practitioner meditating" fill className="object-cover" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              <Image src="/home/home-workshop-wide.jpg" alt="The Workshop — full room" fill className="object-cover" />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              <Image src="/home/home-workshop-host.jpg" alt="The Workshop — workshop in session" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </section>
 
