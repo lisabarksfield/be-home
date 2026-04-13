@@ -420,7 +420,7 @@ export const content = {
         bio: "My name is Eliza Roza Ché. I have been teaching yoga since 2015, with a practice rooted in the integration of movement, breath, and nervous system psychology. I hold 300 hours of Hot 26+ (Bikram) training, 200 hours of Vinyasa training, and a 50-hour mentorship under the late Melanie Castleman, alongside a BA in Applied Psychology from the University of South Africa.\n\nRestorative Yoga is at the heart of what I do. A chronically activated nervous system affects everything: how we feel, how we function, and how we sleep, and somatic approaches to down-regulation are among the most powerful tools we have for restoring that balance. My classes are deep, dynamic, and intentional, with language drawn from both yoga tradition and somatic psychology.\n\nPortuguese by descent, raised in South Africa, and based in Cascais since 2021, I spent over two decades working as a professional television director and producer across Africa, a background that shaped how I communicate: clearly, without fuss, with a strong sense of structure and pacing. My Restorative classes welcome complete beginners and experienced practitioners equally. What brings people back is not the difficulty of the practice. It is the quality of the stillness.",
         image: "/practitioners/eliza.jpg",
         imageProfile: "/practitioners/eliza-profile.jpg",
-        imageObjectPosition: "center 25%",
+        imageObjectPosition: "center 40%",
         tags: ["Restorative Yoga", "Rest", "Recovery"],
         whatsappUrl: "",
       },
