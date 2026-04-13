@@ -25,6 +25,7 @@ const rooms: { label: string; images: GalleryImage[] }[] = [
       { src: "/treatment-room/treatment-1.jpg", alt: "Treatment Room — massage table" },
       { src: "/treatment-room/treatment-2.jpg", alt: "Treatment Room — table with lamp and flowers" },
       { src: "/treatment-room/treatment-3.jpg", alt: "Treatment Room — armchair and lamp detail" },
+      { src: "/treatment-room/treatment-4.jpg", alt: "Treatment Room — wide view with massage table and armchair" },
     ],
   },
   {
