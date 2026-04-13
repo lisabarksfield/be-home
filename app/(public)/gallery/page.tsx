@@ -4,8 +4,9 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 type GalleryImage = { src: string; alt: string };
+type Room = { label: string; images: GalleryImage[]; layout?: "two-column" };
 
-const rooms: { label: string; images: GalleryImage[] }[] = [
+const rooms: Room[] = [
   {
     label: "The Studio",
     images: [
@@ -21,11 +22,12 @@ const rooms: { label: string; images: GalleryImage[] }[] = [
   },
   {
     label: "Treatment Room",
+    layout: "two-column",
     images: [
       { src: "/treatment-room/treatment-1.jpg", alt: "Treatment Room — massage table" },
       { src: "/treatment-room/treatment-2.jpg", alt: "Treatment Room — table with lamp and flowers" },
-      { src: "/treatment-room/treatment-3.jpg", alt: "Treatment Room — armchair and lamp detail" },
       { src: "/treatment-room/treatment-4.jpg", alt: "Treatment Room — wide view with massage table and armchair" },
+      { src: "/treatment-room/treatment-3.jpg", alt: "Treatment Room — armchair and lamp detail" },
     ],
   },
   {
@@ -106,23 +108,47 @@ export default function GalleryPage() {
           <h2 className="text-2xl font-light mb-6" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
             {room.label}
           </h2>
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-3">
-            {room.images.map((img) => (
-              <div
-                key={img.src}
-                className="relative break-inside-avoid mb-3 cursor-pointer overflow-hidden rounded-xl group"
-                onClick={() => openLightbox(img.src)}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={1080}
-                  height={1080}
-                  className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-            ))}
-          </div>
+          {room.layout === "two-column" ? (
+            <div className="flex gap-3">
+              {[room.images.filter((_, i) => i % 2 === 0), room.images.filter((_, i) => i % 2 === 1)].map((col, ci) => (
+                <div key={ci} className="flex flex-col gap-3 flex-1">
+                  {col.map((img) => (
+                    <div
+                      key={img.src}
+                      className="cursor-pointer overflow-hidden rounded-xl group"
+                      onClick={() => openLightbox(img.src)}
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        width={1080}
+                        height={1080}
+                        className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-3">
+              {room.images.map((img) => (
+                <div
+                  key={img.src}
+                  className="relative break-inside-avoid mb-3 cursor-pointer overflow-hidden rounded-xl group"
+                  onClick={() => openLightbox(img.src)}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={1080}
+                    height={1080}
+                    className="w-full h-auto block transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </section>
       ))}
 
