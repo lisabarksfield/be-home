@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 
@@ -25,8 +26,16 @@ export default function TreatmentRoomPage() {
         </Link>
       </section>
 
-      <div className="h-80 md:h-[500px] flex items-center justify-center text-sm" style={{ backgroundColor: "var(--color-stone)", color: "var(--color-stone-deep)" }}>
-        [ Treatment room photography coming soon ]
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="relative h-72 md:h-[500px]">
+          <Image src="/treatment-room/treatment-1.jpg" alt="Be Home treatment room with massage table" fill className="object-cover" />
+        </div>
+        <div className="relative h-72 md:h-[500px]">
+          <Image src="/treatment-room/treatment-2.jpg" alt="Be Home treatment room detail with lamp and flowers" fill className="object-cover" />
+        </div>
+        <div className="relative h-72 md:h-[500px]">
+          <Image src="/treatment-room/treatment-3.jpg" alt="Be Home treatment room corner with armchair" fill className="object-cover" />
+        </div>
       </div>
 
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
