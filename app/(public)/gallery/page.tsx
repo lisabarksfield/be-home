@@ -33,9 +33,11 @@ const rooms: { label: string; images: GalleryImage[] }[] = [
     images: [
       { src: "/workshop/workshop-1.jpg", alt: "The Workshop — dining table and sofas" },
       { src: "/workshop/workshop-5.jpg", alt: "The Workshop — craft workshop session" },
+      { src: "/workshop/workshop-8.jpg", alt: "The Workshop — dining table with fireplace close-up" },
       { src: "/workshop/workshop-2.jpg", alt: "The Workshop — sofa and table" },
       { src: "/workshop/workshop-6.jpg", alt: "The Workshop — workshop in action" },
-      { src: "/workshop/workshop-3.jpg", alt: "The Workshop — dining table with fireplace" },
+      { src: "/workshop/workshop-3.jpg", alt: "The Workshop — dining table fireplace wide" },
+      { src: "/workshop/workshop-9.jpg", alt: "The Workshop — full room view with sofas and doors" },
       { src: "/workshop/workshop-7.jpg", alt: "The Workshop — workshop host smiling" },
       { src: "/workshop/workshop-4.jpg", alt: "The Workshop — curved sofa with studio beyond" },
     ],
