@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { content } from "@/lib/content";
 
 const { about } = content;
@@ -20,8 +21,8 @@ export default function AboutPage() {
 
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div className="h-80 rounded-2xl flex items-center justify-center text-sm" style={{ backgroundColor: "var(--color-stone)", color: "var(--color-stone-deep)" }}>
-            [ About photo coming soon ]
+          <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            <Image src="/about-founder.jpg" alt="Lisa — founder of Be Home Cascais" fill className="object-cover" />
           </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
