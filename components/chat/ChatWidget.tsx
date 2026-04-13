@@ -5,6 +5,13 @@ import { useState, useRef, useEffect } from "react";
 interface Message {
   role: "user" | "assistant";
   content: string;
+  showForm?: boolean;
+}
+
+interface LeadForm {
+  name: string;
+  email: string;
+  message: string;
 }
 
 export default function ChatWidget() {
@@ -13,11 +20,13 @@ export default function ChatWidget() {
     {
       role: "assistant",
       content:
-        "Hi, welcome to Be Home! 👋 I'm here to help with questions about our spaces, classes, treatments, or anything else. What can I help you with?",
+        "Hi, welcome to Be Home! I'm here to help with questions about our spaces, classes, treatments, or anything else. What can I help you with?",
     },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [leadForm, setLeadForm] = useState<LeadForm>({ name: "", email: "", message: "" });
+  const [leadSubmitted, setLeadSubmitted] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -54,26 +63,64 @@ export default function ChatWidget() {
       while (reader) {
         const { done, value } = await reader.read();
         if (done) break;
-        const chunk = decoder.decode(value);
-        assistantText += chunk;
+        assistantText += decoder.decode(value);
         setMessages((m) => {
           const updated = [...m];
           updated[updated.length - 1] = { role: "assistant", content: assistantText };
           return updated;
         });
       }
+
+      // Detect lead capture trigger
+      const hasForm = assistantText.includes("[ENQUIRY_FORM]");
+      setMessages((m) => {
+        const updated = [...m];
+        updated[updated.length - 1] = {
+          role: "assistant",
+          content: assistantText.replace("[ENQUIRY_FORM]", "").trim(),
+          showForm: hasForm,
+        };
+        return updated;
+      });
     } catch {
       setMessages((m) => [
         ...m,
         {
           role: "assistant",
-          content:
-            "Sorry, I'm having trouble responding right now. Please email us at hello@behome.pt or use the contact form.",
+          content: "Sorry, I'm having trouble right now. Please try again or email us at hello@behomecascais.com",
         },
       ]);
     } finally {
       setLoading(false);
     }
+  }
+
+  async function submitLead(e: React.FormEvent) {
+    e.preventDefault();
+    if (!leadForm.name || !leadForm.email || !leadForm.message) return;
+
+    // Find the last user message to use as context
+    const lastUserMsg = [...messages].reverse().find(m => m.role === "user")?.content ?? "";
+
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: leadForm.name,
+        email: leadForm.email,
+        subject: "Chat enquiry",
+        message: `Via chat assistant.\n\nOriginal question: ${lastUserMsg}\n\nMessage: ${leadForm.message}`,
+      }),
+    });
+
+    setLeadSubmitted(true);
+    setMessages((m) => [
+      ...m,
+      {
+        role: "assistant",
+        content: `Thanks ${leadForm.name}! We've got your details and will be in touch at ${leadForm.email} shortly.`,
+      },
+    ]);
   }
 
   return (
@@ -100,8 +147,8 @@ export default function ChatWidget() {
             style={{ backgroundColor: "var(--color-charcoal)" }}
           >
             <div
-              className="w-8 h-8 rounded-full flex items-center justify-center text-sm"
-              style={{ backgroundColor: "var(--color-trumpet)" }}
+              className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium"
+              style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
             >
               BH
             </div>
@@ -116,27 +163,66 @@ export default function ChatWidget() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-80">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-96">
             {messages.map((msg, i) => (
-              <div
-                key={i}
-                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className="max-w-[85%] rounded-xl px-4 py-2.5 text-sm leading-relaxed"
-                  style={
-                    msg.role === "user"
-                      ? {
-                          backgroundColor: "var(--color-charcoal)",
-                          color: "var(--color-cream)",
-                        }
-                      : {
-                          backgroundColor: "var(--color-stone-warm)",
-                          color: "var(--color-charcoal)",
-                        }
-                  }
-                >
-                  {msg.content || (loading ? "..." : "")}
+              <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                <div className="max-w-[90%] space-y-3">
+                  <div
+                    className="rounded-xl px-4 py-2.5 text-sm leading-relaxed"
+                    style={
+                      msg.role === "user"
+                        ? { backgroundColor: "var(--color-charcoal)", color: "var(--color-cream)" }
+                        : { backgroundColor: "var(--color-stone-warm)", color: "var(--color-charcoal)" }
+                    }
+                  >
+                    {msg.content || (loading && i === messages.length - 1 ? "..." : "")}
+                  </div>
+
+                  {/* Inline lead capture form */}
+                  {msg.showForm && !leadSubmitted && (
+                    <form
+                      onSubmit={submitLead}
+                      className="rounded-xl p-4 space-y-2.5 text-sm"
+                      style={{ backgroundColor: "var(--color-stone-warm)", border: "1px solid var(--color-stone)" }}
+                    >
+                      <p className="font-medium text-xs uppercase tracking-wider" style={{ color: "var(--color-stone-deep)" }}>
+                        Leave your details
+                      </p>
+                      <input
+                        required
+                        placeholder="Your name"
+                        value={leadForm.name}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, name: e.target.value }))}
+                        className="w-full rounded-lg px-3 py-2 text-sm outline-none"
+                        style={{ backgroundColor: "var(--color-cream)", color: "var(--color-charcoal)" }}
+                      />
+                      <input
+                        required
+                        type="email"
+                        placeholder="Your email"
+                        value={leadForm.email}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, email: e.target.value }))}
+                        className="w-full rounded-lg px-3 py-2 text-sm outline-none"
+                        style={{ backgroundColor: "var(--color-cream)", color: "var(--color-charcoal)" }}
+                      />
+                      <textarea
+                        required
+                        placeholder="Your question or message"
+                        value={leadForm.message}
+                        onChange={(e) => setLeadForm((f) => ({ ...f, message: e.target.value }))}
+                        rows={3}
+                        className="w-full rounded-lg px-3 py-2 text-sm outline-none resize-none"
+                        style={{ backgroundColor: "var(--color-cream)", color: "var(--color-charcoal)" }}
+                      />
+                      <button
+                        type="submit"
+                        className="w-full py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
+                      >
+                        Send message
+                      </button>
+                    </form>
+                  )}
                 </div>
               </div>
             ))}
@@ -154,19 +240,13 @@ export default function ChatWidget() {
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Type a message..."
               className="flex-1 rounded-lg px-3 py-2 text-sm outline-none"
-              style={{
-                backgroundColor: "var(--color-stone-warm)",
-                color: "var(--color-charcoal)",
-              }}
+              style={{ backgroundColor: "var(--color-stone-warm)", color: "var(--color-charcoal)" }}
             />
             <button
               onClick={sendMessage}
               disabled={loading || !input.trim()}
               className="px-4 py-2 rounded-lg text-sm font-medium disabled:opacity-40 transition-opacity"
-              style={{
-                backgroundColor: "var(--color-trumpet)",
-                color: "var(--color-charcoal)",
-              }}
+              style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
             >
               Send
             </button>

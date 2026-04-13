@@ -152,6 +152,22 @@ export default function GalleryPage() {
         </section>
       ))}
 
+      {/* 3D Tour */}
+      <section className="px-6 pb-20 max-w-7xl mx-auto">
+        <h2 className="text-2xl font-light mb-6" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
+          Explore in 3D
+        </h2>
+        <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+          <iframe
+            src="https://my.matterport.com/show/?m=1m8BpcWptXP"
+            className="absolute inset-0 w-full h-full"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowFullScreen
+            frameBorder="0"
+          />
+        </div>
+      </section>
+
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <div
