@@ -12,6 +12,11 @@ const rooms: { label: string; images: GalleryImage[] }[] = [
       { src: "/studio/studio-1.jpg", alt: "The Studio — yoga mats laid out" },
       { src: "/studio/studio-2.jpg", alt: "The Studio — sheer curtains and warm light" },
       { src: "/studio/studio-3.jpg", alt: "The Studio — full width view" },
+      { src: "/studio/studio-4.jpg", alt: "The Studio — entrance doors with curtains" },
+      { src: "/studio/studio-5.jpg", alt: "The Studio — yoga mats at floor level" },
+      { src: "/studio/studio-6.jpg", alt: "The Studio — practitioner meditating" },
+      { src: "/studio/studio-7.jpg", alt: "The Studio — practitioner seated in full room" },
+      { src: "/studio/studio-8.jpg", alt: "The Studio — Be Home cork mat detail" },
     ],
   },
   {
@@ -28,6 +33,16 @@ const rooms: { label: string; images: GalleryImage[] }[] = [
       { src: "/workshop/workshop-1.jpg", alt: "The Workshop — dining table and sofas" },
       { src: "/workshop/workshop-2.jpg", alt: "The Workshop — sofa and table" },
       { src: "/workshop/workshop-3.jpg", alt: "The Workshop — dining table with fireplace" },
+      { src: "/workshop/workshop-4.jpg", alt: "The Workshop — curved sofa with studio beyond" },
+      { src: "/workshop/workshop-5.jpg", alt: "The Workshop — craft workshop session" },
+      { src: "/workshop/workshop-6.jpg", alt: "The Workshop — workshop in action" },
+      { src: "/workshop/workshop-7.jpg", alt: "The Workshop — workshop host smiling" },
+    ],
+  },
+  {
+    label: "The Space",
+    images: [
+      { src: "/space/space-1.jpg", alt: "The Space — guest bathroom" },
     ],
   },
 ];
