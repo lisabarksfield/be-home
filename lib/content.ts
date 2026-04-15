@@ -343,7 +343,7 @@ export const content = {
         type: "Sound Bath",
         spots: 15,
         whatsappUrl:
-          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+the+Lunchtime+Sound+Bath+on+Monday+27+April+at+12%3A30pm",
+          "https://wa.me/351960057880?text=I+would+like+to+book+a+spot+at+the+Lunchtime+Sound+Bath+on+Monday+27+April+at+12%3A30pm",
       },
       {
         id: "4",
@@ -358,7 +358,7 @@ export const content = {
         type: "Sound Bath",
         spots: 15,
         whatsappUrl:
-          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+the+Evening+Sound+Bath+on+Friday+8+May+at+7pm",
+          "https://wa.me/351960057880?text=I+would+like+to+book+a+spot+at+the+Evening+Sound+Bath+on+Friday+8+May+at+7pm",
       },
     ],
     hostCta: {
