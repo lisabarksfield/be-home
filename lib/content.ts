@@ -330,6 +330,36 @@ export const content = {
         whatsappUrl:
           "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+Rhythm+and+Rest+on+Saturday+25+April+at+10am",
       },
+      {
+        id: "3",
+        date: "Monday, 27 April 2026",
+        isoDate: "2026-04-27",
+        time: "12:30",
+        title: "Lunchtime Sound Bath",
+        description:
+          "A one-hour sound bath in the middle of your day — an invitation to pause, breathe, and reset. Justyna guides you through an immersive experience using a range of instruments and her own voice, creating space for deep rest and renewal. No experience needed. Just come as you are, lie down, and let the sound do the rest. The perfect way to reclaim your afternoon.",
+        practitioner: "Justyna",
+        price: "€20",
+        type: "Sound Bath",
+        spots: 15,
+        whatsappUrl:
+          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+the+Lunchtime+Sound+Bath+on+Monday+27+April+at+12%3A30pm",
+      },
+      {
+        id: "4",
+        date: "Friday, 8 May 2026",
+        isoDate: "2026-05-08",
+        time: "19:00",
+        title: "Evening Sound Bath",
+        description:
+          "Close out your week with an hour of deep, immersive sound. Justyna uses a range of instruments and her own voice to guide you into a state of stillness — helping the nervous system unwind, the mind quieten, and the body fully let go. Whether it's been a long week or a good one, a Friday evening sound bath is one of the kindest things you can do for yourself. Come as you are.",
+        practitioner: "Justyna",
+        price: "€20",
+        type: "Sound Bath",
+        spots: 15,
+        whatsappUrl:
+          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+the+Evening+Sound+Bath+on+Friday+8+May+at+7pm",
+      },
     ],
     hostCta: {
       headline: "Want to run an event at Be Home?",
