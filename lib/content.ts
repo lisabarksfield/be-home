@@ -316,6 +316,20 @@ export const content = {
     },
     list: [
       {
+        id: "1",
+        date: "Thursday, 26 March 2026",
+        isoDate: "2026-03-26",
+        time: "19:00",
+        title: "An Evening of Sound",
+        description:
+          "A gentle evening of sound — crystal bowls, gong, chimes, and soft voice. A space to slow down, breathe a little deeper, and let the nervous system unwind in its own time. No pressure, no expectations. Just come as you are.",
+        practitioner: "Justyna",
+        price: "€20 · Free for teens",
+        type: "Sound Bath",
+        spots: 0,
+        whatsappUrl: "",
+      },
+      {
         id: "2",
         date: "Saturday, 25 April 2026",
         isoDate: "2026-04-25",
