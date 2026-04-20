@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
+import { PricingDisclaimer } from "@/components/ui/PricingDisclaimer";
 
 const { treatmentRoom } = content;
 
@@ -75,7 +76,7 @@ export default function TreatmentRoomPage() {
                     <p className="text-xs mt-0.5" style={{ color: "var(--color-stone-deep)" }}>{r.note}</p>
                   </div>
                   <p className="text-2xl font-light" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
-                    {r.price}
+                    {r.price}*
                   </p>
                 </div>
               ))}
@@ -83,6 +84,7 @@ export default function TreatmentRoomPage() {
             <p className="text-xs mt-4" style={{ color: "var(--color-stone-deep)" }}>
               {treatmentRoom.ratesNote}
             </p>
+            <PricingDisclaimer />
           </div>
         </div>
       </section>

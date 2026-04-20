@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { content } from "@/lib/content";
+import { PricingDisclaimer } from "@/components/ui/PricingDisclaimer";
 
 const { catering } = content;
 
@@ -47,7 +48,7 @@ export default function CateringPage() {
                   </div>
                   <div className="text-right">
                     <p className="text-2xl font-light" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
-                      €{p.pricePerHead}
+                      €{p.pricePerHead}*
                     </p>
                     <p className="text-xs" style={{ color: "var(--color-stone-deep)" }}>per person</p>
                   </div>
@@ -67,6 +68,10 @@ export default function CateringPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-6xl mx-auto mt-4 px-1">
+          <PricingDisclaimer />
         </div>
 
         <div className="max-w-6xl mx-auto mt-12 p-8 rounded-2xl text-center" style={{ backgroundColor: "var(--color-stone-warm)" }}>

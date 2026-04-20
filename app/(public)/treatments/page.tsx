@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { content } from "@/lib/content";
+import { PricingDisclaimer } from "@/components/ui/PricingDisclaimer";
 
 const { treatments } = content;
 
@@ -21,7 +22,7 @@ export default function TreatmentsPage() {
       <section className="py-16 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
         <div className="max-w-5xl mx-auto space-y-12">
           {treatments.list.map((t) => (
-            <div key={t.practitioner}>
+            <div key={t.practitioner} className="pb-4">
               <div className="flex items-center gap-4 mb-6">
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center text-sm font-medium"
@@ -59,7 +60,7 @@ export default function TreatmentsPage() {
                     </div>
                     <div className="flex items-center gap-4">
                       <span className="font-medium" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
-                        {tr.price}
+                        {tr.price}*
                       </span>
                       <a
                         href="https://example.com"
@@ -76,6 +77,7 @@ export default function TreatmentsPage() {
               </div>
             </div>
           ))}
+          <PricingDisclaimer />
         </div>
       </section>
     </div>
