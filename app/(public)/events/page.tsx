@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { content } from "@/lib/content";
-import { PricingDisclaimer } from "@/components/ui/PricingDisclaimer";
 
 const { events } = content;
 
@@ -92,7 +91,7 @@ export default function EventsPage() {
                             className="text-3xl font-light"
                             style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}
                           >
-                            {e.price}*
+                            {e.price}
                           </p>
                         </div>
                       </div>
@@ -121,7 +120,6 @@ export default function EventsPage() {
                 ))}
               </div>
             )}
-            <PricingDisclaimer />
           </section>
 
           {/* ── Previous Events ───────────────────────── */}

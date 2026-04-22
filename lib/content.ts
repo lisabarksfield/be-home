@@ -331,18 +331,18 @@ export const content = {
       },
       {
         id: "2",
-        date: "Saturday, 25 April 2026",
-        isoDate: "2026-04-25",
-        time: "10:00",
+        date: "Wednesday, 1 May 2026",
+        isoDate: "2026-05-01",
+        time: "18:00",
         title: "Rhythm and Rest",
         description:
-          "This class is about balance. Energy and ease. Movement and stillness. Rhythm and Rest starts with a silent disco, an invitation to reconnect with your body through music and free movement. From there, we transition into restorative yoga, giving the body time to slow down, release, and fully rest. 80 Minutes of Bliss. It's simple, intentional, and deeply nourishing.",
+          "This class is about balance. Energy and ease. Movement and stillness. Rhythm and Rest starts with a silent disco, an invitation to reconnect with your body through music and free movement. From there, we transition into restorative yoga, giving the body time to slow down, release, and fully rest. 80 Minutes of Bliss. It's simple, intentional, and deeply nourishing. We're holding this one on the new moon — a natural moment of stillness and new beginnings, and the perfect energy for a night like this.",
         practitioner: "Jane & Eliza",
         price: "€25",
         type: "Workshop",
         spots: 0,
         whatsappUrl:
-          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+Rhythm+and+Rest+on+Saturday+25+April+at+10am",
+          "https://wa.me/351915555249?text=I+would+like+to+book+a+spot+at+Rhythm+and+Rest+on+Wednesday+1+May+at+6pm",
       },
       {
         id: "3",
