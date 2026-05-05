@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { content } from "@/lib/content";
 
+export const dynamic = 'force-dynamic';
+
 const { events } = content;
 
 export default function EventsPage() {
