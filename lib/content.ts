@@ -469,6 +469,22 @@ export const content = {
         whatsappUrl: "",
       },
       {
+        slug: "carla",
+        name: "Carla",
+        specialty: "Sound Massage & Frequency Healing",
+        bio: "Rebalance your nervous system! If you feel like the world is closing in and stress has become a constant presence in your life, imagine stepping into a space of absolute stillness. My Sound and Frequency sessions are designed to help you re-tune your nervous system, allowing you to deeply relax.\n\nWith a background in Sound Healing Therapy and Advanced Frequency Medicine, I offer bespoke individual sessions and group Sound Baths. By working with singing bowls and a set of tuning forks for chakra and energy balancing, I help you release the blockages in your body and mind, guiding you back to a state of inner peace. Give yourself the gift of silence and let the vibration do the work!\n\nMy work is ideal for those who:",
+        bioPoints: [
+          "Seek a sanctuary of silence away from the daily hustle",
+          "Wish to embrace self-care through the power of sound",
+          "Desire a deeper connection with themselves or the Whole",
+          "Are navigating stress, anxiety, or feelings of disconnection",
+        ],
+        image: "/practitioners/carla.jpg",
+        imageProfile: "/practitioners/carla.jpg",
+        tags: ["Sound Massage", "Frequency Healing", "Sound Bath"],
+        whatsappUrl: "",
+      },
+      {
         slug: "ramen",
         name: "Ramen",
         specialty: "Vinyasa Yoga & Active Breathwork",

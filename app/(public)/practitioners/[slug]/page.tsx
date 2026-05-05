@@ -65,12 +65,23 @@ export default async function PractitionerProfilePage({ params }: { params: Prom
                   </span>
                 ))}
               </div>
-              <p
-                className="text-base leading-relaxed max-w-xl"
-                style={{ color: "var(--color-stone-deep)" }}
-              >
-                {practitioner.bio}
-              </p>
+              <div className="space-y-4 max-w-xl">
+                {practitioner.bio.split("\n\n").map((para, i) => (
+                  <p key={i} className="text-base leading-relaxed" style={{ color: "var(--color-stone-deep)" }}>
+                    {para}
+                  </p>
+                ))}
+                {"bioPoints" in practitioner && practitioner.bioPoints && (
+                  <ul className="space-y-2 mt-2">
+                    {(practitioner.bioPoints as readonly string[]).map((point) => (
+                      <li key={point} className="flex items-start gap-2 text-base" style={{ color: "var(--color-stone-deep)" }}>
+                        <span style={{ color: "var(--color-trumpet)" }}>–</span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           </div>
         </div>
