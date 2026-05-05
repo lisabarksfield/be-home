@@ -481,7 +481,7 @@ export const content = {
         ],
         image: "/practitioners/carla.jpg",
         imageProfile: "/practitioners/carla.jpg",
-        imageObjectPosition: "center 15%",
+        imageObjectPosition: "center 45%",
         tags: ["Sound Massage", "Frequency Healing", "Sound Bath"],
         whatsappUrl: "",
       },
