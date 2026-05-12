@@ -655,11 +655,11 @@ export const content = {
     },
     intro: {
       headline: "No theory. Just progress.",
-      body: "Every Tuesday we gather in the studio — laptops out, sleeves rolled up — and spend three hours working on your business together. Each session has a focus, but the real work is yours. You bring the challenges, we build the solutions.",
+      body: "Every Tuesday we gather in the studio, laptops out, sleeves rolled up, and spend three hours working on your business together. Each session has a focus, but the real work is yours. You bring the challenges, we build the solutions.",
     },
     details: {
       startDate: "Tuesday, 26 May 2026",
-      time: "1:00pm – 4:00pm",
+      time: "1:00pm to 4:00pm",
       location: "The Studio, Be Home Cascais",
       duration: "6 weeks",
       price: "€300",
@@ -672,7 +672,7 @@ export const content = {
       ],
     },
     weeks: [
-      { week: "Week 1", date: "26 May", focus: "Visibility", description: "Who knows you exist — and how to change that. We'll audit your current presence and build a plan to get seen by the right people." },
+      { week: "Week 1", date: "26 May", focus: "Visibility", description: "Who knows you exist, and how to change that. We'll audit your current presence and build a plan to get seen by the right people." },
       { week: "Week 2", date: "2 June", focus: "Content Strategy", description: "What to say, where to say it, and how often. We'll create a simple content system that actually fits your life." },
       { week: "Week 3", date: "9 June", focus: "Client Experience", description: "From first contact to lasting loyalty. We'll map your client journey and find the moments that matter most." },
       { week: "Week 4", date: "16 June", focus: "Outreach", description: "Growing your community and finding collaborations that feel good. We'll identify your best opportunities and make the first moves." },

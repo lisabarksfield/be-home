@@ -114,7 +114,7 @@ export default function RootsPage() {
                     className="flex items-start gap-3 text-base"
                     style={{ color: "var(--color-stone-deep)" }}
                   >
-                    <span style={{ color: "var(--color-trumpet)" }}>–</span>
+                    <span style={{ color: "var(--color-trumpet)" }}>◦</span>
                     {item}
                   </li>
                 ))}
