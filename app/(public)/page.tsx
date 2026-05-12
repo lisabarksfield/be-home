@@ -2,10 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { content } from "@/lib/content";
 
+export const dynamic = 'force-dynamic';
+
 const { homepage } = content;
 
-// Subset of events shown on the homepage
-const upcomingEvents = content.events.list.slice(0, 3);
+const today = new Date().toISOString().slice(0, 10);
+const upcomingEvents = content.events.list
+  .filter((e) => e.isoDate >= today)
+  .slice(0, 3);
 
 export default function HomePage() {
   return (

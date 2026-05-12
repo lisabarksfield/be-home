@@ -364,7 +364,7 @@ export const content = {
         date: "Friday, 8 May 2026",
         isoDate: "2026-05-08",
         time: "19:00",
-        title: "Evening Sound Bath",
+        title: "Evening Sound Bath — Justyna",
         description:
           "Close out your week with an hour of deep, immersive sound. Justyna uses a range of instruments and her own voice to guide you into a state of stillness — helping the nervous system unwind, the mind quieten, and the body fully let go. Whether it's been a long week or a good one, a Friday evening sound bath is one of the kindest things you can do for yourself. Come as you are.",
         practitioner: "Justyna",
@@ -373,6 +373,66 @@ export const content = {
         spots: 15,
         whatsappUrl:
           "https://wa.me/351960057880?text=I+would+like+to+book+a+spot+at+the+Evening+Sound+Bath+on+Friday+8+May+at+7pm",
+      },
+      {
+        id: "5",
+        date: "Thursday, 21 May 2026",
+        isoDate: "2026-05-21",
+        time: "19:00",
+        title: "The Creative Break",
+        description:
+          "A crafting and creativity session with Lianne, founder of The Creative Break. Come and make something with your hands — no experience needed, no pressure, just the simple pleasure of slowing down and creating. Bring yourself and leave with something beautiful.",
+        practitioner: "Lianne",
+        price: "TBC",
+        type: "Workshop",
+        spots: 12,
+        whatsappUrl:
+          "https://wa.me/351912384413?text=I+would+like+to+book+a+spot+at+The+Creative+Break+on+Thursday+21+May+at+7pm",
+      },
+      {
+        id: "6",
+        date: "Thursday, 28 May 2026",
+        isoDate: "2026-05-28",
+        time: "19:00",
+        title: "Restorative Yoga",
+        description:
+          "Every Thursday evening at 7pm, Eliza Roza Ché guides you through a deep, intentional restorative yoga practice. Drawing on somatic psychology and nervous system science, these classes create space for genuine down-regulation — releasing what you've been holding and restoring a sense of ease. Beginners and experienced practitioners equally welcome. Starting 28 May, every Thursday.",
+        practitioner: "Eliza Roza Ché",
+        price: "TBC",
+        type: "Class",
+        spots: 15,
+        whatsappUrl:
+          "https://wa.me/351967728873?text=I+would+like+to+book+a+spot+at+Restorative+Yoga+on+Thursdays+at+7pm+from+28+May",
+      },
+      {
+        id: "7",
+        date: "Sunday, 31 May 2026",
+        isoDate: "2026-05-31",
+        time: "19:00",
+        title: "Full Moon: Create & Activate",
+        description:
+          "A special full moon evening bringing together two of Be Home's most beloved practitioners. Start with a guided crafting session with Lianne — making something intentional under the full moon — then transition into an active breathwork journey with Ramen to activate, release, and set your intentions for the month ahead. A truly unique evening of creativity and breath.",
+        practitioner: "Lianne & Ramen",
+        price: "TBC",
+        type: "Special Event",
+        spots: 15,
+        whatsappUrl:
+          "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+the+Full+Moon+Create+and+Activate+on+Sunday+31+May+at+7pm",
+      },
+      {
+        id: "8",
+        date: "Friday, 12 June 2026",
+        isoDate: "2026-06-12",
+        time: "19:00",
+        title: "Evening Sound Bath",
+        description:
+          "Close out your week with an hour of deep, immersive sound. Justyna uses a range of instruments and her own voice to guide you into a state of stillness — helping the nervous system unwind, the mind quieten, and the body fully let go. Come as you are.",
+        practitioner: "Justyna",
+        price: "€20",
+        type: "Sound Bath",
+        spots: 15,
+        whatsappUrl:
+          "https://wa.me/351960057880?text=I+would+like+to+book+a+spot+at+the+Evening+Sound+Bath+on+Friday+12+June+at+7pm",
       },
     ],
     hostCta: {
