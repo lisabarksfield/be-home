@@ -383,7 +383,7 @@ export const content = {
         description:
           "A crafting and creativity session with Lianne, founder of The Creative Break. Come and make something with your hands — no experience needed, no pressure, just the simple pleasure of slowing down and creating. Bring yourself and leave with something beautiful.",
         practitioner: "Lianne",
-        price: "TBC",
+        price: "€28",
         type: "Workshop",
         spots: 12,
         whatsappUrl:
@@ -641,6 +641,49 @@ export const content = {
       headline: "Ready to plan your Bespoke day?",
       body: "Get in touch and tell us what you have in mind. We'll take it from there.",
       ctaLabel: "Enquire about Bespoke",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // ROOTS  /roots
+  // ─────────────────────────────────────────────
+  roots: {
+    hero: {
+      tagline: "Rooted in support, growing with purpose",
+      headline: "Be Home Roots",
+      body: "A 6-week co-working programme for practitioners who are ready to stop thinking about growing their practice and actually do it.",
+    },
+    intro: {
+      headline: "No theory. Just progress.",
+      body: "Every Tuesday we gather in the studio — laptops out, sleeves rolled up — and spend three hours working on your business together. Each session has a focus, but the real work is yours. You bring the challenges, we build the solutions.",
+    },
+    details: {
+      startDate: "Tuesday, 26 May 2026",
+      time: "1:00pm – 4:00pm",
+      location: "The Studio, Be Home Cascais",
+      duration: "6 weeks",
+      price: "€300",
+      includes: [
+        "6 x 3-hour co-working sessions in the studio",
+        "3 Be Home studio credits (worth up to €150)",
+        "Weekly 1:1 focus time with Lisa",
+        "A small group of like-minded practitioners",
+        "Accountability between sessions",
+      ],
+    },
+    weeks: [
+      { week: "Week 1", date: "26 May", focus: "Visibility", description: "Who knows you exist — and how to change that. We'll audit your current presence and build a plan to get seen by the right people." },
+      { week: "Week 2", date: "2 June", focus: "Content Strategy", description: "What to say, where to say it, and how often. We'll create a simple content system that actually fits your life." },
+      { week: "Week 3", date: "9 June", focus: "Client Experience", description: "From first contact to lasting loyalty. We'll map your client journey and find the moments that matter most." },
+      { week: "Week 4", date: "16 June", focus: "Outreach", description: "Growing your community and finding collaborations that feel good. We'll identify your best opportunities and make the first moves." },
+      { week: "Week 5", date: "23 June", focus: "Offer & Pricing", description: "Packaging your work with clarity and confidence. We'll refine how you present and price what you do." },
+      { week: "Week 6", date: "30 June", focus: "Planning & Momentum", description: "Your next 90 days, mapped out. We'll close the programme with a clear action plan so the momentum continues." },
+    ],
+    whatsappUrl: "https://wa.me/447736709009?text=I%27d+like+to+find+out+more+about+Be+Home+Roots",
+    cta: {
+      headline: "Ready to put down roots?",
+      body: "Places are limited to keep the group small and the work meaningful. Drop us a message to find out more or reserve your spot.",
+      ctaLabel: "Enquire via WhatsApp",
     },
   },
 

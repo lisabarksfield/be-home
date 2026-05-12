@@ -36,6 +36,11 @@ const navGroups: NavGroup[] = [
     href: "/bespoke",
   },
   {
+    id: "roots",
+    label: "Roots",
+    href: "/roots",
+  },
+  {
     id: "about",
     label: "About",
     items: [
