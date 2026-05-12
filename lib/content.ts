@@ -664,7 +664,7 @@ export const content = {
       duration: "6 weeks",
       price: "€300",
       includes: [
-        "6 x 3-hour co-working sessions in the studio",
+        "6 x 3-hour co-working sessions in the studio (drinks and snacks included)",
         "3 Be Home studio credits (worth up to €150)",
         "Weekly 1:1 focus time with Lisa",
         "A small group of like-minded practitioners",
