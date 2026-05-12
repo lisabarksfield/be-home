@@ -149,7 +149,7 @@ export default function RootsPage() {
                 className="rounded-2xl p-8"
                 style={{ backgroundColor: "var(--color-stone-warm)" }}
               >
-                <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                <div className="flex flex-wrap items-baseline gap-3 mb-4">
                   <span
                     className="text-xs tracking-widest uppercase"
                     style={{ color: "var(--color-stone-deep)" }}
@@ -163,12 +163,20 @@ export default function RootsPage() {
                     {w.focus}
                   </h3>
                 </div>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: "var(--color-stone-deep)" }}
-                >
-                  {w.description}
-                </p>
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-xs tracking-[0.2em] uppercase mb-1" style={{ color: "var(--color-trumpet-deep)" }}>Priority</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-charcoal)" }}>{w.priority}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs tracking-[0.2em] uppercase mb-1" style={{ color: "var(--color-trumpet-deep)" }}>Accountability goal</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-stone-deep)" }}>{w.goal}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs tracking-[0.2em] uppercase mb-1" style={{ color: "var(--color-trumpet-deep)" }}>Why now</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-stone-deep)" }}>{w.why}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

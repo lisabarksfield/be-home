@@ -672,12 +672,42 @@ export const content = {
       ],
     },
     weeks: [
-      { week: "Week 1", date: "26 May", focus: "Visibility", description: "Who knows you exist, and how to change that. We'll audit your current presence and build a plan to get seen by the right people." },
-      { week: "Week 2", date: "2 June", focus: "Content Strategy", description: "What to say, where to say it, and how often. We'll create a simple content system that actually fits your life." },
-      { week: "Week 3", date: "9 June", focus: "Client Experience", description: "From first contact to lasting loyalty. We'll map your client journey and find the moments that matter most." },
-      { week: "Week 4", date: "16 June", focus: "Outreach", description: "Growing your community and finding collaborations that feel good. We'll identify your best opportunities and make the first moves." },
-      { week: "Week 5", date: "23 June", focus: "Offer & Pricing", description: "Packaging your work with clarity and confidence. We'll refine how you present and price what you do." },
-      { week: "Week 6", date: "30 June", focus: "Planning & Momentum", description: "Your next 90 days, mapped out. We'll close the programme with a clear action plan so the momentum continues." },
+      {
+        week: "Week 1", date: "26 May", focus: "Foundation & Visibility",
+        priority: "Get clear on your offer and who you serve",
+        goal: "Define your niche and ideal client in one sentence, then audit your current online presence (Instagram, website, bio)",
+        why: "You can't grow if you're unclear on what you're selling and to whom",
+      },
+      {
+        week: "Week 2", date: "2 June", focus: "Content Strategy",
+        priority: "Create your 3-month Instagram content plan",
+        goal: "Map out 36 posts (3 per week for 12 weeks) with themes and pillars, draft 9 captions, and create or gather 9 images",
+        why: "Content consistency is the foundation of visibility and trust",
+      },
+      {
+        week: "Week 3", date: "9 June", focus: "Outreach & Connection",
+        priority: "Fill your pipeline with real humans",
+        goal: "Identify and reach out to 12 to 15 potential clients (DMs, emails, coffee invites, collaborations)",
+        why: "You can't wait for clients to find you. This week is about proactive relationship building",
+      },
+      {
+        week: "Week 4", date: "16 June", focus: "Client Experience & Systems",
+        priority: "Make booking you easy and professional",
+        goal: "Set up or refine your booking system, create a welcome sequence for new clients, clarify your packages and pricing",
+        why: "You're driving traffic. Now you need to convert it smoothly",
+      },
+      {
+        week: "Week 5", date: "23 June", focus: "Community & Collaboration",
+        priority: "Build visibility through partnerships",
+        goal: "Plan and pitch one collaboration (workshop, event, Instagram takeover, joint offer) with another wellness practitioner or local business",
+        why: "Collaboration expands your reach without paid ads",
+      },
+      {
+        week: "Week 6", date: "30 June", focus: "Momentum & Next Quarter",
+        priority: "Review, celebrate, and set your next 90 days",
+        goal: "Assess what worked and what didn't, set 3 measurable goals for July to September, and schedule your content and outreach for the next month",
+        why: "Integration week so the habits stick beyond the programme",
+      },
     ],
     whatsappUrl: "https://wa.me/447736709009?text=I%27d+like+to+find+out+more+about+Be+Home+Roots",
     cta: {
