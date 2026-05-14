@@ -490,9 +490,9 @@ export const content = {
       {
         slug: "jane",
         name: "Jane",
-        specialty: "Yoga",
-        bio: "I'm a dedicated yoga teacher whose classes blend movement, breath and stillness. I bring warmth and care to everyone I work with.",
-        tags: ["Reiki", "Yoga", "Silent Disco"],
+        specialty: "Yoga, Reiki & Spiritual Coaching",
+        bio: "I'm Jane, a spiritual girly with a background in yoga teaching, personal training, and wellness. I offer reiki (both remotely and in person), angel card readings, and spiritual life coaching for anyone ready to dive deeper into their journey. I also own Secret Sunrise, where we bring people together through guided silent disco, yoga, and walking events that blend movement, music, and connection. Whether you're looking for energetic healing, spiritual guidance, or just want to dance it out with good vibes and wireless headsets, I'm here to help you tap into joy, clarity, and a deeper sense of yourself.",
+        tags: ["Reiki", "Yoga", "Spiritual Coaching", "Silent Disco"],
         image: "/practitioners/jane.jpg",
         imageProfile: "",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
