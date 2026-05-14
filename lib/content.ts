@@ -555,6 +555,17 @@ export const content = {
         tags: ["Vinyasa Yoga", "Breathwork", "Movement"],
         whatsappUrl: "",
       },
+      {
+        slug: "mafalda",
+        name: "Mafalda",
+        specialty: "Physiotherapy",
+        bio: "I'm Mafalda, a physiotherapist since 2015 with a passion for helping people move better and feel stronger. I specialise in musculoskeletal injuries, neuro-muscular rehabilitation, postural correction, and sports recovery, working with each client to create treatments that actually fit their body and their life.\n\nWhether you're recovering from an injury, dealing with chronic pain, or want to move through your day without limitations, I'm here to help you get back to doing what you love.",
+        tags: ["Physiotherapy", "Rehabilitation", "Sports Recovery"],
+        image: "/practitioners/mafalda.jpg",
+        imageProfile: "/practitioners/mafalda.jpg",
+        imageObjectPosition: "center 20%",
+        whatsappUrl: "",
+      },
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",
