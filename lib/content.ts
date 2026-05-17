@@ -402,6 +402,18 @@ export const content = {
         whatsappUrl: "https://wa.me/31650422958?text=I+would+like+to+book+a+spot+at+Free+Flow+Dance+on+Friday+22+May+at+2pm",
       },
       {
+        id: "10",
+        date: "Tuesday, 26 May 2026",
+        isoDate: "2026-05-26",
+        time: "10:00",
+        title: "Fluent Portuguese Workshop",
+        description: "This workshop will take you on a journey through the sounds, rhythms and communication of the Portuguese language. It will help you assess where you are with vowel pronunciation, rhythm and articulation, and speech fluency. Whether you want to improve your Portuguese, understand when natives speak fast, or pass the CIPLE exam with confidence, come and assess where you are. Held in Portuguese and English as required.",
+        practitioner: "Elsa Braga",
+        price: "€25",
+        type: "Workshop",
+        whatsappUrl: "https://wa.me/351962468019?text=I+would+like+to+book+a+spot+at+the+Fluent+Portuguese+Workshop+on+Tuesday+26+May+at+10am",
+      },
+      {
         id: "6",
         date: "Thursday, 28 May 2026",
         isoDate: "2026-05-28",
