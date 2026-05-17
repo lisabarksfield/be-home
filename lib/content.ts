@@ -399,7 +399,7 @@ export const content = {
         practitioner: "Shannon",
         price: "Free",
         type: "Workshop",
-        whatsappUrl: "",
+        whatsappUrl: "https://wa.me/31650422958?text=I+would+like+to+book+a+spot+at+Free+Flow+Dance+on+Friday+22+May+at+2pm",
       },
       {
         id: "6",
