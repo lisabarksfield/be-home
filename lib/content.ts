@@ -390,6 +390,18 @@ export const content = {
           "https://wa.me/351912384413?text=I+would+like+to+book+a+spot+at+The+Creative+Break+on+Thursday+21+May+at+7pm",
       },
       {
+        id: "9",
+        date: "Friday, 22 May 2026",
+        isoDate: "2026-05-22",
+        time: "14:00",
+        title: "Free Flow Dance",
+        description: "Two hours of unscripted movement to remember the woman underneath.",
+        practitioner: "Shannon",
+        price: "Free",
+        type: "Workshop",
+        whatsappUrl: "",
+      },
+      {
         id: "6",
         date: "Thursday, 28 May 2026",
         isoDate: "2026-05-28",
