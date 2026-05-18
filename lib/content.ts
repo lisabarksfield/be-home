@@ -403,7 +403,7 @@ export const content = {
       },
       {
         id: "11",
-        date: "Sunday, 25 May 2026",
+        date: "Monday, 25 May 2026",
         isoDate: "2026-05-25",
         time: "12:30",
         title: "Lunchtime Sound Bath",
