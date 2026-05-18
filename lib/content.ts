@@ -600,7 +600,7 @@ export const content = {
         image: "/practitioners/mafalda.jpg",
         imageProfile: "/practitioners/mafalda.jpg",
         imageObjectPosition: "center 20%",
-        whatsappUrl: "",
+        whatsappUrl: "https://wa.me/351965382539?text=I%27d+like+to+book+a+session+with+you+at+Be+Home",
       },
     ],
     joinCta: {
