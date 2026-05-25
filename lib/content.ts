@@ -430,30 +430,30 @@ export const content = {
         date: "Thursday, 28 May 2026",
         isoDate: "2026-05-28",
         time: "19:00",
-        title: "Restorative Yoga",
+        title: "Somatic Rest",
         description:
-          "Every Thursday evening at 7pm, Eliza Roza Ché guides you through a deep, intentional restorative yoga practice. Drawing on somatic psychology and nervous system science, these classes create space for genuine down-regulation — releasing what you've been holding and restoring a sense of ease. Beginners and experienced practitioners equally welcome. Starting 28 May, every Thursday.",
+          "Every Thursday at 7pm, Eliza Roza Ché guides you through a deep, intentional somatic rest practice. Drawing on somatic psychology and nervous system science, these classes create space for genuine down-regulation, releasing what you've been holding and restoring a sense of ease. Beginners and experienced practitioners equally welcome. Starting 28 May, every Thursday.",
         practitioner: "Eliza Roza Ché",
-        price: "TBC",
+        price: "€20",
         type: "Class",
         spots: 15,
         whatsappUrl:
-          "https://wa.me/351967728873?text=I+would+like+to+book+a+spot+at+Restorative+Yoga+on+Thursdays+at+7pm+from+28+May",
+          "https://wa.me/351967728873?text=I+would+like+to+book+a+spot+at+Somatic+Rest+on+Thursdays+at+7pm+from+28+May",
       },
       {
         id: "7",
         date: "Sunday, 31 May 2026",
         isoDate: "2026-05-31",
-        time: "19:00",
+        time: "09:30",
         title: "Full Moon: Create & Activate",
         description:
-          "A special full moon evening bringing together two of Be Home's most beloved practitioners. Start with a guided crafting session with Lianne — making something intentional under the full moon — then transition into an active breathwork journey with Ramen to activate, release, and set your intentions for the month ahead. A truly unique evening of creativity and breath.",
+          "A full moon morning of expansion, bringing together two of Be Home's most beloved practitioners. Start with a guided crafting session with Lianne, making your own Lunar intention box to hold your intentions for the month ahead, then move into an active breathwork journey with Ramen to activate, release, and expand into what is opening up for you. A truly unique morning of creativity and breath.",
         practitioner: "Lianne & Ramen",
-        price: "TBC",
+        price: "€38",
         type: "Special Event",
         spots: 15,
         whatsappUrl:
-          "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+the+Full+Moon+Create+and+Activate+on+Sunday+31+May+at+7pm",
+          "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+the+Full+Moon+Create+and+Activate+on+Sunday+31+May+at+9:30am",
       },
       {
         id: "8",
