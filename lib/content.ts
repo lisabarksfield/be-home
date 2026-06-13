@@ -495,6 +495,18 @@ export const content = {
         whatsappUrl: "https://wa.me/351967728873?text=I+would+like+to+book+a+spot+at+Release+and+Receive+on+Tuesday+16+June+at+7pm",
       },
       {
+        id: "19",
+        date: "Thursday, 18 June 2026",
+        isoDate: "2026-06-18",
+        time: "10:00",
+        title: "🧵 The Creative Break: Reverse Appliqué",
+        description: "A hands-on crafting session with Lianne, founder of The Creative Break. Reverse appliqué is a beautiful technique where you cut away layers of fabric to reveal colour and texture beneath. No experience needed, just come ready to make something with your hands.",
+        practitioner: "Lianne",
+        price: "€28",
+        type: "Workshop",
+        whatsappUrl: "https://wa.me/351912384413?text=I+would+like+to+book+a+spot+at+The+Creative+Break+Reverse+Applique+on+Thursday+18+June+at+10am",
+      },
+      {
         id: "15",
         date: "Thursday, 18 June 2026",
         isoDate: "2026-06-18",
