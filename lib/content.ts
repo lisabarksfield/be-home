@@ -677,8 +677,8 @@ export const content = {
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",
-      body: "We welcome applications from experienced practitioners. Get in touch to discuss hiring a space.",
-      ctaLabel: "Apply to join",
+      body: "We would love to welcome you to our community, get in touch to arrange a visit.",
+      ctaLabel: "Get in touch",
     },
   },
 
