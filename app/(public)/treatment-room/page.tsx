@@ -81,9 +81,13 @@ export default function TreatmentRoomPage() {
                 </div>
               ))}
             </div>
-            <p className="text-xs mt-4" style={{ color: "var(--color-stone-deep)" }}>
-              {treatmentRoom.ratesNote}
-            </p>
+            <div className="space-y-2 mt-4">
+              {treatmentRoom.ratesNote.map((note, i) => (
+                <p key={i} className="text-xs" style={{ color: "var(--color-stone-deep)" }}>
+                  {note}
+                </p>
+              ))}
+            </div>
             <PricingDisclaimer />
           </div>
         </div>

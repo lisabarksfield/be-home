@@ -183,10 +183,15 @@ export const content = {
     suitableFor:
       "Massage therapy · Osteopathy · Physiotherapy · Acupuncture · Reiki · Sound healing · Life coaching · Nutritional therapy · Psychotherapy",
     rates: [
+      { label: "Hourly", price: "From €18", note: "€18 first hour, €12.50 each additional hour" },
       { label: "Half Day", price: "€80", note: "8:00–14:00 or 14:00–20:00" },
-      { label: "Full Day", price: "€150", note: "8:00–20:00 · €12.50/hr" },
+      { label: "Full Day", price: "€150", note: "8:00–20:00" },
     ],
-    ratesNote: "Optional towel service available as an add-on: €10 per session.",
+    ratesNote: [
+      "Hourly rate applies for bookings up to 6 hours. Beyond that, the half day or full day rate applies, whichever is lower.",
+      "Some practitioners require full privacy during their session (for example psychotherapy or sensitive consultations). If this applies to you, let us know when booking, a small privacy uplift may apply depending on the day and time.",
+      "Optional towel service available as an add-on: €10 per session.",
+    ],
     cta: {
       headline: "Ready to book the Treatment Room?",
     },
