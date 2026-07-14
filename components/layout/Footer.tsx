@@ -35,7 +35,6 @@ export default function Footer() {
               { href: "/studio", label: "The Studio" },
               { href: "/treatment-room", label: "Treatment Room" },
               { href: "/events", label: "Classes & Events" },
-              { href: "/treatments", label: "Treatments" },
               { href: "/events", label: "Events" },
             ].map((l) => (
               <li key={l.href}>

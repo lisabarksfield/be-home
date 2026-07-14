@@ -126,7 +126,6 @@ export default function ContentPage() {
     { id: "catering", title: "Catering & Drinks", page: "/catering", fields: content.catering as unknown as Record<string, unknown> },
     { id: "classes", title: "Classes", page: "/classes", fields: content.classes as unknown as Record<string, unknown> },
     { id: "events", title: "Events", page: "/events", fields: content.events as unknown as Record<string, unknown> },
-    { id: "treatments", title: "Treatments", page: "/treatments", fields: content.treatments as unknown as Record<string, unknown> },
     { id: "practitioners", title: "Practitioners", page: "/practitioners", fields: content.practitioners as unknown as Record<string, unknown> },
     { id: "contact", title: "Contact", page: "/contact", fields: content.contact as unknown as Record<string, unknown> },
   ];

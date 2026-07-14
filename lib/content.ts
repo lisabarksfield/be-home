@@ -13,7 +13,6 @@
  *   catering       → /catering
  *   classes        → /classes
  *   events         → /events
- *   treatments     → /treatments
  *   practitioners  → /practitioners
  *   contact        → /contact
  */
@@ -572,41 +571,6 @@ export const content = {
       body: "Our studio is available for workshops, retreats, and special events. Get in touch to discuss.",
       ctaLabel: "Enquire about hosting an event",
     },
-  },
-
-  // ─────────────────────────────────────────────
-  // TREATMENTS  /treatments
-  // ─────────────────────────────────────────────
-  treatments: {
-    hero: {
-      tagline: "One-to-One",
-      headline: "Treatments",
-      body: "Private, one-to-one treatments with our practitioners in the Be Home treatment room. Book directly with each practitioner.",
-    },
-    list: [
-      {
-        practitioner: "Lúcia Ferreira",
-        slug: "lucia-ferreira",
-        specialty: "Massage Therapy",
-        bio: "Lúcia has been practising massage therapy for 8 years, with additional training in myofascial release and sports recovery.",
-        treatments: [
-          { name: "Swedish Relaxation Massage", duration: "60 min", price: "€70" },
-          { name: "Deep Tissue Massage", duration: "60 min", price: "€80" },
-          { name: "Sports Massage", duration: "45 min", price: "€65" },
-        ],
-      },
-      {
-        practitioner: "James Carroll",
-        slug: "james-carroll",
-        specialty: "Breathwork & Sound Healing",
-        bio: "James offers deeply personal one-to-one sessions in breathwork, sound, and meditation for stress, anxiety, and personal growth.",
-        treatments: [
-          { name: "1:1 Breathwork Session", duration: "90 min", price: "€90" },
-          { name: "Sound Healing Treatment", duration: "60 min", price: "€75" },
-          { name: "Meditation Coaching", duration: "60 min", price: "€65" },
-        ],
-      },
-    ],
   },
 
   // ─────────────────────────────────────────────
