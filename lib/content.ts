@@ -565,6 +565,18 @@ export const content = {
         type: "Class",
         whatsappUrl: "https://wa.me/351967728873?text=I+would+like+to+book+a+spot+at+Somatic+Rest+on+Thursday+25+June+at+7pm",
       },
+      {
+        id: "20",
+        date: "Wednesday, 29 July 2026",
+        isoDate: "2026-07-29",
+        time: "19:00",
+        title: "Born to Bachata",
+        description: "Please welcome Miguel and Nóra to Be Home, our new Bachata instructors bringing serious energy (and serious rhythm) to the studio. Born to Bachata is a beginner class packed into 90 minutes of playfulness, movement, and connection: to your body, to the music, and to your dance partner. Together you'll discover the roots of this Afro Latin dance, the fundamentals of partner work, and the beautiful push and pull of leading and following. You can even try both. No partner needed, no experience needed, just curiosity and a willingness to feel a little silly while you learn something brand new.",
+        practitioner: "Miguel & Nóra",
+        price: "€15 · Introductory price",
+        type: "Class",
+        whatsappUrl: "https://wa.me/36308940723?text=I+would+like+to+book+a+spot+at+Born+to+Bachata+on+Wednesday+29+July+at+7pm",
+      },
     ],
     hostCta: {
       headline: "Want to run an event at Be Home?",
