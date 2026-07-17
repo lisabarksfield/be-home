@@ -97,12 +97,17 @@ export default function EventsPage() {
                           </p>
                         </div>
                       </div>
-                      <p
-                        className="text-sm leading-relaxed mb-6"
-                        style={{ color: "var(--color-stone-deep)" }}
-                      >
-                        {e.description}
-                      </p>
+                      <div className="space-y-3 mb-6">
+                        {e.description.split("\n\n").map((para, i) => (
+                          <p
+                            key={i}
+                            className="text-sm leading-relaxed"
+                            style={{ color: "var(--color-stone-deep)" }}
+                          >
+                            {para}
+                          </p>
+                        ))}
+                      </div>
                       {"whatsappUrl" in e && e.whatsappUrl && (
                         <a
                           href={e.whatsappUrl}
@@ -176,12 +181,17 @@ export default function EventsPage() {
                           </p>
                         </div>
                       </div>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{ color: "var(--color-stone-deep)" }}
-                      >
-                        {e.description}
-                      </p>
+                      <div className="space-y-3">
+                        {e.description.split("\n\n").map((para, i) => (
+                          <p
+                            key={i}
+                            className="text-sm leading-relaxed"
+                            style={{ color: "var(--color-stone-deep)" }}
+                          >
+                            {para}
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ))}

@@ -582,6 +582,18 @@ export const content = {
         type: "Class",
         whatsappUrl: "https://wa.me/36308940723?text=I+would+like+to+book+a+spot+at+Born+to+Bachata+on+Wednesday+29+July+at+7pm",
       },
+      {
+        id: "21",
+        date: "Friday, 7 August 2026",
+        isoDate: "2026-08-07",
+        time: "19:00",
+        title: "Yin Yoga",
+        description: "We'll be bringing our awareness inwards by focusing on target areas and felt sensation as we gently release tension through the fascia muscular system. The energetic elements of nature and the Meridian system with its connected organs will tie in to the postures, bringing a deeper quality to your practice.\n\nThis class is for you if: you already love Yin Yoga, or you're a little curious about longer hold postures, the energetic body, and exploring the felt sense through the experiential realm.\n\nWhether you're a beginner, new to Yin, or a seasoned yogi, there is room for you.",
+        practitioner: "Bryony",
+        price: "€20 · €30 for 2",
+        type: "Class",
+        whatsappUrl: "https://wa.me/351933906821?text=I+would+like+to+book+a+spot+at+Yin+Yoga+on+Friday+7+August+at+7pm",
+      },
     ],
     hostCta: {
       headline: "Want to run an event at Be Home?",
