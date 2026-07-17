@@ -679,6 +679,17 @@ export const content = {
         imageObjectPosition: "center 20%",
         whatsappUrl: "https://wa.me/351965382539?text=I%27d+like+to+book+a+session+with+you+at+Be+Home",
       },
+      {
+        slug: "bryony",
+        name: "Bryony",
+        specialty: "Somatic Movement & Yoga",
+        bio: "I'm Bryony, founder and facilitator of Forest of Neptune, a home for embodied movement practices. I'm a Somatic Movement Educator, Yin & Vinyasa Yoga teacher, and Reiki practitioner. I hold an ISMETA-accredited Master's (2019) from the University of Central Lancashire in \"Dance and Somatic Well-being ~ Connections to the living body,\" and an undergraduate degree in Contemporary Dance from the University of Chester.\n\nI host monthly Somatic immersions in Lisbon, guiding people into the body's \"felt sense\" through supportive language and movement, and I'm currently developing an online somatic offering. My weekly yoga classes include Yin and a Yin/Yang flow, informed by embodied sensing.\n\nI'm passionate about movement for healing, inclusivity, accessibility, Jungian depth psychology, and, most of all, being in nature! I've completed 560 hours of teacher training in Portugal and India (Hatha-inspired Vinyasa, Mandala, and Rocket), plus 160 hours specialising in Yin. I've also completed Reiki Level 1 and weave it with somatic movement in a unique one-to-one healing modality.\n\nI'm originally from the UK and have been living in Lisbon since 2021.",
+        tags: ["Somatic Movement", "Yin Yoga", "Vinyasa Yoga", "Reiki"],
+        image: "/practitioners/bryony.jpg",
+        imageProfile: "",
+        imageObjectPosition: "center 30%",
+        whatsappUrl: "",
+      },
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",

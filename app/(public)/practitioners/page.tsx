@@ -2,9 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { content } from "@/lib/content";
 
+export const dynamic = 'force-dynamic';
+
 const { practitioners } = content;
 
+// Rotates the directory so a different practitioner leads each week (flips every Monday, UTC).
+function weeklyRotate<T>(list: readonly T[]): T[] {
+  if (list.length === 0) return [];
+  const mondayAnchor = Date.UTC(1970, 0, 5);
+  const weeksSinceAnchor = Math.floor((Date.now() - mondayAnchor) / (7 * 24 * 60 * 60 * 1000));
+  const offset = ((weeksSinceAnchor % list.length) + list.length) % list.length;
+  return [...list.slice(offset), ...list.slice(0, offset)];
+}
+
 export default function PractitionersPage() {
+  const directory = weeklyRotate(practitioners.directory);
+
   return (
     <div>
       <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--color-stone-warm)" }}>
@@ -21,7 +34,7 @@ export default function PractitionersPage() {
 
       <section className="py-16 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          {practitioners.directory.map((p) => (
+          {directory.map((p) => (
             <Link
               key={p.slug}
               href={`/practitioners/${p.slug}`}
