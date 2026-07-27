@@ -75,7 +75,7 @@ export default function EventsPage() {
                               {e.type}
                             </span>
                             <span className="text-sm" style={{ color: "var(--color-stone-deep)" }}>
-                              {e.date} · {e.time}
+                              {e.time ? `${e.date} · ${e.time}` : e.date}
                             </span>
                           </div>
                           <h3
