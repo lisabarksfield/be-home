@@ -139,7 +139,7 @@ export default function EventsPage() {
                 Previous events
               </h2>
               <div className="space-y-6">
-                {past.map((e) => (
+                {past.slice(-3).map((e) => (
                   <div
                     key={e.id}
                     className="rounded-2xl overflow-hidden opacity-60"
@@ -196,6 +196,15 @@ export default function EventsPage() {
                   </div>
                 ))}
               </div>
+              {past.length > 3 && (
+                <Link
+                  href="/events/archive"
+                  className="inline-block mt-6 text-sm font-medium hover:opacity-60 transition-opacity"
+                  style={{ color: "var(--color-charcoal)" }}
+                >
+                  View past events archive →
+                </Link>
+              )}
             </section>
           )}
 
