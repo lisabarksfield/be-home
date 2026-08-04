@@ -580,7 +580,7 @@ export const content = {
         practitioner: "Nóra & Miguel",
         price: "€15 · Introductory price",
         type: "Postponed",
-        whatsappUrl: "https://wa.me/36308940723?text=I+would+like+to+be+notified+about+the+new+date+for+Born+to+Bachata",
+        whatsappUrl: "",
       },
       {
         id: "21",
