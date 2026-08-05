@@ -196,17 +196,19 @@ export default function EventsPage() {
                   </div>
                 ))}
               </div>
-              {past.length > 3 && (
-                <Link
-                  href="/events/archive"
-                  className="inline-block mt-6 text-sm font-medium hover:opacity-60 transition-opacity"
-                  style={{ color: "var(--color-charcoal)" }}
-                >
-                  View past events archive →
-                </Link>
-              )}
             </section>
           )}
+
+          {/* ── Events Calendar link ──────────────────── */}
+          <div className="mb-16">
+            <Link
+              href="/events/archive"
+              className="inline-block text-sm font-medium hover:opacity-60 transition-opacity"
+              style={{ color: "var(--color-charcoal)" }}
+            >
+              View full events calendar →
+            </Link>
+          </div>
 
           {/* ── Host CTA ──────────────────────────────── */}
           <div className="text-center">

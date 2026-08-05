@@ -10,6 +10,7 @@ import {
   subMonths,
   format,
   isSameMonth,
+  isToday,
   parse,
 } from "date-fns";
 
@@ -25,10 +26,10 @@ export default async function EventsArchivePage({
 }) {
   const { month } = await searchParams;
   const today = new Date().toISOString().slice(0, 10);
-  const past = events.list.filter((e) => e.isoDate < today);
+  // Only dated events can appear on the calendar — events with no confirmed date (e.g. postponed) are excluded.
+  const dated = events.list.filter((e) => e.time);
 
-  const defaultMonthStr = past.length > 0 ? past[past.length - 1].isoDate.slice(0, 7) : today.slice(0, 7);
-  const monthStr = month && /^\d{4}-\d{2}$/.test(month) ? month : defaultMonthStr;
+  const monthStr = month && /^\d{4}-\d{2}$/.test(month) ? month : today.slice(0, 7);
   const current = parse(`${monthStr}-01`, "yyyy-MM-dd", new Date());
 
   const monthStart = startOfMonth(current);
@@ -37,8 +38,8 @@ export default async function EventsArchivePage({
   const gridEnd = endOfWeek(monthEnd, { weekStartsOn: 1 });
   const days = eachDayOfInterval({ start: gridStart, end: gridEnd });
 
-  const eventsByDate = new Map<string, typeof past>();
-  for (const e of past) {
+  const eventsByDate = new Map<string, typeof dated>();
+  for (const e of dated) {
     const list = eventsByDate.get(e.isoDate) ?? [];
     list.push(e);
     eventsByDate.set(e.isoDate, list);
@@ -51,13 +52,13 @@ export default async function EventsArchivePage({
     <div>
       <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--color-stone-warm)" }}>
         <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: "var(--color-trumpet-deep)" }}>
-          Archive
+          All Events
         </p>
         <h1 className="text-5xl md:text-6xl font-bold mb-4" style={{ fontFamily: "'Recoleta Alt', var(--font-serif)", color: "var(--color-charcoal)" }}>
-          Past Events
+          Events Calendar
         </h1>
         <p className="text-base max-w-xl mx-auto" style={{ color: "var(--color-stone-deep)" }}>
-          Browse by month to see what's happened at Be Home. Click an event for the full details.
+          Browse by month to see everything happening at Be Home, past and upcoming. Click an event for the full details.
         </p>
       </section>
 
@@ -111,28 +112,39 @@ export default async function EventsArchivePage({
               const iso = format(day, "yyyy-MM-dd");
               const dayEvents = eventsByDate.get(iso) ?? [];
               const inMonth = isSameMonth(day, current);
+              const today_ = isToday(day);
               return (
                 <div
                   key={iso}
                   className="min-h-24 p-1.5"
-                  style={{ backgroundColor: "var(--color-cream)", opacity: inMonth ? 1 : 0.4 }}
+                  style={{
+                    backgroundColor: "var(--color-cream)",
+                    opacity: inMonth ? 1 : 0.4,
+                    boxShadow: today_ ? "inset 0 0 0 2px var(--color-trumpet-deep)" : undefined,
+                  }}
                 >
                   <p className="text-xs mb-1" style={{ color: "var(--color-stone-deep)" }}>
                     {format(day, "d")}
                   </p>
                   <div className="space-y-1">
-                    {dayEvents.map((e) => (
-                      <Link
-                        key={e.id}
-                        href={`/events/archive/${e.id}`}
-                        className="block text-[10px] leading-tight px-1 py-0.5 rounded hover:opacity-70 transition-opacity"
-                        style={{ backgroundColor: "var(--color-trumpet-light)", color: "var(--color-charcoal)" }}
-                      >
-                        <span className="font-medium">{e.time}</span> {e.title}
-                        <br />
-                        {e.price} · {e.practitioner}
-                      </Link>
-                    ))}
+                    {dayEvents.map((e) => {
+                      const isPast = e.isoDate < today;
+                      return (
+                        <Link
+                          key={e.id}
+                          href={`/events/archive/${e.id}`}
+                          className="block text-[10px] leading-tight px-1 py-0.5 rounded hover:opacity-70 transition-opacity"
+                          style={{
+                            backgroundColor: isPast ? "var(--color-stone)" : "var(--color-trumpet-light)",
+                            color: "var(--color-charcoal)",
+                          }}
+                        >
+                          <span className="font-medium">{e.time}</span> {e.title}
+                          <br />
+                          {e.price} · {e.practitioner}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               );
