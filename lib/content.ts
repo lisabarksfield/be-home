@@ -730,6 +730,7 @@ export const content = {
       "Catering Enquiry",
       "Practitioner Application",
       "Event Enquiry",
+      "The Girls Club",
       "General Question",
     ],
   },
@@ -861,6 +862,39 @@ export const content = {
       headline: "Ready to put down roots?",
       body: "Places are limited to keep the group small and the work meaningful. Drop us a message to find out more or reserve your spot.",
       ctaLabel: "Enquire via WhatsApp",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // THE GIRLS CLUB  /the-girls-club
+  // ─────────────────────────────────────────────
+  girlsClub: {
+    hero: {
+      tagline: "Welcome to",
+      headline: "The Girls Club",
+      body: "You are exactly who we built this for.",
+    },
+    intro: {
+      headline: "What is The Girls Club?",
+      body: [
+        "The Girls Club is a series of workshops for women and kids at every stage of life, and for the people around them who want to show up better.",
+        "For the girls navigating puberty with more confidence than we ever did. For the teenagers who are ready to understand their bodies as something powerful, not just inconvenient. For the women in the thick of hormonal shifts, perimenopause, ADHD, anxiety, or any of the other things that nobody prepared us for either. And for the men and dads who love them and want to do it differently.",
+        "Every workshop is rooted in the same belief: that real information, in a safe and honest space, changes everything. We have seen it happen in the room. That is why we keep going.",
+      ],
+    },
+    whatsComing: {
+      headline: "What's coming",
+      subheadline: "The Girls Club is growing.",
+      body: [
+        "Cycle Mastery for teenagers who are ready to understand their bodies as something to work with. Workshops for dads who want to show up for their daughters and their partners in the way the generation before them simply never did, with the knowledge, the language and the confidence to actually be there. Perimenopause, ADHD, breathwork, pelvic floor health, resilience and somatic work for kids and teens. And a workshop to help the men who love women in perimenopause understand what is actually going on, and what genuinely helps.",
+        "We are building something for every stage, every age and everyone who is trying to do this better than it was done for them.",
+        "More is coming. Stay close.",
+      ],
+    },
+    ideaCta: {
+      headline: "Have an idea? We'd love to hear it.",
+      body: "Is there a workshop you wish existed? A topic you have been searching for? Something you would love to bring to your community or host through Be Home?\n\nReach out. This whole series started with a feeling that something was missing, and we are still building it. Your ideas are very welcome here.",
+      ctaLabel: "Get in touch",
     },
   },
 

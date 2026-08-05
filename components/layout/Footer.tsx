@@ -35,7 +35,6 @@ export default function Footer() {
               { href: "/studio", label: "The Studio" },
               { href: "/treatment-room", label: "Treatment Room" },
               { href: "/events", label: "Classes & Events" },
-              { href: "/events", label: "Events" },
             ].map((l) => (
               <li key={l.href}>
                 <Link
@@ -62,6 +61,7 @@ export default function Footer() {
             {[
               { href: "/practitioners", label: "Our Practitioners" },
               { href: "/catering", label: "Catering & Drinks" },
+              { href: "/the-girls-club", label: "The Girls Club" },
               { href: "/about", label: "About Be Home" },
               { href: "/contact", label: "Get in Touch" },
             ].map((l) => (
