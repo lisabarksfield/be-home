@@ -9,6 +9,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Gulfs Display";
+  src: url("/fonts/GulfsDisplay-Normal.woff2") format("woff2"),
+       url("/fonts/GulfsDisplay-Normal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   /* Be Home Color Palette */
   /* CIN 07N2 – warm neutral tones */

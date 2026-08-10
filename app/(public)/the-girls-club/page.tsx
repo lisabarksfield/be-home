@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bagel_Fat_One, Baloo_2 } from "next/font/google";
+import { Baloo_2 } from "next/font/google";
 import { content } from "@/lib/content";
 
 const { girlsClub } = content;
 
-const display = Bagel_Fat_One({ subsets: ["latin"], weight: "400" });
 const rounded = Baloo_2({ subsets: ["latin"], weight: ["500", "600", "700"] });
+const displayFont = "'Gulfs Display', sans-serif";
 
 const GC = {
   cream: "#FFF7D3",
@@ -57,8 +57,8 @@ export default function TheGirlsClubPage() {
             {girlsClub.hero.tagline}
           </p>
           <h1
-            className={`${display.className} text-5xl md:text-7xl mb-6`}
-            style={{ color: GC.cream }}
+            className="text-5xl md:text-7xl mb-6"
+            style={{ color: GC.cream, fontFamily: displayFont }}
           >
             {girlsClub.hero.headline}
           </h1>
@@ -75,8 +75,8 @@ export default function TheGirlsClubPage() {
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
         <div className="max-w-2xl mx-auto">
           <h2
-            className={`${display.className} text-3xl md:text-4xl mb-8`}
-            style={{ color: GC.orangeDeep }}
+            className="text-3xl md:text-4xl mb-8"
+            style={{ color: GC.orangeDeep, fontFamily: displayFont }}
           >
             {girlsClub.intro.headline}
           </h2>
@@ -100,8 +100,8 @@ export default function TheGirlsClubPage() {
             {girlsClub.whatsComing.subheadline}
           </p>
           <h2
-            className={`${display.className} text-3xl md:text-4xl mb-8`}
-            style={{ color: GC.orangeDeep }}
+            className="text-3xl md:text-4xl mb-8"
+            style={{ color: GC.orangeDeep, fontFamily: displayFont }}
           >
             {girlsClub.whatsComing.headline}
           </h2>
@@ -119,8 +119,8 @@ export default function TheGirlsClubPage() {
       <GradientBand>
         <div className="max-w-xl mx-auto">
           <h2
-            className={`${display.className} text-3xl md:text-5xl mb-6`}
-            style={{ color: GC.cream }}
+            className="text-3xl md:text-5xl mb-6"
+            style={{ color: GC.cream, fontFamily: displayFont }}
           >
             {girlsClub.ideaCta.headline}
           </h2>
