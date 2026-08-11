@@ -702,6 +702,17 @@ export const content = {
         imageObjectPosition: "center 30%",
         whatsappUrl: "",
       },
+      {
+        slug: "hugo",
+        name: "Hugo",
+        specialty: "Somatic Therapist",
+        bio: "I work with people who carry a lot, those who accumulate stress in their bodies and find it difficult to turn it off. My purpose is to guide you on that journey of letting go of the pressure, helping you to build inner resilience and reclaim your body as a safe space... your home. Ultimately, this is an invitation to cultivate a more mindful and caring relationship with yourself, so you can move through life with more ease, balance, and vitality.",
+        tags: ["Embodiment", "Self-Regulation", "Somatic Release"],
+        image: "/practitioners/hugo.jpg",
+        imageProfile: "",
+        imageObjectPosition: "center 25%",
+        whatsappUrl: "",
+      },
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",
