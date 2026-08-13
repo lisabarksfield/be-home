@@ -46,7 +46,7 @@ export default function EventsPage() {
               className="text-2xl font-light mb-6"
               style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}
             >
-              Special events &amp; retreats
+              Special events &amp; workshops
             </h2>
 
             {upcoming.length === 0 ? (
@@ -139,7 +139,7 @@ export default function EventsPage() {
                 Previous events
               </h2>
               <div className="space-y-6">
-                {past.slice(-3).map((e) => (
+                {past.slice(-3).reverse().map((e) => (
                   <div
                     key={e.id}
                     className="rounded-2xl overflow-hidden opacity-60"
