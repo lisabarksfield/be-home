@@ -16,6 +16,12 @@ const GC = {
   tan: "#E0A97F",
 };
 
+// Gulfs Display only ships a single (regular) weight — a slight text-stroke
+// thickens the letterforms to better match the bolder logo/flyer artwork.
+function displayHeadingStyle(color: string) {
+  return { color, fontFamily: displayFont, WebkitTextStroke: `2px ${color}` };
+}
+
 const grainOverlay =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
@@ -58,7 +64,7 @@ export default function TheGirlsClubPage() {
           </p>
           <h1
             className="text-5xl md:text-7xl mb-6"
-            style={{ color: GC.cream, fontFamily: displayFont }}
+            style={displayHeadingStyle(GC.cream)}
           >
             {girlsClub.hero.headline}
           </h1>
@@ -76,7 +82,7 @@ export default function TheGirlsClubPage() {
         <div className="max-w-2xl mx-auto">
           <h2
             className="text-3xl md:text-4xl mb-8"
-            style={{ color: GC.orangeDeep, fontFamily: displayFont }}
+            style={displayHeadingStyle(GC.orangeDeep)}
           >
             {girlsClub.intro.headline}
           </h2>
@@ -101,7 +107,7 @@ export default function TheGirlsClubPage() {
           </p>
           <h2
             className="text-3xl md:text-4xl mb-8"
-            style={{ color: GC.orangeDeep, fontFamily: displayFont }}
+            style={displayHeadingStyle(GC.orangeDeep)}
           >
             {girlsClub.whatsComing.headline}
           </h2>
@@ -120,7 +126,7 @@ export default function TheGirlsClubPage() {
         <div className="max-w-xl mx-auto">
           <h2
             className="text-3xl md:text-5xl mb-6"
-            style={{ color: GC.cream, fontFamily: displayFont }}
+            style={displayHeadingStyle(GC.cream)}
           >
             {girlsClub.ideaCta.headline}
           </h2>
