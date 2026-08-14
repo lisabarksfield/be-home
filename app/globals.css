@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: "Gulfs Display";
-  src: url("/fonts/GulfsDisplay-Normal.woff2") format("woff2"),
-       url("/fonts/GulfsDisplay-Normal.woff") format("woff");
+  src: url("/fonts/GulfsDisplay-SemiExpanded.woff2") format("woff2"),
+       url("/fonts/GulfsDisplay-SemiExpanded.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
