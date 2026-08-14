@@ -16,10 +16,8 @@ const GC = {
   tan: "#E0A97F",
 };
 
-// Gulfs Display only ships a single (regular) weight — a slight text-stroke
-// thickens the letterforms to better match the bolder logo/flyer artwork.
 function displayHeadingStyle(color: string) {
-  return { color, fontFamily: displayFont, WebkitTextStroke: `2px ${color}` };
+  return { color, fontFamily: displayFont };
 }
 
 const grainOverlay =
