@@ -583,6 +583,18 @@ export const content = {
         whatsappUrl: "https://wa.me/351933906821?text=I+would+like+to+book+a+spot+at+Yin+Yoga+on+Friday+7+August+at+7pm",
       },
       {
+        id: "25",
+        date: "Friday, 11 September 2026",
+        isoDate: "2026-09-11",
+        time: "10:30",
+        title: "Cacao Ceremony",
+        description: "On the new moon in Virgo, Friday 11 September, Ilham is hosting her first cacao ceremony in Cascais since making Portugal home.\n\nFor Ilham, ceremonial cacao isn't a wellness trend. It's one of the plant medicines that helped her feel safe enough to live in her heart again, to stop making every decision from her head and start making them from her heart instead.\n\nThe Aztecs and Maya only brought cacao out for their most sacred occasions: the birth of a son to a noble king, and the ritual sacrifice of women, whose hearts were offered to the gods before cacao was drunk in their honor. The cacao pod itself looks like a heart, which is why priests and poets called it yollotl, eztli: heart, blood. It isn't a pretty metaphor. It's the actual reason cacao has always been heart medicine, long before \"ceremony\" became a wellness word.",
+        practitioner: "Ilham",
+        price: "€30 · Introductory price",
+        type: "Ceremony",
+        whatsappUrl: "https://wa.me/351912901582?text=I+would+like+to+book+a+spot+at+the+Cacao+Ceremony+on+Friday+11+September",
+      },
+      {
         id: "22",
         date: "Friday, 18 September 2026",
         isoDate: "2026-09-18",
