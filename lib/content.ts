@@ -631,6 +631,18 @@ export const content = {
         whatsappUrl: "https://wa.me/351933906821?text=I+would+like+to+book+a+spot+at+Yin+Yoga+on+Friday+11+September+at+7pm",
       },
       {
+        id: "31",
+        date: "Wednesday, 16 September 2026",
+        isoDate: "2026-09-16",
+        time: "19:30",
+        title: "Perimenopause: No Filter",
+        description: "Perimenopause isn't the mythical beast you think it is. It's just that no one ever explained it.\n\nPerimenopause: No Filter is a Girls Club workshop for men only, hosted by Lisa and Dr Jeanette Sundberg at Be Home, Birre, Cascais. No jargon, no judgement, no stupid questions, just honest answers about what is actually going on for the women in your life, and what genuinely helps.",
+        practitioner: "Lisa & Dr Jeanette Sundberg",
+        price: "€40 · Men only",
+        type: "Workshop",
+        whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Perimenopause%3A+No+Filter+on+Wednesday+16+September",
+      },
+      {
         id: "22",
         date: "Friday, 18 September 2026",
         isoDate: "2026-09-18",
