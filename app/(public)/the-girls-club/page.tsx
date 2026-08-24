@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Baloo_2 } from "next/font/google";
 import { content } from "@/lib/content";
 
-const { girlsClub } = content;
+export const dynamic = 'force-dynamic';
+
+const { girlsClub, events } = content;
 
 const rounded = Baloo_2({ subsets: ["latin"], weight: ["500", "600", "700"] });
 const displayFont = "'Gulfs Display', sans-serif";
@@ -41,6 +43,11 @@ function GradientBand({ children }: { children: React.ReactNode }) {
 }
 
 export default function TheGirlsClubPage() {
+  const today = new Date().toISOString().slice(0, 10);
+  const upcomingEvents = events.list.filter(
+    (e) => "series" in e && e.series === "girlsClub" && e.isoDate >= today
+  );
+
   return (
     <div>
       {/* ── Hero ──────────────────────────────────────── */}
@@ -116,6 +123,55 @@ export default function TheGirlsClubPage() {
               </p>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Upcoming events ────────────────────────────── */}
+      <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
+        <div className="max-w-2xl mx-auto">
+          <h2
+            className="text-3xl md:text-4xl mb-8"
+            style={displayHeadingStyle(GC.orangeDeep)}
+          >
+            Upcoming events
+          </h2>
+          {upcomingEvents.length === 0 ? (
+            <p className="text-base italic" style={{ color: "var(--color-charcoal)" }}>
+              No upcoming events right now, check back soon.
+            </p>
+          ) : (
+            <div className="space-y-4">
+              {upcomingEvents.map((e) => (
+                <div
+                  key={e.id}
+                  className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 rounded-xl px-5 py-4"
+                  style={{ backgroundColor: "var(--color-stone-warm)" }}
+                >
+                  <div>
+                    <p className="text-lg font-medium" style={{ color: "var(--color-charcoal)" }}>
+                      {e.title}
+                    </p>
+                    <p className="text-sm" style={{ color: "var(--color-stone-deep)" }}>
+                      Hosted by {e.practitioner} · {e.date}{e.time ? ` · ${e.time}` : ""}
+                    </p>
+                  </div>
+                  <p
+                    className={`${rounded.className} text-base font-medium`}
+                    style={{ color: GC.orangeDeep }}
+                  >
+                    {e.price}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+          <Link
+            href="/events"
+            className="inline-block mt-6 text-sm font-medium hover:opacity-60 transition-opacity"
+            style={{ color: "var(--color-charcoal)" }}
+          >
+            View full events calendar →
+          </Link>
         </div>
       </section>
 

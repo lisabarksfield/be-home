@@ -545,6 +545,7 @@ export const content = {
         price: "From €30",
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+The+Girls+Club+on+Sunday+21+June+at+10:30am",
+        series: "girlsClub",
       },
       {
         id: "16",
@@ -641,6 +642,7 @@ export const content = {
         price: "€40 · Men only",
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Perimenopause%3A+No+Filter+on+Wednesday+16+September",
+        series: "girlsClub",
       },
       {
         id: "22",
