@@ -605,6 +605,7 @@ export const content = {
         price: "€135 for 3 (early bird)",
         type: "Workshop",
         whatsappUrl: "https://wa.me/15082804493?text=I+would+like+to+book+a+spot+at+Demystifying+Hormones%2C+Nutrition+and+the+Pelvic+Floor+on+Friday+18+September",
+        bookingUrl: "https://calendly.com/re-centre/packages/be6e8827-5a34-4955-b8a8-11e9c2a1cb78",
       },
       {
         id: "23",
@@ -617,6 +618,7 @@ export const content = {
         price: "€135 for 3 (early bird)",
         type: "Workshop",
         whatsappUrl: "https://wa.me/15082804493?text=I+would+like+to+book+a+spot+at+Demystifying+Hormones%2C+Nutrition+and+the+Pelvic+Floor+on+Friday+16+October",
+        bookingUrl: "https://calendly.com/re-centre/packages/be6e8827-5a34-4955-b8a8-11e9c2a1cb78",
       },
       {
         id: "24",
@@ -629,6 +631,7 @@ export const content = {
         price: "€135 for 3 (early bird)",
         type: "Workshop",
         whatsappUrl: "https://wa.me/15082804493?text=I+would+like+to+book+a+spot+at+Demystifying+Hormones%2C+Nutrition+and+the+Pelvic+Floor+on+Friday+20+November",
+        bookingUrl: "https://calendly.com/re-centre/packages/be6e8827-5a34-4955-b8a8-11e9c2a1cb78",
       },
       {
         id: "20",
