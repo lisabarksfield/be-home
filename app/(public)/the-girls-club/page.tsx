@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { Baloo_2 } from "next/font/google";
 import { content } from "@/lib/content";
 
@@ -140,30 +141,53 @@ export default function TheGirlsClubPage() {
               No upcoming events right now, check back soon.
             </p>
           ) : (
-            <div className="space-y-4">
-              {upcomingEvents.map((e) => (
-                <div
-                  key={e.id}
-                  className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 rounded-xl px-5 py-4"
-                  style={{ backgroundColor: "var(--color-stone-warm)" }}
-                >
-                  <div>
-                    <p className="text-lg font-medium" style={{ color: "var(--color-charcoal)" }}>
+            <>
+              {/* Table layout, sm screens and up */}
+              <div
+                className="hidden sm:grid gap-x-6 gap-y-4"
+                style={{ gridTemplateColumns: "auto 1fr auto auto" }}
+              >
+                {upcomingEvents.map((e) => (
+                  <Fragment key={e.id}>
+                    <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
+                      {e.date}
+                    </p>
+                    <p className="text-base font-medium" style={{ color: "var(--color-charcoal)" }}>
+                      {e.title}
+                    </p>
+                    <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
+                      {e.time}
+                    </p>
+                    <p
+                      className={`${rounded.className} text-sm font-medium whitespace-nowrap`}
+                      style={{ color: GC.orangeDeep }}
+                    >
+                      {e.price}
+                    </p>
+                  </Fragment>
+                ))}
+              </div>
+
+              {/* Stacked layout, below sm */}
+              <div className="sm:hidden space-y-4">
+                {upcomingEvents.map((e) => (
+                  <div key={e.id}>
+                    <p className="text-base font-medium" style={{ color: "var(--color-charcoal)" }}>
                       {e.title}
                     </p>
                     <p className="text-sm" style={{ color: "var(--color-stone-deep)" }}>
-                      Hosted by {e.practitioner} · {e.date}{e.time ? ` · ${e.time}` : ""}
+                      {e.date} · {e.time}
+                    </p>
+                    <p
+                      className={`${rounded.className} text-sm font-medium`}
+                      style={{ color: GC.orangeDeep }}
+                    >
+                      {e.price}
                     </p>
                   </div>
-                  <p
-                    className={`${rounded.className} text-base font-medium`}
-                    style={{ color: GC.orangeDeep }}
-                  >
-                    {e.price}
-                  </p>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </>
           )}
           <Link
             href="/events"
