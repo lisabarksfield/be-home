@@ -23,6 +23,11 @@ function displayHeadingStyle(color: string) {
   return { color, fontFamily: displayFont };
 }
 
+// Drops the leading weekday ("Wednesday, ") to save horizontal space in the compact events table.
+function shortDate(date: string) {
+  return date.replace(/^[A-Za-z]+,\s*/, "");
+}
+
 const grainOverlay =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
@@ -144,15 +149,15 @@ export default function TheGirlsClubPage() {
             <>
               {/* Table layout, sm screens and up */}
               <div
-                className="hidden sm:grid gap-x-6 gap-y-4"
+                className="hidden sm:grid gap-x-4 gap-y-4"
                 style={{ gridTemplateColumns: "auto 1fr auto auto" }}
               >
                 {upcomingEvents.map((e) => (
                   <Fragment key={e.id}>
                     <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
-                      {e.date}
+                      {shortDate(e.date)}
                     </p>
-                    <p className="text-base font-medium" style={{ color: "var(--color-charcoal)" }}>
+                    <p className="text-base font-medium whitespace-nowrap" style={{ color: "var(--color-charcoal)" }}>
                       {e.title}
                     </p>
                     <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
