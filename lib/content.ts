@@ -584,6 +584,19 @@ export const content = {
         whatsappUrl: "https://wa.me/351933906821?text=I+would+like+to+book+a+spot+at+Yin+Yoga+on+Friday+7+August+at+7pm",
       },
       {
+        id: "35",
+        date: "Thursday, 3 September 2026",
+        isoDate: "2026-09-03",
+        time: "18:00",
+        title: "Influence Beyond Words: The Power of Resonance in Leadership",
+        description: "An immersive experience with Marina Sigalova and Inna Pearce exploring how you influence others before you even speak, through your presence, energy, and embodied resonance.\n\nResonance: create emotional connection beyond words and be remembered for how you make people feel.\n\nPresence: align your thoughts, emotions, energy, and communication so your message lands with authenticity and impact.\n\nVisibility: express your ideas with confidence, without shrinking, self-censoring, or over-explaining.\n\nEmotional Mastery: shift your internal state to move from doubt, fear, or overthinking into clarity, confidence, and self-trust.\n\nEnergetic Influence: understand how people feel your energy before they hear your words, and learn to regulate and elevate your impact.",
+        practitioner: "Marina Sigalova & Inna Pearce",
+        price: "€50",
+        type: "Workshop",
+        bookingUrl: "https://luma.com/0a4kv6hs",
+        bookingLabel: "Book now →",
+      },
+      {
         id: "27",
         date: "Friday, 4 September 2026",
         isoDate: "2026-09-04",
@@ -656,6 +669,7 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/15082804493?text=I+would+like+to+book+a+spot+at+Demystifying+Hormones%2C+Nutrition+and+the+Pelvic+Floor+on+Friday+18+September",
         bookingUrl: "https://calendly.com/re-centre/packages/be6e8827-5a34-4955-b8a8-11e9c2a1cb78",
+        bookingLabel: "Grab your Early Bird Spot →",
       },
       {
         id: "29",
@@ -706,6 +720,7 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/15082804493?text=I+would+like+to+book+a+spot+at+Demystifying+Hormones%2C+Nutrition+and+the+Pelvic+Floor+on+Friday+16+October",
         bookingUrl: "https://calendly.com/re-centre/packages/be6e8827-5a34-4955-b8a8-11e9c2a1cb78",
+        bookingLabel: "Grab your Early Bird Spot →",
       },
       {
         id: "33",
@@ -732,6 +747,7 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/15082804493?text=I+would+like+to+book+a+spot+at+Demystifying+Hormones%2C+Nutrition+and+the+Pelvic+Floor+on+Friday+20+November",
         bookingUrl: "https://calendly.com/re-centre/packages/be6e8827-5a34-4955-b8a8-11e9c2a1cb78",
+        bookingLabel: "Grab your Early Bird Spot →",
       },
       {
         id: "34",

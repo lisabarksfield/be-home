@@ -131,7 +131,7 @@ export default function EventsPage() {
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium hover:opacity-70 transition-opacity"
                             style={{ border: "1.5px solid var(--color-charcoal)", color: "var(--color-charcoal)" }}
                           >
-                            Grab your Early Bird Spot →
+                            {"bookingLabel" in e && e.bookingLabel ? e.bookingLabel : "Book now →"}
                           </a>
                         )}
                       </div>
