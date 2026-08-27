@@ -163,12 +163,24 @@ export default function TheGirlsClubPage() {
                     <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
                       {e.time}
                     </p>
-                    <p
-                      className={`${rounded.className} text-sm font-medium whitespace-nowrap`}
-                      style={{ color: GC.orangeDeep }}
-                    >
-                      {e.price}
-                    </p>
+                    {"bookingUrl" in e && e.bookingUrl ? (
+                      <a
+                        href={e.bookingUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${rounded.className} text-xs font-medium whitespace-nowrap px-3 py-1.5 rounded-full text-center hover:opacity-90 transition-opacity`}
+                        style={{ backgroundColor: GC.orangeDeep, color: GC.cream }}
+                      >
+                        {"bookingLabel" in e && e.bookingLabel ? e.bookingLabel : "Book now →"}
+                      </a>
+                    ) : (
+                      <p
+                        className={`${rounded.className} text-sm font-medium whitespace-nowrap`}
+                        style={{ color: GC.orangeDeep }}
+                      >
+                        {e.price}
+                      </p>
+                    )}
                   </Fragment>
                 ))}
               </div>
@@ -180,15 +192,27 @@ export default function TheGirlsClubPage() {
                     <p className="text-base font-medium" style={{ color: "var(--color-charcoal)" }}>
                       {e.title}
                     </p>
-                    <p className="text-sm" style={{ color: "var(--color-stone-deep)" }}>
+                    <p className="text-sm mb-2" style={{ color: "var(--color-stone-deep)" }}>
                       {e.date} · {e.time}
                     </p>
-                    <p
-                      className={`${rounded.className} text-sm font-medium`}
-                      style={{ color: GC.orangeDeep }}
-                    >
-                      {e.price}
-                    </p>
+                    {"bookingUrl" in e && e.bookingUrl ? (
+                      <a
+                        href={e.bookingUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${rounded.className} inline-block text-xs font-medium px-3 py-1.5 rounded-full hover:opacity-90 transition-opacity`}
+                        style={{ backgroundColor: GC.orangeDeep, color: GC.cream }}
+                      >
+                        {"bookingLabel" in e && e.bookingLabel ? e.bookingLabel : "Book now →"}
+                      </a>
+                    ) : (
+                      <p
+                        className={`${rounded.className} text-sm font-medium`}
+                        style={{ color: GC.orangeDeep }}
+                      >
+                        {e.price}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>

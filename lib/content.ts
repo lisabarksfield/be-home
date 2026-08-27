@@ -656,6 +656,8 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Perimenopause%3A+No+Filter+on+Wednesday+16+September",
         series: "girlsClub",
+        bookingUrl: "https://calendly.com/hello-behomecascais",
+        bookingLabel: "Book Now →",
       },
       {
         id: "22",
@@ -707,6 +709,8 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Periods+%26+Growing+Up+on+Sunday+4+October",
         series: "girlsClub",
+        bookingUrl: "https://calendly.com/hello-behomecascais",
+        bookingLabel: "Book Now →",
       },
       {
         id: "23",
@@ -734,6 +738,8 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Periods+%26+Growing+Up%3A+For+Dads+on+Sunday+18+October",
         series: "girlsClub",
+        bookingUrl: "https://calendly.com/hello-behomecascais",
+        bookingLabel: "Book Now →",
       },
       {
         id: "24",
@@ -761,6 +767,8 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Periods+%26+Growing+Up+on+Sunday+22+November",
         series: "girlsClub",
+        bookingUrl: "https://calendly.com/hello-behomecascais",
+        bookingLabel: "Book Now →",
       },
       {
         id: "20",
