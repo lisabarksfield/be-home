@@ -901,6 +901,16 @@ export const content = {
         imageObjectPosition: "center 25%",
         whatsappUrl: "",
       },
+      {
+        slug: "carine",
+        name: "Carine",
+        specialty: "Qi Gong",
+        bio: "I am Carine and I discovered Qi Gong at a crucial moment of my life. I would love to share with you its healing power focusing on physical strength, mental peace and energy flow.",
+        tags: ["Qi Gong", "Energy Flow", "Mind-Body Practice"],
+        image: "/practitioners/carine.jpg",
+        imageProfile: "",
+        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
+      },
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",
