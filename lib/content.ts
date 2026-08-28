@@ -909,6 +909,7 @@ export const content = {
         tags: ["Qi Gong", "Energy Flow", "Mind-Body Practice"],
         image: "/practitioners/carine.jpg",
         imageProfile: "",
+        imageObjectPosition: "center 15%",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
     ],

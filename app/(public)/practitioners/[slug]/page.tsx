@@ -32,7 +32,8 @@ export default async function PractitionerProfilePage({ params }: { params: Prom
                   src={practitioner.image}
                   alt={practitioner.name}
                   fill
-                  className="object-cover object-[center_35%]"
+                  className="object-cover"
+                  style={{ objectPosition: ('imageObjectPosition' in practitioner ? practitioner.imageObjectPosition as string : undefined) ?? "center 35%" }}
                 />
               </div>
             ) : (
