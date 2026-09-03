@@ -1101,6 +1101,26 @@ export const content = {
         "More is coming. Stay close.",
       ],
     },
+    testimonials: {
+      headline: "What families are saying",
+      items: [
+        {
+          quote:
+            "The girls club is wonderful! Just super awesome. Melissa and Lisa are kind, knowledgeable and calmly confident. They care so much and they know what they're talking about.\n\nMy daughter who is 12 benefited enormously. And (to my surprise!) I even learned a lot of new things for myself. I wish I had had the opportunity to attend a girls club workshop when I was a tween.\n\nIt was also really cool to spend time with other mothers and daughters and to feel the community of caring, intelligent, kind women across a spectrum of ages. Really good stuff.",
+          name: "Scarlett",
+        },
+        {
+          quote:
+            "We've been to a workshop and couldn't be more happy about it. Starting from the design, the people involved, and content quality. I'm so happy we went and definitely planning to come back. Highly recommend!",
+          name: "Adi",
+        },
+        {
+          quote:
+            "Attending the 'Girls' Club' Periods & growing up with my daughter was hands-down one of the best decisions I've made as a parent this year.\n\nTalking about growing up can feel daunting, but the expert facilitators made the entire experience feel completely natural, warm, and zero-percent awkward. Her down-to-earth, professional approach created a safe space where shame and stigma simply vanished. Instead of feeling embarrassed, the girls left feeling knowledgeable, confident, and genuinely empowered about their bodies and the changes ahead.\n\nIt also gave my daughter and me a shared language and opened up a channel of communication that I know will benefit us for years to come. If you get the chance to attend with your daughter, don't hesitate, it's such a valuable experience for you both!",
+          name: "Lianne",
+        },
+      ],
+    },
     ideaCta: {
       headline: "Have an idea? We'd love to hear it.",
       body: "Is there a workshop you wish existed? A topic you have been searching for? Something you would love to bring to your community or host through Be Home?\n\nReach out. This whole series started with a feeling that something was missing, and we are still building it. Your ideas are very welcome here.",

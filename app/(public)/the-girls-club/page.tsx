@@ -228,6 +228,41 @@ export default function TheGirlsClubPage() {
         </div>
       </section>
 
+      {/* ── Testimonials ──────────────────────────────── */}
+      <section className="py-20 px-6" style={{ backgroundColor: "var(--color-stone-warm)" }}>
+        <div className="max-w-2xl mx-auto">
+          <h2
+            className="text-3xl md:text-4xl mb-10 text-center"
+            style={displayHeadingStyle(GC.orangeDeep)}
+          >
+            {girlsClub.testimonials.headline}
+          </h2>
+          <div className="space-y-14">
+            {girlsClub.testimonials.items.map((t, i) => (
+              <figure key={i}>
+                <blockquote className="space-y-4">
+                  {t.quote.split("\n\n").map((para, j) => (
+                    <p
+                      key={j}
+                      className="text-lg md:text-xl italic leading-relaxed"
+                      style={{ color: "var(--color-charcoal)" }}
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </blockquote>
+                <figcaption
+                  className={`${rounded.className} text-sm font-medium mt-6`}
+                  style={{ color: GC.orangeDeep }}
+                >
+                  {t.name}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Have an idea? CTA ─────────────────────────── */}
       <GradientBand>
         <div className="max-w-xl mx-auto">
