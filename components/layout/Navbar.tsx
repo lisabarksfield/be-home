@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef } from "react";
 
+const GIRLS_CLUB_PINK = "#F16EC3";
+
 type NavItem = { href: string; label: string; sub: string };
 type NavGroup =
   | { id: string; label: string; items: NavItem[]; href?: never }
@@ -99,7 +101,7 @@ export default function Navbar() {
                 key={group.id}
                 href={group.href}
                 className="px-4 py-2 text-sm tracking-wide rounded-lg hover:opacity-60 transition-opacity"
-                style={{ color: "var(--color-charcoal)" }}
+                style={{ color: group.id === "girls-club" ? GIRLS_CLUB_PINK : "var(--color-charcoal)" }}
               >
                 {group.label}
               </Link>
@@ -241,7 +243,7 @@ export default function Navbar() {
                 key={group.id}
                 href={group.href}
                 className="py-3 text-base tracking-wide"
-                style={{ color: "var(--color-charcoal)" }}
+                style={{ color: group.id === "girls-club" ? GIRLS_CLUB_PINK : "var(--color-charcoal)" }}
                 onClick={() => setMobileOpen(false)}
               >
                 {group.label}

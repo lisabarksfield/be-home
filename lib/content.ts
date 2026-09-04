@@ -1116,7 +1116,7 @@ export const content = {
         },
         {
           quote:
-            "Attending the 'Girls' Club' Periods & growing up with my daughter was hands-down one of the best decisions I've made as a parent this year.\n\nTalking about growing up can feel daunting, but the expert facilitators made the entire experience feel completely natural, warm, and zero-percent awkward. Her down-to-earth, professional approach created a safe space where shame and stigma simply vanished. Instead of feeling embarrassed, the girls left feeling knowledgeable, confident, and genuinely empowered about their bodies and the changes ahead.\n\nIt also gave my daughter and me a shared language and opened up a channel of communication that I know will benefit us for years to come. If you get the chance to attend with your daughter, don't hesitate, it's such a valuable experience for you both!",
+            "Attending the 'Girls' Club' Periods & Growing Up with my daughter was hands-down one of the best decisions I've made as a parent this year.\n\nTalking about growing up can feel daunting, but the expert facilitators made the entire experience feel completely natural, warm, and zero-percent awkward. Their down-to-earth, professional approach created a safe space where shame and stigma simply vanished. Instead of feeling embarrassed, the girls left feeling knowledgeable, confident, and genuinely empowered about their bodies and the changes ahead.\n\nIt also gave my daughter and me a shared language and opened up a channel of communication that I know will benefit us for years to come. If you get the chance to attend with your daughter, don't hesitate, it's such a valuable experience for you both!",
           name: "Lianne",
         },
       ],

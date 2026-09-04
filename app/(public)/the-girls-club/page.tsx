@@ -230,21 +230,25 @@ export default function TheGirlsClubPage() {
 
       {/* ── Testimonials ──────────────────────────────── */}
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-stone-warm)" }}>
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2
             className="text-3xl md:text-4xl mb-10 text-center"
             style={displayHeadingStyle(GC.orangeDeep)}
           >
             {girlsClub.testimonials.headline}
           </h2>
-          <div className="space-y-14">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {girlsClub.testimonials.items.map((t, i) => (
-              <figure key={i}>
-                <blockquote className="space-y-4">
+              <figure
+                key={i}
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: GC.cream }}
+              >
+                <blockquote className="space-y-3">
                   {t.quote.split("\n\n").map((para, j) => (
                     <p
                       key={j}
-                      className="text-lg md:text-xl italic leading-relaxed"
+                      className="text-sm md:text-base italic leading-relaxed"
                       style={{ color: "var(--color-charcoal)" }}
                     >
                       {para}
@@ -252,7 +256,7 @@ export default function TheGirlsClubPage() {
                   ))}
                 </blockquote>
                 <figcaption
-                  className={`${rounded.className} text-sm font-medium mt-6`}
+                  className={`${rounded.className} text-sm font-medium mt-4`}
                   style={{ color: GC.orangeDeep }}
                 >
                   {t.name}
