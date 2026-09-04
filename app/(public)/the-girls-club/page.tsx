@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 const { girlsClub, events } = content;
 
 const rounded = Baloo_2({ subsets: ["latin"], weight: ["500", "600", "700"] });
-const displayFont = "'Gulfs Display', sans-serif";
+const displayFont = "'Recoleta Alt', var(--font-serif)";
 
 const GC = {
   cream: "#FFF7D3",
@@ -242,7 +242,7 @@ export default function TheGirlsClubPage() {
               <figure
                 key={i}
                 className="rounded-2xl p-6"
-                style={{ backgroundColor: GC.cream }}
+                style={{ backgroundColor: "var(--color-cream)" }}
               >
                 <blockquote className="space-y-3">
                   {t.quote.split("\n\n").map((para, j) => (
