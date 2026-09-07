@@ -25,20 +25,23 @@ export function EventCard({ event, dimmed = false }: { event: EventEntry; dimmed
     >
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-3 mb-3">
-          <div>
-            <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span
-                className="text-xs px-2.5 py-1 rounded-full"
-                style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
-              >
-                {event.type}
-              </span>
-              <span className="text-xs" style={{ color: "var(--color-stone-deep)" }}>
-                {event.time ? `${event.date} · ${event.time}` : event.date}
-              </span>
-            </div>
+          <div className="min-w-0">
+            <span
+              className="inline-block text-xs px-2.5 py-1 rounded-full mb-2"
+              style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
+            >
+              {event.type}
+            </span>
+            <p className="text-xs" style={{ color: "var(--color-stone-deep)" }}>
+              {event.date}
+            </p>
+            {event.time && (
+              <p className="text-xs mt-0.5" style={{ color: "var(--color-stone-deep)" }}>
+                {"endTime" in event && event.endTime ? `${event.time}-${event.endTime}` : event.time}
+              </p>
+            )}
             <h3
-              className="text-xl leading-snug"
+              className="text-xl leading-snug line-clamp-2 min-h-[3.5rem] mt-2"
               style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}
             >
               {event.title}
