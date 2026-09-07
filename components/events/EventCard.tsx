@@ -4,6 +4,16 @@ import { useState } from "react";
 import type { EventEntry } from "@/lib/content";
 
 const SHOW_MORE_THRESHOLD = 220;
+const NBSP = " ";
+
+// Keeps first/last names glued together when wrapping, only allowing a
+// break at "&"/"and" between people (e.g. avoids "Simone" / "Muller & ...").
+function keepNamesTogether(text: string) {
+  return text
+    .split(/(\s&\s|\sand\s)/)
+    .map((part, i) => (i % 2 === 0 ? part.split(" ").join(NBSP) : part))
+    .join("");
+}
 
 function whatsappIcon() {
   return (
@@ -24,34 +34,32 @@ export function EventCard({ event, dimmed = false }: { event: EventEntry; dimmed
       style={{ backgroundColor: "var(--color-stone-warm)" }}
     >
       <div className="p-6 flex flex-col flex-1">
-        <div className="flex items-start justify-between gap-3 mb-3">
-          <div className="min-w-0">
-            <span
-              className="inline-block text-xs px-2.5 py-1 rounded-full mb-2"
-              style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
-            >
-              {event.type}
-            </span>
-            <p className="text-xs" style={{ color: "var(--color-stone-deep)" }}>
-              {event.date}
+        <div className="mb-3">
+          <span
+            className="inline-block text-xs px-2.5 py-1 rounded-full mb-2"
+            style={{ backgroundColor: "var(--color-trumpet)", color: "var(--color-charcoal)" }}
+          >
+            {event.type}
+          </span>
+          <p className="text-xs" style={{ color: "var(--color-stone-deep)" }}>
+            {event.date}
+          </p>
+          {event.time && (
+            <p className="text-xs mt-0.5" style={{ color: "var(--color-stone-deep)" }}>
+              {"endTime" in event && event.endTime ? `${event.time}-${event.endTime}` : event.time}
             </p>
-            {event.time && (
-              <p className="text-xs mt-0.5" style={{ color: "var(--color-stone-deep)" }}>
-                {"endTime" in event && event.endTime ? `${event.time}-${event.endTime}` : event.time}
-              </p>
-            )}
-            <h3
-              className="text-xl leading-snug line-clamp-2 min-h-[3.5rem] mt-2"
-              style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}
-            >
-              {event.title}
-            </h3>
-            <p className="text-sm mt-1" style={{ color: "var(--color-stone-deep)" }}>
-              with {event.practitioner}
-            </p>
-          </div>
+          )}
+          <h3
+            className="text-xl leading-snug mt-2"
+            style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}
+          >
+            {event.title}
+          </h3>
+          <p className="text-sm mt-1" style={{ color: "var(--color-stone-deep)" }}>
+            with {keepNamesTogether(event.practitioner)}
+          </p>
           <p
-            className="text-lg md:text-xl leading-tight whitespace-nowrap"
+            className="text-lg mt-2"
             style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}
           >
             {event.price}
