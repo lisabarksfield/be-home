@@ -746,7 +746,7 @@ export const content = {
         title: "Periods & Growing Up: For Dads",
         description: "Periods & Growing Up: For Dads is part of The Girls Club for Men, a straight-talking session for dads of girls aged 8 to 14 covering everything you actually need to know: what's happening in her body, how to handle the mood, what to keep in the house, and how to have a conversation without making it weird.",
         practitioner: "Lisa & Melissa",
-        price: "€40 · Men only",
+        price: "€30 · Men only",
         type: "Workshop",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Periods+%26+Growing+Up%3A+For+Dads+on+Sunday+18+October",
         series: "girlsClub",
