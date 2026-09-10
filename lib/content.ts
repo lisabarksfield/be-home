@@ -689,7 +689,7 @@ export const content = {
         title: "Morning Qi Gong",
         description: "Qi Gong is one of the oldest morning practices in the world. Traditionally it is practiced at the start of the day to activate and balance your Qi before life takes over.\n\nJoin Carine to gently wake the body, clear the mind, and set the tone for the rest of the day.\n\nThis introductory class is open to everyone. No experience needed.",
         practitioner: "Carine",
-        price: "€5",
+        price: "€5 · Introductory price",
         type: "Class",
         whatsappUrl: "https://wa.me/351914639457?text=I+would+like+to+book+a+spot+at+Morning+Qi+Gong+on+Friday+25+September+at+9%3A30am",
       },
