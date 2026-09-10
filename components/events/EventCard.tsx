@@ -108,6 +108,17 @@ export function EventCard({ event, dimmed = false }: { event: EventEntry; dimmed
               {"bookingLabel" in event && event.bookingLabel ? event.bookingLabel : "Book now →"}
             </a>
           )}
+          {"bookingUrl2" in event && event.bookingUrl2 && (
+            <a
+              href={event.bookingUrl2}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium hover:opacity-70 transition-opacity"
+              style={{ border: "1.5px solid var(--color-charcoal)", color: "var(--color-charcoal)" }}
+            >
+              {"bookingLabel2" in event && event.bookingLabel2 ? event.bookingLabel2 : "Book now →"}
+            </a>
+          )}
         </div>
       </div>
     </div>
