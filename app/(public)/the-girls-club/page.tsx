@@ -1,32 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment } from "react";
 import { Baloo_2 } from "next/font/google";
 import { content } from "@/lib/content";
+import { GC, displayHeadingStyle } from "@/lib/girlsClubTheme";
+import { GirlsClubEventCard } from "@/components/events/GirlsClubEventCard";
 
 export const dynamic = 'force-dynamic';
 
 const { girlsClub, events } = content;
 
 const rounded = Baloo_2({ subsets: ["latin"], weight: ["500", "600", "700"] });
-const displayFont = "'Recoleta Alt', var(--font-serif)";
-
-const GC = {
-  cream: "#FFF7D3",
-  pink: "#F16EC3",
-  orange: "#FB9553",
-  orangeDeep: "#F2793D",
-  tan: "#E0A97F",
-};
-
-function displayHeadingStyle(color: string) {
-  return { color, fontFamily: displayFont };
-}
-
-// Drops the leading weekday ("Wednesday, ") to save horizontal space in the compact events table.
-function shortDate(date: string) {
-  return date.replace(/^[A-Za-z]+,\s*/, "");
-}
 
 const grainOverlay =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
@@ -134,7 +117,7 @@ export default function TheGirlsClubPage() {
 
       {/* ── Upcoming events ────────────────────────────── */}
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2
             className="text-3xl md:text-4xl mb-8"
             style={displayHeadingStyle(GC.orangeDeep)}
@@ -146,77 +129,11 @@ export default function TheGirlsClubPage() {
               No upcoming events right now, check back soon.
             </p>
           ) : (
-            <>
-              {/* Table layout, sm screens and up */}
-              <div
-                className="hidden sm:grid gap-x-4 gap-y-4"
-                style={{ gridTemplateColumns: "auto 1fr auto auto" }}
-              >
-                {upcomingEvents.map((e) => (
-                  <Fragment key={e.id}>
-                    <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
-                      {shortDate(e.date)}
-                    </p>
-                    <p className="text-base font-medium whitespace-nowrap" style={{ color: "var(--color-charcoal)" }}>
-                      {e.title}
-                    </p>
-                    <p className="text-sm whitespace-nowrap" style={{ color: "var(--color-stone-deep)" }}>
-                      {e.time}
-                    </p>
-                    {"bookingUrl" in e && e.bookingUrl ? (
-                      <a
-                        href={e.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${rounded.className} text-xs font-medium whitespace-nowrap px-3 py-1.5 rounded-full text-center hover:opacity-90 transition-opacity`}
-                        style={{ backgroundColor: GC.orangeDeep, color: GC.cream }}
-                      >
-                        {"bookingLabel" in e && e.bookingLabel ? e.bookingLabel : "Book now →"}
-                      </a>
-                    ) : (
-                      <p
-                        className={`${rounded.className} text-sm font-medium whitespace-nowrap`}
-                        style={{ color: GC.orangeDeep }}
-                      >
-                        {e.price}
-                      </p>
-                    )}
-                  </Fragment>
-                ))}
-              </div>
-
-              {/* Stacked layout, below sm */}
-              <div className="sm:hidden space-y-4">
-                {upcomingEvents.map((e) => (
-                  <div key={e.id}>
-                    <p className="text-base font-medium" style={{ color: "var(--color-charcoal)" }}>
-                      {e.title}
-                    </p>
-                    <p className="text-sm mb-2" style={{ color: "var(--color-stone-deep)" }}>
-                      {e.date} · {e.time}
-                    </p>
-                    {"bookingUrl" in e && e.bookingUrl ? (
-                      <a
-                        href={e.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${rounded.className} inline-block text-xs font-medium px-3 py-1.5 rounded-full hover:opacity-90 transition-opacity`}
-                        style={{ backgroundColor: GC.orangeDeep, color: GC.cream }}
-                      >
-                        {"bookingLabel" in e && e.bookingLabel ? e.bookingLabel : "Book now →"}
-                      </a>
-                    ) : (
-                      <p
-                        className={`${rounded.className} text-sm font-medium`}
-                        style={{ color: GC.orangeDeep }}
-                      >
-                        {e.price}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {upcomingEvents.map((e) => (
+                <GirlsClubEventCard key={e.id} event={e} />
+              ))}
+            </div>
           )}
           <Link
             href="/events"
