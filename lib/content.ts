@@ -1108,7 +1108,7 @@ export const content = {
       headline: "What's coming",
       subheadline: "The Girls Club is growing.",
       body: [
-        "Cycle Mastery for teenagers who are ready to understand their bodies as something to work with. Workshops for dads who want to show up for their daughters and their partners in the way the generation before them simply never did, with the knowledge, the language and the confidence to actually be there. Perimenopause, ADHD, breathwork, pelvic floor health, resilience and somatic work for kids and teens. And a workshop to help the men who love women in perimenopause understand what is actually going on, and what genuinely helps.",
+        "Cycle Mastery for anyone with a regular period who is ready to understand their body as something to work with, bring a friend along. Workshops for dads who want to show up for their daughters and their partners in the way the generation before them simply never did, with the knowledge, the language and the confidence to actually be there. Perimenopause, ADHD, breathwork, pelvic floor health, resilience and somatic work for kids and teens. And a workshop to help the men who love women in perimenopause understand what is actually going on, and what genuinely helps.",
         "We are building something for every stage, every age and everyone who is trying to do this better than it was done for them.",
         "More is coming. Stay close.",
       ],
