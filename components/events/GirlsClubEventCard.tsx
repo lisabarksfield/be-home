@@ -33,12 +33,12 @@ export function GirlsClubEventCard({ event }: { event: EventEntry }) {
   const isLong = event.description.length > SHOW_MORE_THRESHOLD;
 
   return (
-    <div className="rounded-2xl overflow-hidden flex flex-col" style={{ backgroundColor: GC.cream }}>
+    <div className="rounded-2xl overflow-hidden flex flex-col" style={{ backgroundColor: "var(--color-stone-warm)" }}>
       <div className="p-6 flex flex-col flex-1">
         <div className="mb-3">
           <span
             className={`${rounded.className} inline-block text-xs px-2.5 py-1 rounded-full mb-2`}
-            style={{ backgroundColor: GC.pink, color: GC.cream }}
+            style={{ backgroundColor: GC.pink, color: "#fff" }}
           >
             {event.type}
           </span>
@@ -98,7 +98,7 @@ export function GirlsClubEventCard({ event }: { event: EventEntry }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`${rounded.className} inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity`}
-              style={{ backgroundColor: GC.orangeDeep, color: GC.cream }}
+              style={{ backgroundColor: GC.orangeDeep, color: "#fff" }}
             >
               {"bookingLabel" in event && event.bookingLabel ? event.bookingLabel : "Book now →"}
             </a>
