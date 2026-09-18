@@ -681,6 +681,18 @@ export const content = {
         whatsappUrl: "https://wa.me/351933906821?text=I+would+like+to+book+a+spot+at+Yin+Yoga+on+Friday+18+September+at+7pm",
       },
       {
+        id: "39",
+        date: "Monday, 21 September 2026",
+        isoDate: "2026-09-21",
+        time: "19:00",
+        title: "Kundalini Yoga",
+        description: "A grounding practice that weaves breathwork, meditation, mantra, visualisation and movement to help you return to yourself. Dinara draws on traditional yogic teaching and anatomy to explain the why behind each technique, so you leave not just feeling better but understanding how and why the practice works.\n\nClasses end with a deep Shavasana accompanied by live instruments.\n\nNo experience needed. Come as you are.",
+        practitioner: "Dinara",
+        price: "€45",
+        type: "Class",
+        whatsappUrl: "https://wa.me/380685723979?text=I+would+like+to+book+a+spot+at+Kundalini+Yoga+on+Monday+21+September+at+7pm",
+      },
+      {
         id: "38",
         date: "Friday, 25 September 2026",
         isoDate: "2026-09-25",
