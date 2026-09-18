@@ -924,6 +924,16 @@ export const content = {
         imageObjectPosition: "center 15%",
         whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
       },
+      {
+        slug: "dinara",
+        name: "Dinara",
+        specialty: "Kundalini Yoga, Hatha Yoga & Sound Healing",
+        bio: "I'm Dinara, a certified teacher of Traditional Kundalini Yoga (500h) and Hatha Yoga (300h), as well as a Sound Healing practitioner.\n\nI lived and studied in Rishikesh, India, for around six months, completing my training at Divine Yoga Ashram.\n\nI have taught in London, Ukraine, Poland and Barcelona, as well as online, including regular charity practices in London and Ukraine.\n\nI maintain a daily personal sadhana and stay in regular contact with my gurus, teachers and mentor. Vipassana and silent retreats are also an integral part of my path, with eight retreats completed over the past three years.",
+        tags: ["Kundalini Yoga", "Hatha Yoga", "Sound Healing"],
+        image: "/practitioners/dinara.jpg",
+        imageProfile: "",
+        whatsappUrl: "", // add WhatsApp link e.g. "https://wa.me/351..."
+      },
     ],
     joinCta: {
       headline: "Want to join our practitioner community?",
