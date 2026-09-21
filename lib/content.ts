@@ -735,18 +735,6 @@ export const content = {
         bookingLabel2: "Book 2 Tickets →",
       },
       {
-        id: "36",
-        date: "Saturday, 26 September 2026",
-        isoDate: "2026-09-26",
-        time: "16:00",
-        title: "A Session on Motherhood, Mental Health and Movement",
-        description: "Velaia x Maria Palha bring an afternoon of conversation, Q&A, socialising and a movement session, all around motherhood and mental health. For all mothers. Also available online via Zoom, with limited spaces.\n\n€30 · book via the link in Velaia's Instagram bio, @velaia.app. Sponsored by Soul Krave Mother & Baby.",
-        practitioner: "Laura (Velaia) x Maria Palha",
-        price: "€30",
-        type: "Workshop",
-        whatsappUrl: "https://wa.me/351963466894?text=I+would+like+to+book+a+spot+at+A+Session+on+Motherhood%2C+Mental+Health+and+Movement+on+Saturday+26+September",
-      },
-      {
         id: "32",
         date: "Sunday, 4 October 2026",
         isoDate: "2026-10-04",
