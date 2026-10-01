@@ -1096,7 +1096,7 @@ export const content = {
         isoDate: "2026-10-14",
         time: "19:30",
         title: "Be Home Book Club",
-        description: "An evening for our Be Home community to delve deep into this month's book together, with drinks and snacks included.\n\nBy invitation only, we wanted to add it here so you can see the breadth of what happens at Be Home.",
+        description: "A small, intimate evening with a few familiar faces, settling in to talk through this month's book together, the ideas it raised, the parts that stuck, and where it took us. Drinks and snacks included.",
         practitioner: "Be Home",
         price: "By invitation only",
         type: "Special Event",
