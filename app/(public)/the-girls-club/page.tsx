@@ -4,6 +4,7 @@ import { Baloo_2 } from "next/font/google";
 import { content } from "@/lib/content";
 import { GC, displayHeadingStyle } from "@/lib/girlsClubTheme";
 import { GirlsClubEventCard } from "@/components/events/GirlsClubEventCard";
+import { GirlsClubIdeaCard } from "@/components/events/GirlsClubIdeaCard";
 import { GirlsClubTestimonialCarousel } from "@/components/events/GirlsClubTestimonialCarousel";
 
 export const dynamic = 'force-dynamic';
@@ -125,17 +126,17 @@ export default function TheGirlsClubPage() {
           >
             Upcoming events
           </h2>
-          {upcomingEvents.length === 0 ? (
-            <p className="text-base italic" style={{ color: "var(--color-charcoal)" }}>
+          {upcomingEvents.length === 0 && (
+            <p className="text-base italic mb-6" style={{ color: "var(--color-charcoal)" }}>
               No upcoming events right now, check back soon.
             </p>
-          ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {upcomingEvents.map((e) => (
-                <GirlsClubEventCard key={e.id} event={e} />
-              ))}
-            </div>
           )}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {upcomingEvents.map((e) => (
+              <GirlsClubEventCard key={e.id} event={e} />
+            ))}
+            <GirlsClubIdeaCard />
+          </div>
           <Link
             href="/events"
             className="inline-block mt-6 text-sm font-medium hover:opacity-60 transition-opacity"
