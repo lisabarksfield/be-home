@@ -4,6 +4,7 @@ import { Baloo_2 } from "next/font/google";
 import { content } from "@/lib/content";
 import { GC, displayHeadingStyle } from "@/lib/girlsClubTheme";
 import { GirlsClubEventCard } from "@/components/events/GirlsClubEventCard";
+import { GirlsClubTestimonialCarousel } from "@/components/events/GirlsClubTestimonialCarousel";
 
 export const dynamic = 'force-dynamic';
 
@@ -154,32 +155,15 @@ export default function TheGirlsClubPage() {
           >
             {girlsClub.testimonials.headline}
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {girlsClub.testimonials.items.map((t, i) => (
-              <figure
-                key={i}
-                className="rounded-2xl p-6"
-                style={{ backgroundColor: "var(--color-cream)" }}
-              >
-                <blockquote className="space-y-3">
-                  {t.quote.split("\n\n").map((para, j) => (
-                    <p
-                      key={j}
-                      className="text-sm md:text-base italic leading-relaxed"
-                      style={{ color: "var(--color-charcoal)" }}
-                    >
-                      {para}
-                    </p>
-                  ))}
-                </blockquote>
-                <figcaption
-                  className={`${rounded.className} text-sm font-medium mt-4`}
-                  style={{ color: GC.orangeDeep }}
-                >
-                  {t.name}
-                </figcaption>
-              </figure>
-            ))}
+          <GirlsClubTestimonialCarousel items={girlsClub.testimonials.items.slice(0, 3)} />
+          <div className="text-center mt-6">
+            <Link
+              href="/the-girls-club/testimonials"
+              className="inline-block text-sm font-medium hover:opacity-60 transition-opacity"
+              style={{ color: "var(--color-charcoal)" }}
+            >
+              Read all testimonials →
+            </Link>
           </div>
         </div>
       </section>
