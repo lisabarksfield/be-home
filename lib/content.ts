@@ -1584,6 +1584,33 @@ export const content = {
     },
   },
 
+  // ─────────────────────────────────────────────
+  // CINEMA  /cinema
+  // ─────────────────────────────────────────────
+  cinema: {
+    hero: {
+      tagline: "Hire a Space",
+      headline: "The Cinema",
+      body:
+        "A dedicated private screening room with plush blue velvet seating, a large projection screen and a characterful, moody interior. Perfect for film nights, private screenings and intimate gatherings.",
+      ctaLabel: "Enquire About Hire",
+      ctaHref: "/contact?subject=Cinema+Hire",
+    },
+    amenities: [
+      "Dedicated screening room",
+      "Large projection screen",
+      "Multi-speaker sound system",
+      "Plush corner sofa seating",
+      "Ambient LED mood lighting",
+      "Natural light with blackout option",
+    ],
+    note:
+      "Equipment details, seating capacity and rates are being finalised — enquire and we'll confirm availability and the latest specification for your event.",
+    cta: {
+      headline: "Curious about the Cinema?",
+    },
+  },
+
 } as const;
 
 // Type exports for convenience

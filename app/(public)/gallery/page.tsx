@@ -53,6 +53,14 @@ const rooms: Room[] = [
       { src: "/space/space-4.jpg", alt: "The Space — changing room corridor" },
     ],
   },
+  {
+    label: "The Cinema",
+    images: [
+      { src: "/cinema/cinema-1.jpg", alt: "The Cinema — screen and blue velvet seating" },
+      { src: "/cinema/cinema-2.jpg", alt: "The Cinema — facing the projection screen" },
+      { src: "/cinema/cinema-3.jpg", alt: "The Cinema — seating and ambient lighting" },
+    ],
+  },
 ];
 
 // Flat list for lightbox navigation

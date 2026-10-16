@@ -19,6 +19,7 @@ const navGroups: NavGroup[] = [
       { href: "/studio",         label: "The Studio",         sub: "Classes, workshops & group sessions" },
       { href: "/treatment-room", label: "Treatment Room",     sub: "Private 1-on-1 treatments" },
       { href: "/workshop",       label: "The Workshop",       sub: "Crafting, making & meetings" },
+      { href: "/cinema",         label: "The Cinema",         sub: "Private screenings & film nights" },
       { href: "/catering",       label: "Catering & Drinks",  sub: "Organic packages for your session" },
     ],
   },
