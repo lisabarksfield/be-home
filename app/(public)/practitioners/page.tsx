@@ -33,7 +33,7 @@ export default function PractitionersPage() {
       </section>
 
       <section className="py-16 px-6" style={{ backgroundColor: "var(--color-cream)" }}>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           {directory.map((p) => (
             <Link
               key={p.slug}
