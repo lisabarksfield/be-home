@@ -1190,6 +1190,20 @@ export const content = {
         type: "Workshop",
         whatsappUrl: "https://wa.me/18018597614?text=I+would+like+to+book+a+spot+at+Scene+Work+%26+Performance+Skills+for+Teens+starting+7+November",
       },
+      {
+        id: "77",
+        date: "Monday, 9 November 2026",
+        isoDate: "2026-11-09",
+        time: "13:00",
+        endTime: "15:00",
+        title: "Cascais Energy Collective — First Gathering",
+        description:
+          "A relaxed and inspiring space for wellbeing practitioners, healers and kindred souls to connect, share ideas, upskill, problem solve and celebrate, in a supportive, non-competitive environment.\n\nBy invitation only, with limited numbers. €15 covers room hire, with any excess donated to a local charity. RSVP via WhatsApp to reserve your place.",
+        practitioner: "Mary Barrett",
+        price: "€15",
+        type: "Special Event",
+        whatsappUrl: "",
+      },
     ],
     hostCta: {
       headline: "Want to run an event at Be Home?",
