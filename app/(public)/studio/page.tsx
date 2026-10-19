@@ -98,12 +98,12 @@ export default function StudioPage() {
       <section className="py-20 px-6" style={{ backgroundColor: "var(--color-stone-warm)" }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-light mb-3 text-center" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
-            Eleven ways to lay out the Studio
+            Some of the ways to lay out the Studio
           </h2>
           <p className="text-sm leading-relaxed max-w-2xl mx-auto mb-12 text-center" style={{ color: "var(--color-stone-deep)" }}>
             Concept layouts for the Studio&apos;s approximate 6.91 x 10.04 m floor, from yoga and pilates to workshops and full conference seating. Furniture counts are planning concepts, not approved capacities.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {studio.layouts.map((l) => (
               <a
                 key={l.title}
@@ -113,7 +113,7 @@ export default function StudioPage() {
                 className="group block rounded-xl overflow-hidden"
                 style={{ backgroundColor: "var(--color-cream)", border: "1px solid var(--color-stone)" }}
               >
-                <div className="relative aspect-[4/5]">
+                <div className="relative aspect-[1819/1287]">
                   <Image
                     src={l.image}
                     alt={`Be Home Studio layout: ${l.title}`}
