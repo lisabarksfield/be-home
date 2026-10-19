@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 type Room = "studio" | "workshop" | "treatment";
 
-export function RoomPlanner({ room }: { room: Room }) {
+export function RoomPlanner({ room }: { room?: Room }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(1500);
 
@@ -32,7 +32,7 @@ export function RoomPlanner({ room }: { room: Room }) {
   return (
     <iframe
       ref={frame}
-      src={`/room-planner/index.html?embed=1&room=${room}`}
+      src={`/room-planner/index.html?embed=1${room ? `&room=${room}` : ""}`}
       title="Be Home interactive room planner"
       style={{ width: "100%", height, border: 0, display: "block" }}
     />

@@ -11,14 +11,17 @@ export const ROOMS = [
   { id: 'studio', name: 'Studio', width: 6.91, height: 10.04, area: 69.4,
     polygon: [[0, 0], [6.91, 0], [6.91, 10.04], [0, 10.04]],
     accessZones: [{ x: 0, y: 0, w: 1, d: 10.04 }, { x: 1, y: 8.6, w: 5.91, d: 1.44 }],
+    fixedFeatures: [],
     description: 'Approximate 6.91 × 10.04 m rectangular studio. Keep the left and rear planning routes clear; verify dimensions and exits on site.' },
-  { id: 'workshop', name: 'Workshop', width: 7.94, height: 6.17, area: 49.0,
-    polygon: [[0, 0], [6.35, 0], [6.35, .33], [7.94, .33], [7.94, 6.17], [0, 6.17]],
+  { id: 'workshop', name: 'Workshop', width: 6.27, height: 8.075, area: 50.6,
+    polygon: [[0, 0], [6.27, 0], [6.27, 8.075], [0, 8.075]],
     accessZones: [],
-    description: 'Approximate stepped outline traced from the supplied plan. Width, depth and small front recess are estimates; confirm the shape and door clearance on site.' },
+    fixedFeatures: [{ id: 'fixed-table', label: 'Fixed table, cannot be moved', x: 3.135, y: 2.8925, w: 2.51, d: 1.805 }],
+    description: 'Approximate 6.27 × 8.075 m rectangular workshop, measured from the Workshop Floor Plan. The crafting table is fixed in place; build your layout around it and confirm dimensions and door clearance on site.' },
   { id: 'treatment', name: 'Treatment', width: 3.61, height: 3.83, area: 13.8,
     polygon: [[0, 0], [3.38, 0], [3.61, 1.03], [3.61, 3.83], [0, 3.83]],
     accessZones: [],
+    fixedFeatures: [],
     description: 'Approximate treatment-room outline with an angled corner. Dimensions are source estimates; confirm the shape and door clearance on site.' }
 ];
 
@@ -133,12 +136,16 @@ function overlaps(a, b) {
   return true;
 }
 
+const fixedPolygon = f => [[f.x - f.w / 2, f.y - f.d / 2], [f.x + f.w / 2, f.y - f.d / 2], [f.x + f.w / 2, f.y + f.d / 2], [f.x - f.w / 2, f.y + f.d / 2]];
+
 export function placementIssues(items, roomId) {
   const room = roomFor(roomId), issues = [], footprints = items.map(polygon);
   const zones = room.accessZones.map(z => [[z.x, z.y], [z.x + z.w, z.y], [z.x + z.w, z.y + z.d], [z.x, z.y + z.d]]);
+  const fixed = (room.fixedFeatures || []).map(fixedPolygon);
   items.forEach((item, i) => {
     if (!contained(footprints[i], room.polygon)) issues.push({ type: 'boundary', ids: [item.id], message: 'Footprint extends outside the approximate room outline.' });
     if (zones.some(z => overlaps(footprints[i], z))) issues.push({ type: 'access', ids: [item.id], message: 'Footprint occupies a marked clear route.' });
+    if (fixed.some(f => overlaps(footprints[i], f))) issues.push({ type: 'fixed', ids: [item.id], message: 'Footprint overlaps a fixed feature that cannot be moved.' });
     for (let j = 0; j < i; j++) {
       if (overlaps(footprints[i], footprints[j])) issues.push({ type: 'overlap', ids: [items[j].id, item.id], message: 'Furniture footprints overlap.' });
     }
@@ -175,6 +182,7 @@ export function autoPlace(kind, items, roomId, id) {
   if (items.length >= 200 || items.some(item => item.id === id)) return null;
   const occupied = items.map(polygon);
   const zones = room.accessZones.map(z => [[z.x, z.y], [z.x + z.w, z.y], [z.x + z.w, z.y + z.d], [z.x, z.y + z.d]]);
+  const fixed = (room.fixedFeatures || []).map(fixedPolygon);
   // Only test the candidate. Existing warnings need not prevent a new clear
   // placement, and rechecking all existing pairs at each grid cell is wasteful.
   for (let y = candidate.d / 2; y <= room.height - candidate.d / 2 + EPS; y += .1) {
@@ -183,6 +191,7 @@ export function autoPlace(kind, items, roomId, id) {
       candidate.y = Math.round(y * 1e6) / 1e6;
       const footprint = polygon(candidate);
       if (contained(footprint, room.polygon) && !zones.some(z => overlaps(footprint, z)) &&
+          !fixed.some(f => overlaps(footprint, f)) &&
           !occupied.some(other => overlaps(footprint, other))) return { ...candidate };
     }
   }

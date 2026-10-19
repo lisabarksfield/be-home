@@ -55,6 +55,9 @@ function contents(exporting=false){
  if(showRoutes)for(const z of r.accessZones)markup+=`<rect x="${z.x}" y="${z.y}" width="${z.w}" height="${z.d}" fill="url(#route-pattern)"/>`;
  if(showRoutes&&r.id==='studio')markup+=`<text x=".52" y="5.1" transform="rotate(-90 .52 5.1)" text-anchor="middle" font-family="Arial,sans-serif" font-size=".12" letter-spacing=".025" fill="#8c987f">1 M CLEAR ROUTE</text><text x="2.8" y="9.43" text-anchor="middle" font-family="Arial,sans-serif" font-size=".12" letter-spacing=".02" fill="#8c987f">KEEP ENTRY CLEAR</text>`;
  markup+=`<polygon points="${r.polygon.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#2c2825" stroke-width=".07" stroke-linejoin="round"/>`;
+ for(const f of r.fixedFeatures){const hw=f.w/2,hd=f.d/2;
+  markup+=`<g><rect x="${f.x-hw}" y="${f.y-hd}" width="${f.w}" height="${f.d}" rx=".04" fill="#e8e0d5" stroke="#a89880" stroke-width=".02"/><rect x="${f.x-hw+.06}" y="${f.y-hd+.06}" width="${Math.max(.02,f.w-.12)}" height="${Math.max(.02,f.d-.12)}" rx=".03" fill="none" stroke="#a89880" stroke-width=".012" stroke-dasharray=".05 .04"/><text x="${f.x}" y="${f.y}" text-anchor="middle" dominant-baseline="middle" font-family="Arial,sans-serif" font-size=".14" fill="#70685f">${xml(f.label)}</text></g>`;
+ }
  if(r.id==='studio'){
   for(const [a,b]of[[1.18,2.1],[4.89,5.78]])markup+=`<path d="M${a} 0H${b}" stroke="#faf7f2" stroke-width=".09"/><path d="M${a} -.025H${b}M${a} .025H${b}" stroke="#a89880" stroke-width=".012"/>`;
   markup+=`<path d="M0 7.53V8.36" stroke="#faf7f2" stroke-width=".09"/><path d="M-.025 7.53V8.36M.025 7.53V8.36" stroke="#a89880" stroke-width=".012"/>`;

@@ -1857,10 +1857,21 @@ export const content = {
       "Food and drink packages available on request — organic teas, juices, snack platters and more.",
     planner: {
       heading: "Plan your layout",
-      body: "Arrange tables, chairs and furniture inside the Workshop's approximate 7.94 x 6.17 m footprint, then save or print your plan.",
+      body: "Arrange chairs and furniture around the Workshop's fixed table, inside its approximate 6.27 x 8.075 m footprint, then save or print your plan.",
     },
     cta: {
       headline: "Ready to book the Workshop?",
+    },
+  },
+
+  // ─────────────────────────────────────────────
+  // PLAN YOUR LAYOUT  /plan-your-layout
+  // ─────────────────────────────────────────────
+  planYourLayout: {
+    hero: {
+      tagline: "Hire a Space",
+      headline: "Plan your layout",
+      body: "Try the Studio's furnished layout concepts, or start from an empty Workshop or Treatment Room, then drag, resize, save and print your own plan for any of our spaces.",
     },
   },
 

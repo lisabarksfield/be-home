@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { PricingDisclaimer } from "@/components/ui/PricingDisclaimer";
-import { RoomPlanner } from "@/components/ui/RoomPlanner";
 
 const { workshop } = content;
 
@@ -95,18 +94,20 @@ export default function WorkshopPage() {
         </div>
       </section>
 
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--color-stone-warm)" }}>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-light mb-3 text-center" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
-            {workshop.planner.heading}
-          </h2>
-          <p className="text-sm leading-relaxed max-w-2xl mx-auto mb-10 text-center" style={{ color: "var(--color-stone-deep)" }}>
-            {workshop.planner.body}
-          </p>
-          <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--color-stone)" }}>
-            <RoomPlanner room="workshop" />
-          </div>
-        </div>
+      <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--color-stone-warm)" }}>
+        <h2 className="text-3xl font-light mb-3" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
+          {workshop.planner.heading}
+        </h2>
+        <p className="text-sm leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "var(--color-stone-deep)" }}>
+          {workshop.planner.body}
+        </p>
+        <Link
+          href="/plan-your-layout?room=workshop"
+          style={{ backgroundColor: "var(--color-charcoal)", color: "var(--color-cream)" }}
+          className="inline-block px-8 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
+        >
+          Try the Room Planner
+        </Link>
       </section>
 
       <section className="py-20 px-6 text-center" style={{ backgroundColor: "var(--color-trumpet)" }}>
