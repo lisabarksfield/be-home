@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { RoomPlanner } from "@/components/ui/RoomPlanner";
 
-const { planYourLayout, studio } = content;
+const { planYourLayout } = content;
 
 type Room = "studio" | "workshop" | "treatment";
 const rooms: Room[] = ["studio", "workshop", "treatment"];
@@ -35,47 +34,6 @@ export default async function PlanYourLayoutPage({
           <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--color-stone)" }}>
             <RoomPlanner room={selectedRoom} />
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-6" style={{ backgroundColor: "var(--color-stone-warm)" }}>
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-light mb-3 text-center" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
-            Some of the ways to lay out the Studio
-          </h2>
-          <p className="text-sm leading-relaxed max-w-2xl mx-auto mb-12 text-center" style={{ color: "var(--color-stone-deep)" }}>
-            Concept layouts for the Studio&apos;s approximate 6.91 x 10.04 m floor, from yoga and pilates to workshops and full conference seating. Furniture counts are planning concepts, not approved capacities.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {studio.layouts.map((l) => (
-              <a
-                key={l.title}
-                href={l.image}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-xl overflow-hidden"
-                style={{ backgroundColor: "var(--color-cream)", border: "1px solid var(--color-stone)" }}
-              >
-                <div className="relative aspect-[1819/1287]">
-                  <Image
-                    src={l.image}
-                    alt={`Be Home Studio layout: ${l.title}`}
-                    fill
-                    className="object-contain p-2 group-hover:scale-105 transition-transform"
-                  />
-                </div>
-                <div className="px-3 py-3">
-                  <p className="text-sm font-medium" style={{ color: "var(--color-charcoal)" }}>{l.title}</p>
-                  <p className="text-xs mt-0.5" style={{ color: "var(--color-stone-deep)" }}>{l.meta}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <p className="text-xs mt-8 text-center" style={{ color: "var(--color-stone-deep)" }}>
-            <Link href={studio.planner.downloadHref} target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "var(--color-charcoal)" }}>
-              {studio.planner.downloadLabel}
-            </Link>
-          </p>
         </div>
       </section>
 
