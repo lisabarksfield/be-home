@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { PricingDisclaimer } from "@/components/ui/PricingDisclaimer";
+import { RoomPlanner } from "@/components/ui/RoomPlanner";
 
 const { treatmentRoom } = content;
 
@@ -89,6 +90,20 @@ export default function TreatmentRoomPage() {
               ))}
             </div>
             <PricingDisclaimer />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6" style={{ backgroundColor: "var(--color-stone-warm)" }}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-light mb-3 text-center" style={{ fontFamily: "var(--font-serif)", color: "var(--color-charcoal)" }}>
+            {treatmentRoom.planner.heading}
+          </h2>
+          <p className="text-sm leading-relaxed max-w-2xl mx-auto mb-10 text-center" style={{ color: "var(--color-stone-deep)" }}>
+            {treatmentRoom.planner.body}
+          </p>
+          <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--color-stone)" }}>
+            <RoomPlanner room="treatment" />
           </div>
         </div>
       </section>

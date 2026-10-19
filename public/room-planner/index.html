@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Make room for your ideas at Be Home Cascais. Try studio layouts, arrange furniture and save your own room plan.">
+<title>Room planner · Be Home Cascais</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="site-header"><a href="https://www.behomecascais.com/" target="_top" aria-label="Be Home Cascais home"><img src="assets/logo.svg" alt="Be Home" width="110" height="46"></a><span class="header-label">SPACE TO MAKE IT YOURS</span><a class="home-link" href="https://www.behomecascais.com/" target="_top">Visit Be Home <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="intro"><div><p class="eyebrow">BE HOME · CASCAIS</p><h1>Make room for your ideas.</h1><p>From a morning on the mat to a room full of conversation.<br class="desktop"> Start with a layout, then make it your own.</p></div><a class="pack-link" href="assets/Be_Home_Basement_Studio_Layouts.pdf" target="_blank" rel="noopener">View all floor plans <span aria-hidden="true">↗</span></a></section>
+<nav id="rooms" class="room-tabs" aria-label="Choose a room"></nav>
+<div class="workspace">
+<aside class="library panel">
+<div class="panel-heading"><span class="step">01</span><h2>Set the scene</h2></div>
+<label class="field-label" for="preset">Start with a layout</label><select id="preset"></select>
+<p id="preset-help" class="muted small">Change any layout to suit your event.</p>
+<div class="divider"></div>
+<div class="panel-heading"><span class="step">02</span><h2>Add your pieces</h2></div>
+<div id="catalog" class="catalog"></div>
+<p class="small muted">Tap to add. Drag to move. Select a piece to adjust its size or angle.</p>
+</aside>
+<section class="canvas-panel panel" aria-label="Interactive room plan">
+<div class="canvas-toolbar"><div class="tool-group"><button id="undo" class="icon-btn" aria-label="Undo" title="Undo (⌘/Ctrl Z)">↶</button><button id="redo" class="icon-btn" aria-label="Redo" title="Redo (⌘/Ctrl Shift Z)">↷</button><span id="save-state" class="save-state">Saved on this device</span></div><div class="view-options"><label><input type="checkbox" id="grid" checked> Grid</label><label><input type="checkbox" id="routes" checked> Routes</label><label><input type="checkbox" id="snap" checked> Snap</label></div></div>
+<div id="plan-wrap" class="plan-wrap"><svg id="plan" role="group" aria-label="Room plan. Select furniture, then use arrow keys to move, R to rotate and Delete to remove." tabindex="0" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<div class="canvas-bottom"><span id="room-caption"></span><span>METRES · TOP VIEW</span></div>
+<div class="plan-summary"><div><strong id="object-count">0</strong><span>pieces in your plan</span></div><div id="count-detail"></div></div>
+</section>
+<aside class="inspector panel">
+<div class="panel-heading"><span class="step">03</span><h2>Make it yours</h2></div>
+<label class="field-label" for="object-picker">Select a piece</label><select id="object-picker"><option value="">Choose a piece</option></select>
+<div id="empty-selection" class="empty-selection"><span class="select-glyph" aria-hidden="true">↖</span><h3>A place for everything.</h3><p class="small muted">Select a piece in your plan to fine-tune the details.</p></div>
+<form id="item-form" hidden autocomplete="off">
+<p id="item-kind" class="eyebrow"></p>
+<label class="field-label" for="item-label">Name</label><input id="item-label" type="text" maxlength="60">
+<div class="field-row"><div><label class="field-label" for="item-w">Width · m</label><input id="item-w" type="number" min="0.1" max="15" step="0.05" required></div><div><label class="field-label" for="item-d">Depth · m</label><input id="item-d" type="number" min="0.1" max="20" step="0.05" required></div></div>
+<div class="field-row"><div><label class="field-label" for="item-x">Centre X · m</label><input id="item-x" type="number" step="0.05" required></div><div><label class="field-label" for="item-y">Centre Y · m</label><input id="item-y" type="number" step="0.05" required></div></div>
+<label class="field-label" for="item-angle">Rotation · degrees</label><div class="rotation-row"><button id="rotate-left" type="button" aria-label="Rotate left 15 degrees">↶</button><input id="item-angle" type="number" min="-360" max="360" step="1" required><button id="rotate-right" type="button" aria-label="Rotate right 15 degrees">↷</button></div>
+<div class="field-row item-actions"><button id="duplicate" type="button">Duplicate</button><button id="remove" type="button" class="danger">Remove</button></div>
+<p class="small muted">Arrows move 10 cm · Shift + arrows move 1 m · R rotates 15°.</p>
+</form>
+<div class="divider"></div>
+<div id="placement-status" class="placement-status" role="status"></div><ul id="issues" class="issues"></ul>
+<div class="divider"></div>
+<h3>Your plan, to keep.</h3><div class="export-buttons"><button id="export-png" class="primary">Download image <span aria-hidden="true">↓</span></button><button id="export-svg">Download vector SVG</button><div class="field-row"><button id="save-json">Save plan</button><button id="load-json">Open plan</button></div><button id="print">Print plan</button></div>
+<input id="file-input" type="file" accept=".json,application/json" hidden>
+<p class="small muted">Edits stay in this browser. Save a plan file to reopen it on another device.</p>
+</aside>
+</div>
+<section class="notes"><div><h3>A little room for the details.</h3><p id="room-description"></p><p>Room areas are approximate, calculated from the dimensions on the supplied floor plan. Furniture shows its footprint. Allow for people, moving equipment and actual door clearance when finalising your layout.</p></div><div><h3>Planning made simple</h3><p>Sage pieces are yours to move. Striped areas mark the studio’s suggested clear routes. Clay outlines flag an overlap or a piece outside the room.</p><p>Seating counts describe the drawing, not an approved event capacity. Be Home will help confirm the right setup for your event.</p></div></section>
+</main>
+<footer><img src="assets/logo.svg" alt="Be Home" width="88" height="37"><span>A space to move, connect and belong.</span><span>CASCAIS, PORTUGAL</span></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript>This room planner needs JavaScript. You can still <a href="assets/Be_Home_Basement_Studio_Layouts.pdf">download the Be Home floor plans</a>.</noscript>
+</body></html>

@@ -159,6 +159,25 @@ export const content = {
     ratesNote: "Rates exclude IVA. Extended hours up to 22:00 available on request.",
     cateringNote:
       "Food and drink packages available on request — organic teas, juices, snack platters and more.",
+    planner: {
+      heading: "Plan your layout",
+      body: "Try the Studio's eleven furnished layouts, from a yoga semicircle to full conference seating, then drag, resize and save your own. Furniture counts are planning concepts, not approved capacities, so confirm your setup with us before booking.",
+      downloadLabel: "Download all floor plans (PDF)",
+      downloadHref: "/floor-plans/Be_Home_Basement_Studio_Layouts.pdf",
+    },
+    layouts: [
+      { image: "/floor-plans/png/02_empty.png", title: "Empty Studio", meta: "Open floor, 69.4 m²" },
+      { image: "/floor-plans/png/03_yoga-semicircle.png", title: "Yoga semicircle", meta: "9 participants + instructor" },
+      { image: "/floor-plans/png/04_pilates-six.png", title: "Pilates", meta: "6 reformers" },
+      { image: "/floor-plans/png/05_workshop-groups.png", title: "Workshop, grouped tables", meta: "24 chairs" },
+      { image: "/floor-plans/png/06_workshop-classroom.png", title: "Workshop, classroom", meta: "18 chairs" },
+      { image: "/floor-plans/png/07_workshop-shared.png", title: "Workshop, shared table", meta: "16 chairs" },
+      { image: "/floor-plans/png/08_workshop-u-shape.png", title: "Workshop, U-shaped table", meta: "18 chairs" },
+      { image: "/floor-plans/png/09_conference-horizontal.png", title: "Conference, horizontal", meta: "49 chairs" },
+      { image: "/floor-plans/png/10_conference-semicircle.png", title: "Conference, semicircle", meta: "26 chairs" },
+      { image: "/floor-plans/png/11_conference-vertical.png", title: "Conference, vertical", meta: "55 chairs" },
+      { image: "/floor-plans/png/12_standing-poseur.png", title: "Standing, poseur tables", meta: "~24 people" },
+    ],
     cta: {
       headline: "Ready to book the Studio?",
     },
@@ -192,6 +211,10 @@ export const content = {
       "Some practitioners require full privacy during their session (for example psychotherapy or sensitive consultations). If this applies to you, let us know when booking, a small privacy uplift may apply depending on the day and time.",
       "Optional towel service available as an add-on: €10 per session.",
     ],
+    planner: {
+      heading: "Plan your layout",
+      body: "Sketch your table, chairs and equipment inside the Treatment Room's approximate 3.61 x 3.83 m footprint, then save or print your plan.",
+    },
     cta: {
       headline: "Ready to book the Treatment Room?",
     },
@@ -1832,6 +1855,10 @@ export const content = {
     ratesNote: "Rates exclude IVA. Extended hours up to 22:00 available on request.",
     cateringNote:
       "Food and drink packages available on request — organic teas, juices, snack platters and more.",
+    planner: {
+      heading: "Plan your layout",
+      body: "Arrange tables, chairs and furniture inside the Workshop's approximate 7.94 x 6.17 m footprint, then save or print your plan.",
+    },
     cta: {
       headline: "Ready to book the Workshop?",
     },
