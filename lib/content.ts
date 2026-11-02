@@ -1886,7 +1886,6 @@ export const content = {
       "Open fireplace",
       "Natural light",
       "Kitchenette access",
-      "Whiteboard and display wall",
       "Wi-Fi included",
     ],
     rates: [
