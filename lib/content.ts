@@ -1556,6 +1556,7 @@ export const content = {
         practitioner: "Justyna",
         price: "€35",
         type: "Special Event",
+        bookingUrl: "https://calendly.com/hello-behomecascais/new-meeting?month=2026-11&date=2026-11-13",
         whatsappUrl: "https://wa.me/447736709009?text=I+would+like+to+book+a+spot+at+Reset+%26+Reground+on+Friday+13+November+at+2pm",
       },
       {
