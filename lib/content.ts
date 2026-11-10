@@ -1506,6 +1506,20 @@ export const content = {
         whatsappUrl: "",
       },
       {
+        id: "113",
+        date: "Monday, 7 December 2026",
+        isoDate: "2026-12-07",
+        time: "13:00",
+        endTime: "15:00",
+        title: "Cascais Energy Collective: Second Gathering",
+        description:
+          "A relaxed and inspiring space for wellbeing practitioners, healers and kindred souls to connect, share ideas, upskill, problem solve and celebrate, in a supportive, non-competitive environment.\n\nBy invitation only, with limited numbers. RSVP via WhatsApp to reserve your place.",
+        practitioner: "Mary Barrett",
+        price: "Invitation only",
+        type: "Special Event",
+        whatsappUrl: "",
+      },
+      {
         id: "97",
         date: "Monday, 19 October 2026",
         isoDate: "2026-10-19",
