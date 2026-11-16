@@ -1582,7 +1582,7 @@ export const content = {
         title: "The Creative Break: Christmas Edition",
         description: "A festive edition of our regular crafting and creativity session with Lianne, founder of The Creative Break. Come and make something with your hands for the season ahead, no experience needed, no pressure, just the simple pleasure of slowing down and creating something beautiful. All materials, cozy drinks and cake included.",
         practitioner: "Lianne",
-        price: "TBC",
+        price: "€30",
         type: "Workshop",
         spots: 12,
         whatsappUrl: "https://wa.me/351912384413?text=I+would+like+to+book+a+spot+at+The+Creative+Break+on+Tuesday+17+November+at+7pm",
