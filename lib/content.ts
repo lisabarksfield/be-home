@@ -1935,6 +1935,11 @@ export const content = {
       items: [
         {
           quote:
+            "I cried in the first 10 minutes.\n\nLying on the floor, holding my daughter's hand, taking a moment to ground and breathe, I suddenly realised the magnitude of this moment.\n\nWhat a gift to give our daughters.\n\nThe opportunity for their experience of womanhood to be so different, simply because we are creating open, honest and supported conversations from the beginning.\n\nThe Girls Club did not disappoint.\n\n2.5 hours of child-friendly conversations about anatomy, periods, boobs, hormones, period products and how to use them, gender, sex, sexuality, feelings, emotions, and so much more.\n\nMy biggest takeaway?\n\nThere is no 'normal' when it comes to comparing yourself to other people.\n\nBut there is your normal.\n\nAnd the more we help our girls get to know their own bodies, emotions and cycles, the better equipped they are to recognise when something feels right, and when something doesn't.\n\nIt was such a beautiful way to spark conversations about our ever-changing bodies. And I think every mother in the room probably learnt something too.\n\nWomen have been left behind in so many areas of health, education and understanding. Initiatives like this give us, as mothers, an opportunity to do things differently for our daughters.\n\nTo talk. To listen. To bond. To make the awkward things less awkward. And to create a space where nothing about their bodies needs to be embarrassing or off limits.",
+          name: "Octavia",
+        },
+        {
+          quote:
             "The girls club is wonderful! Just super awesome. Melissa and Lisa are kind, knowledgeable and calmly confident. They care so much and they know what they're talking about.\n\nMy daughter who is 12 benefited enormously. And (to my surprise!) I even learned a lot of new things for myself. I wish I had had the opportunity to attend a girls club workshop when I was a tween.\n\nIt was also really cool to spend time with other mothers and daughters and to feel the community of caring, intelligent, kind women across a spectrum of ages. Really good stuff.",
           name: "Scarlett",
         },
@@ -1952,11 +1957,6 @@ export const content = {
           quote:
             "The space is wonderful, welcoming, and very well thought out down to the smallest detail. I took one of \"The Girls Club\" courses with my 10-year-old daughter, and the experience was transformative for both of us. We left with an even stronger bond, and for her, it was a safe, relaxed environment where she could learn and ask all the questions she had about the changes that come with adolescence. I recommend it wholeheartedly.",
           name: "Helena",
-        },
-        {
-          quote:
-            "I cried in the first 10 minutes.\n\nLying on the floor, holding my daughter's hand, taking a moment to ground and breathe, I suddenly realised the magnitude of this moment.\n\nWhat a gift to give our daughters.\n\nThe opportunity for their experience of womanhood to be so different, simply because we are creating open, honest and supported conversations from the beginning.\n\nThe Girls Club did not disappoint.\n\n2.5 hours of child-friendly conversations about anatomy, periods, boobs, hormones, period products and how to use them, gender, sex, sexuality, feelings, emotions, and so much more.\n\nMy biggest takeaway?\n\nThere is no 'normal' when it comes to comparing yourself to other people.\n\nBut there is your normal.\n\nAnd the more we help our girls get to know their own bodies, emotions and cycles, the better equipped they are to recognise when something feels right, and when something doesn't.\n\nIt was such a beautiful way to spark conversations about our ever-changing bodies. And I think every mother in the room probably learnt something too.\n\nWomen have been left behind in so many areas of health, education and understanding. Initiatives like this give us, as mothers, an opportunity to do things differently for our daughters.\n\nTo talk. To listen. To bond. To make the awkward things less awkward. And to create a space where nothing about their bodies needs to be embarrassing or off limits.",
-          name: "Octavia",
         },
       ],
     },
