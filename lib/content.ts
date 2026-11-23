@@ -1626,6 +1626,7 @@ export const content = {
         practitioner: "Melanie",
         price: "€135 for all three gatherings",
         type: "Workshop",
+        whatsappUrl: "https://wa.me/31652313858?text=I+would+like+to+book+a+spot+at+the+Rooted+%26+Rising+Mothers+Circle+starting+26+November",
       },
     ],
     hostCta: {
