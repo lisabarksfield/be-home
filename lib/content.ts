@@ -1615,6 +1615,18 @@ export const content = {
         bookingUrl: "https://octaviahamilton.com/retreats/the-sisterhood-the-energy-of-becoming",
         bookingLabel: "Book now →",
       },
+      {
+        id: "117",
+        date: "Thursdays, 26 November, 3 December & 17 December 2026",
+        isoDate: "2026-12-17",
+        time: "13:00",
+        endTime: "14:30",
+        title: "Rooted & Rising: Mothers Circle",
+        description: "A space to reconnect, recharge and gain new insights.\n\nA nourishing journey for mothers who want to feel more grounded, connected and supported in their motherhood.\n\nThree gatherings to slow down, reconnect with yourself and explore what can bring more ease, understanding and connection into your everyday life as a mother.\n\nA 3-part journey, held at Be Home, Cascais. A warm and intimate space to feel supported, inspired and recharged.",
+        practitioner: "Melanie",
+        price: "€135 for all three gatherings",
+        type: "Workshop",
+      },
     ],
     hostCta: {
       headline: "Want to run an event at Be Home?",
